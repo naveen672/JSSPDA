@@ -29,7 +29,10 @@
     "blue": "நீலம்",
     "green": "பச்சை",
     "purple": "ஊதா",
-    "orange": "ஆரஞ்சு"
+    "orange": "ஆரஞ்சு",
+    "smallText": "சிறிய உரை",
+    "mediumText": "நடுத்தர உரை",
+    "largeText": "பெரிய உரை"
   },
   "home": {
     "hero": {

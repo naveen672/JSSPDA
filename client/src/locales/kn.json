@@ -29,7 +29,10 @@
     "blue": "ನೀಲಿ",
     "green": "ಹಸಿರು",
     "purple": "ನೇರಳೆ",
-    "orange": "ಕಿತ್ತಳೆ"
+    "orange": "ಕಿತ್ತಳೆ",
+    "smallText": "ಚಿಕ್ಕ ಪಠ್ಯ",
+    "mediumText": "ಮಧ್ಯಮ ಪಠ್ಯ",
+    "largeText": "ದೊಡ್ಡ ಪಠ್ಯ"
   },
   "home": {
     "hero": {
