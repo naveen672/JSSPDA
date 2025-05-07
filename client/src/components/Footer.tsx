@@ -72,10 +72,10 @@ function VisitorCounter() {
     <div className="flex items-center gap-2 text-white/60 text-sm">
       <Users size={16} />
       {loading ? (
-        <span className="animate-pulse">Loading...</span>
+        <span className="animate-pulse">{t('common.loading')}</span>
       ) : (
         <span>
-          {`${t('Visitors')}: ${visitorCount?.toLocaleString() || '0'}`}
+          {t('footer.visitorCount', { count: visitorCount?.toLocaleString() || '0' })}
         </span>
       )}
     </div>

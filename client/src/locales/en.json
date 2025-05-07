@@ -558,6 +558,7 @@
     "subscribeText": "Stay updated with our latest news and announcements",
     "emailPlaceholder": "Your email address",
     "subscribe": "Subscribe",
+    "visitorCount": "Visitors: {{count}}",
     "accreditationsHeading": "Accreditations",
     "policies": {
       "privacy": "Privacy Policy",

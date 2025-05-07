@@ -160,6 +160,7 @@
     "subscribeText": "हमारे नवीनतम समाचार और घोषणाओं के साथ अपडेट रहें",
     "emailPlaceholder": "आपका ईमेल पता",
     "subscribe": "सब्सक्राइब करें",
+    "visitorCount": "आगंतुक: {{count}}",
     "accreditationsHeading": "मान्यताएँ",
     "policies": {
       "privacy": "गोपनीयता नीति",

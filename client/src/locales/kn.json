@@ -160,6 +160,7 @@
     "subscribeText": "ನಮ್ಮ ನವೀನತಮ ಸುದ್ದಿ ಮತ್ತು ಘೋಷಣೆಗಳೊಂದಿಗೆ ಅಪ್‌ಡೇಟ್ ಆಗಿರಿ",
     "emailPlaceholder": "ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸ",
     "subscribe": "ಚಂದಾದಾರರಾಗಿ",
+    "visitorCount": "ಭೇಟಿಗಾರರು: {{count}}",
     "accreditationsHeading": "ಮಾನ್ಯತೆಗಳು",
     "policies": {
       "privacy": "ಗೌಪ್ಯತೆ ನೀತಿ",
