@@ -38,7 +38,8 @@ export default function Header() {
     { href: "/contact", label: t('navigation.contact') }
   ];
 
-  const languages = [
+  // Type-safe language codes matching the type in useLanguage.ts
+  const languages: { code: 'en' | 'hi' | 'kn' | 'ta', label: string }[] = [
     { code: 'en', label: 'English' },
     { code: 'hi', label: 'हिंदी' },
     { code: 'kn', label: 'ಕನ್ನಡ' },
@@ -46,7 +47,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 bg-white shadow-md z-50" onClick={handleClickOutside}>
+    <header className="sticky top-0 bg-[hsl(var(--header-bg))] shadow-md z-50" onClick={handleClickOutside}>
       <div className="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-3">
@@ -167,7 +168,7 @@ export default function Header() {
       </div>
       
       {/* Mobile menu */}
-      <div className={`md:hidden bg-white shadow-lg absolute w-full left-0 z-50 ${mobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
+      <div className={`md:hidden bg-[hsl(var(--header-bg))] shadow-lg absolute w-full left-0 z-50 ${mobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
         <nav className="container mx-auto px-4 py-3 flex flex-col">
           {navLinks.map((link) => (
             <Link 

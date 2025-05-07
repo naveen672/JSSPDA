@@ -77,6 +77,14 @@
   --accent: 213 94% 68%;
   --accent-foreground: 210 40% 98%;
   --chart-1: 207 90% 54%;
+  --secondary: 210 40% 96%;
+  --secondary-foreground: 222 47% 11%;
+  /* Specific color elements for this theme */
+  --header-bg: 210 40% 96%;
+  --footer-bg: 205 100% 20%;
+  --footer-text: 210 40% 98%;
+  --card-accent: 210 60% 95%;
+  --button-hover: 207 90% 45%;
 }
 
 .color-theme-green {
@@ -85,6 +93,14 @@
   --accent: 143 55% 62%;
   --accent-foreground: 210 40% 98%;
   --chart-1: 142 71% 45%;
+  --secondary: 150 42% 95%;
+  --secondary-foreground: 150 60% 20%;
+  /* Specific color elements for this theme */
+  --header-bg: 150 42% 95%;
+  --footer-bg: 150 80% 20%;
+  --footer-text: 150 42% 95%;
+  --card-accent: 150 50% 94%;
+  --button-hover: 142 71% 38%;
 }
 
 .color-theme-purple {
@@ -93,6 +109,14 @@
   --accent: 262 83% 58%;
   --accent-foreground: 210 40% 98%;
   --chart-1: 262 83% 65%;
+  --secondary: 265 50% 95%;
+  --secondary-foreground: 265 70% 30%;
+  /* Specific color elements for this theme */
+  --header-bg: 265 50% 95%;
+  --footer-bg: 265 80% 25%;
+  --footer-text: 265 50% 95%;
+  --card-accent: 265 60% 95%;
+  --button-hover: 262 83% 55%;
 }
 
 .color-theme-orange {
@@ -101,6 +125,14 @@
   --accent: 35 92% 43%;
   --accent-foreground: 210 40% 98%;
   --chart-1: 35 92% 50%;
+  --secondary: 40 80% 96%;
+  --secondary-foreground: 30 75% 25%;
+  /* Specific color elements for this theme */
+  --header-bg: 40 80% 96%;
+  --footer-bg: 30 60% 30%;
+  --footer-text: 40 80% 96%;
+  --card-accent: 35 70% 95%;
+  --button-hover: 35 92% 45%;
 }
 
 /* Font size adjustments */
