@@ -19,29 +19,29 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative bg-neutral-light">
-        {/* Main Hero Image with Overlay Text */}
+        {/* Main Hero Image with Overlay Text - Enhanced Responsiveness */}
         <div className="relative">
           <img 
             src={instituteFrontImage} 
             alt="JSS Polytechnic for the Differently Abled Front Entrance" 
-            className="w-full h-auto object-cover max-h-[500px]"
+            className="w-full h-auto object-cover min-h-[300px] sm:min-h-[400px] md:min-h-[500px]"
           />
           
           {/* Text overlay positioned on top of the image */}
-          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-            <div className="container mx-auto px-4">
+          <div className="absolute inset-0 bg-black/50 md:bg-black/40 flex items-center justify-center">
+            <div className="container mx-auto px-4 py-8 md:py-0">
               <div className="max-w-3xl mx-auto text-center animate-fade-in">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-2 md:mb-4">
                   {t('home.hero.title')}
                 </h1>
-                <p className="text-lg md:text-xl text-white/90 mb-8">
+                <p className="text-base sm:text-lg md:text-xl text-white/90 mb-4 md:mb-8 px-2">
                   {t('home.hero.subtitle')}
                 </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Link href="/courses" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-medium">
+                <div className="flex flex-wrap justify-center gap-2 md:gap-4">
+                  <Link href="/courses" className="text-sm md:text-base bg-primary hover:bg-primary/90 text-primary-foreground px-4 md:px-6 py-2 md:py-3 rounded-md font-medium">
                     {t('home.hero.exploreCourses')}
                   </Link>
-                  <Link href="/about" className="bg-white hover:bg-gray-100 text-primary border border-white px-6 py-3 rounded-md font-medium">
+                  <Link href="/about" className="text-sm md:text-base bg-white hover:bg-gray-100 text-primary border border-white px-4 md:px-6 py-2 md:py-3 rounded-md font-medium">
                     {t('home.hero.aboutUs')}
                   </Link>
                 </div>

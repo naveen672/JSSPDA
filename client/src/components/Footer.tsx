@@ -10,6 +10,8 @@ import {
   Send,
   Users
 } from "lucide-react";
+import mainLogo from "@/assets/main-logo.png";
+import secondaryLogo from "@/assets/logo2.png";
 
 // Visitor counter component
 function VisitorCounter() {
@@ -118,8 +120,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-12 w-12 rounded-full flex items-center justify-center bg-white text-primary text-xl font-bold">
-                JSS
+              <div className="h-16 w-auto bg-white rounded-md p-1 flex items-center justify-center">
+                <img 
+                  src={mainLogo} 
+                  alt="JSS Polytechnic for the Differently Abled" 
+                  className="h-full w-auto object-contain"
+                />
               </div>
               <div>
                 <h2 className="text-lg font-bold font-serif">{t('footer.title')}</h2>
