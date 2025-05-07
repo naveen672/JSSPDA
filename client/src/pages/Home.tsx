@@ -10,6 +10,7 @@ import {
   Mail, 
   Clock 
 } from "lucide-react";
+import instituteFrontImage from "@/assets/pda-front.jpg";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -18,24 +19,29 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative bg-neutral-light">
-        <div 
-          className="h-[60vh] md:h-[70vh] bg-cover bg-center relative" 
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80')" }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
-          <div className="container mx-auto px-4 py-20 h-full flex flex-col justify-center relative z-10">
-            <div className="max-w-3xl animate-fade-in">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-4">
+        {/* Main Hero Image - Institution Front */}
+        <div className="flex flex-col items-center">
+          <img 
+            src={instituteFrontImage} 
+            alt="JSS Polytechnic for the Differently Abled Front Entrance" 
+            className="w-full h-auto object-cover max-h-[400px]"
+          />
+        </div>
+        
+        <div className="bg-gradient-to-b from-[#1e3a8a]/10 to-[#1e3a8a]/5 py-12">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto text-center animate-fade-in">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#1e3a8a] mb-4">
                 {t('home.hero.title')}
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-8">
+              <p className="text-lg md:text-xl text-gray-700 mb-8">
                 {t('home.hero.subtitle')}
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/courses" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-medium">
                   {t('home.hero.exploreCourses')}
                 </Link>
-                <Link href="/about" className="bg-white hover:bg-gray-100 text-primary px-6 py-3 rounded-md font-medium">
+                <Link href="/about" className="bg-white hover:bg-gray-100 text-primary border border-primary px-6 py-3 rounded-md font-medium">
                   {t('home.hero.aboutUs')}
                 </Link>
               </div>
