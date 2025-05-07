@@ -19,35 +19,35 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative bg-neutral-light">
-        {/* Title and subtitle */}
-        <div className="bg-gradient-to-b from-[#1e3a8a]/10 to-[#1e3a8a]/5 py-12">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center animate-fade-in">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#1e3a8a] mb-4">
-                {t('home.hero.title')}
-              </h1>
-              <p className="text-lg md:text-xl text-gray-700 mb-8">
-                {t('home.hero.subtitle')}
-              </p>
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                <Link href="/courses" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-medium">
-                  {t('home.hero.exploreCourses')}
-                </Link>
-                <Link href="/about" className="bg-white hover:bg-gray-100 text-primary border border-primary px-6 py-3 rounded-md font-medium">
-                  {t('home.hero.aboutUs')}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Main Hero Image - Institution Front */}
-        <div className="flex flex-col items-center">
+        {/* Main Hero Image with Overlay Text */}
+        <div className="relative">
           <img 
             src={instituteFrontImage} 
             alt="JSS Polytechnic for the Differently Abled Front Entrance" 
-            className="w-full h-auto object-cover max-h-[400px]"
+            className="w-full h-auto object-cover max-h-[500px]"
           />
+          
+          {/* Text overlay positioned on top of the image */}
+          <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl mx-auto text-center animate-fade-in">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-4">
+                  {t('home.hero.title')}
+                </h1>
+                <p className="text-lg md:text-xl text-white/90 mb-8">
+                  {t('home.hero.subtitle')}
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Link href="/courses" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-medium">
+                    {t('home.hero.exploreCourses')}
+                  </Link>
+                  <Link href="/about" className="bg-white hover:bg-gray-100 text-primary border border-white px-6 py-3 rounded-md font-medium">
+                    {t('home.hero.aboutUs')}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
