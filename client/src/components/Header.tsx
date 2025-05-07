@@ -56,7 +56,7 @@ export default function Header() {
             <img
               src={logo2}
               alt="JSS Polytechnic for the Differently Abled Logo"
-              className="h-12 w-auto rounded-md"
+              className="h-16 w-auto rounded-md shadow-sm"
             />
             <div className="hidden md:block">
               <h1 className="text-lg font-bold font-serif">{t('header.title')}</h1>
@@ -164,7 +164,7 @@ export default function Header() {
           <img
             src={mainLogo}
             alt="JSS Polytechnic Main Logo"
-            className="hidden md:block h-12 w-auto ml-2"
+            className="hidden md:block h-16 w-auto ml-2 rounded-md shadow-sm"
           />
           
           <button 
@@ -181,6 +181,18 @@ export default function Header() {
       {/* Mobile menu */}
       <div className={`md:hidden bg-[hsl(var(--header-bg))] shadow-lg absolute w-full left-0 z-50 ${mobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
         <nav className="container mx-auto px-4 py-3 flex flex-col">
+          <div className="flex justify-between items-center mb-4 pb-2 border-b">
+            <img
+              src={logo2}
+              alt="JSS Polytechnic for the Differently Abled Logo"
+              className="h-12 w-auto"
+            />
+            <img
+              src={mainLogo}
+              alt="JSS Polytechnic Main Logo"
+              className="h-12 w-auto"
+            />
+          </div>
           {navLinks.map((link) => (
             <Link 
               key={link.href} 
