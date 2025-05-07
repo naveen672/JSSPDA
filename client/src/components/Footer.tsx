@@ -75,7 +75,7 @@ function VisitorCounter() {
         <span className="animate-pulse">{t('common.loading')}</span>
       ) : (
         <span>
-          {t('footer.visitorCount', { count: visitorCount?.toLocaleString() || '0' })}
+          {t('footer.visitorCount', { count: Number(visitorCount || 0) })}
         </span>
       )}
     </div>

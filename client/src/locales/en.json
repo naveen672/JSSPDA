@@ -29,7 +29,10 @@
     "blue": "Blue",
     "green": "Green",
     "purple": "Purple",
-    "orange": "Orange"
+    "orange": "Orange",
+    "smallText": "Small Text",
+    "mediumText": "Medium Text",
+    "largeText": "Large Text"
   },
   "home": {
     "hero": {

@@ -29,7 +29,10 @@
     "blue": "नीला",
     "green": "हरा",
     "purple": "बैंगनी",
-    "orange": "नारंगी"
+    "orange": "नारंगी",
+    "smallText": "छोटा टेक्स्ट",
+    "mediumText": "मध्यम टेक्स्ट",
+    "largeText": "बड़ा टेक्स्ट"
   },
   "home": {
     "hero": {
