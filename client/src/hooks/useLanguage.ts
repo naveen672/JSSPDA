@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
-type Language = 'en' | 'hi' | 'kn' | 'ta' | 'ml';
+type Language = 'en' | 'hi' | 'kn' | 'ta';
 
 export const useLanguage = () => {
   const { i18n } = useTranslation();

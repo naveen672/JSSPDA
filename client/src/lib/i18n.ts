@@ -7,7 +7,6 @@ import enTranslation from '../locales/en.json';
 import hiTranslation from '../locales/hi.json';
 import knTranslation from '../locales/kn.json';
 import taTranslation from '../locales/ta.json';
-import mlTranslation from '../locales/ml.json';
 
 const resources = {
   en: {
@@ -21,9 +20,6 @@ const resources = {
   },
   ta: {
     translation: taTranslation
-  },
-  ml: {
-    translation: mlTranslation
   }
 };
 
