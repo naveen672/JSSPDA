@@ -1,0 +1,588 @@
+{
+  "splashScreen": {
+    "title": "JSS Polytechnic",
+    "subtitle": "for the Differently Abled, Mysuru"
+  },
+  "header": {
+    "title": "JSS Polytechnic",
+    "subtitle": "for the Differently Abled, Mysuru"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "courses": "Courses",
+    "faculty": "Faculty",
+    "contact": "Contact"
+  },
+  "accessibility": {
+    "decreaseFontSize": "Decrease font size",
+    "normalFontSize": "Normal font size",
+    "increaseFontSize": "Increase font size",
+    "blueTheme": "Blue color theme",
+    "greenTheme": "Green color theme",
+    "purpleTheme": "Purple color theme",
+    "orangeTheme": "Orange color theme",
+    "options": "Accessibility Options",
+    "openMenu": "Open menu",
+    "colorThemes": "Color Themes",
+    "textSize": "Text Size",
+    "blue": "Blue",
+    "green": "Green",
+    "purple": "Purple",
+    "orange": "Orange"
+  },
+  "home": {
+    "hero": {
+      "title": "Empowering Through Education",
+      "subtitle": "JSS Polytechnic provides quality technical education designed for differently-abled students",
+      "exploreCourses": "Explore Courses",
+      "aboutUs": "About Us"
+    },
+    "announcements": {
+      "admissions": "Admissions open for 2023-24 academic year",
+      "computerLab": "New computer lab inaugurated with accessible technology",
+      "careerFair": "Career fair for differently-abled students on June 15"
+    },
+    "about": {
+      "title": "Welcome to JSS Polytechnic",
+      "subtitle": "A premier institution dedicated to providing accessible technical education to differently-abled students in Mysuru",
+      "features": {
+        "education": {
+          "title": "Specialized Education",
+          "description": "Tailored technical courses designed for different abilities and learning needs"
+        },
+        "campus": {
+          "title": "Accessible Campus",
+          "description": "Fully equipped facilities with assistive technologies and accessible infrastructure"
+        },
+        "faculty": {
+          "title": "Expert Faculty",
+          "description": "Dedicated teachers trained to support diverse learning requirements"
+        },
+        "career": {
+          "title": "Career Support",
+          "description": "Placement assistance and industry connections for successful careers"
+        }
+      }
+    },
+    "courses": {
+      "title": "Our Courses",
+      "subtitle": "Discover our range of technical diploma courses designed with accessibility at their core",
+      "viewAll": "View all courses",
+      "duration": "3 Years",
+      "computerScience": {
+        "title": "Computer Science",
+        "description": "Diploma course focused on programming, web development, and IT fundamentals with accessible tools and technologies.",
+        "imageAlt": "Students working in accessible computer lab"
+      },
+      "mechanical": {
+        "title": "Mechanical Engineering",
+        "description": "Specialized diploma with adapted workshops and equipment for differently-abled students interested in mechanical design.",
+        "imageAlt": "Accessible mechanical engineering workshop"
+      },
+      "electronics": {
+        "title": "Electronics & Communication",
+        "description": "Diploma course focusing on circuit design, communication systems, and electronics with adaptive learning approaches.",
+        "imageAlt": "Students in accessible electronics lab"
+      },
+      "learnMore": "Learn more"
+    },
+    "cta": {
+      "title": "Begin Your Journey With Us",
+      "subtitle": "Applications are now open for the upcoming academic year. Join our inclusive community of learners and unlock your potential.",
+      "applyNow": "Apply Now",
+      "scheduleVisit": "Schedule a Visit"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Have questions? Our team is here to help you. Reach out to us through any of these channels.",
+      "location": {
+        "title": "Our Location",
+        "address": "JSS Polytechnic for the Differently Abled, JSS Technical Education Campus, Mysuru, Karnataka - 570006"
+      },
+      "phone": {
+        "title": "Phone",
+        "number1": "+91 821 2548235",
+        "number2": "+91 821 2548236"
+      },
+      "email": {
+        "title": "Email",
+        "address1": "admissions@jsspolytechnic.edu.in",
+        "address2": "info@jsspolytechnic.edu.in"
+      },
+      "hours": {
+        "title": "Office Hours",
+        "weekdays": "Monday - Friday: 9:00 AM - 5:00 PM",
+        "saturday": "Saturday: 9:00 AM - 1:00 PM"
+      },
+      "form": {
+        "title": "Send us a Message",
+        "name": "Your Name",
+        "email": "Email Address",
+        "subject": "Subject",
+        "message": "Message",
+        "send": "Send Message",
+        "sending": "Sending...",
+        "successTitle": "Message Sent",
+        "successMessage": "Thank you for your message. We will get back to you soon.",
+        "errorTitle": "Error",
+        "errorMessage": "Please fill in all required fields.",
+        "submitError": "There was an error sending your message. Please try again later."
+      }
+    }
+  },
+  "about": {
+    "title": "About JSS Polytechnic",
+    "subtitle": "Learn about our mission, history, and commitment to inclusive technical education",
+    "mission": {
+      "title": "Our Mission & Purpose",
+      "description1": "JSS Polytechnic for the Differently Abled is committed to providing accessible, quality technical education that empowers students with disabilities to achieve their full potential.",
+      "description2": "Our institution focuses on creating an inclusive learning environment where students can acquire skills, knowledge, and confidence needed to excel in the technical fields of their choice.",
+      "imageAlt": "Students learning in an accessible classroom environment"
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description1": "We envision a society where differently-abled individuals have equal opportunities in education and employment, contributing their unique perspectives and talents to the technical workforce.",
+      "description2": "Our goal is to be a center of excellence in technical education that bridges the gap between differently-abled students and employment opportunities in the industry.",
+      "imageAlt": "Group of diverse students collaborating on a project"
+    },
+    "history": {
+      "title": "Our History & Journey",
+      "subtitle": "For over two decades, JSS Polytechnic has been pioneering accessible technical education",
+      "timeline": {
+        "founding": {
+          "title": "Institution Founded",
+          "description": "JSS Polytechnic for the Differently Abled was established as the first specialized technical institution for differently-abled students in the region."
+        },
+        "expansion": {
+          "title": "Campus Expansion",
+          "description": "Expanded our facilities with new accessible laboratories, classrooms, and assistive technology resources to accommodate more students."
+        },
+        "recognition": {
+          "title": "National Recognition",
+          "description": "Received national recognition for excellence in accessible education and achievement in student placement outcomes."
+        },
+        "today": {
+          "title": "Present Day",
+          "description": "Today, JSS Polytechnic stands as a premier institution with state-of-the-art facilities serving hundreds of differently-abled students annually."
+        }
+      }
+    },
+    "campus": {
+      "title": "Accessible Campus Features",
+      "subtitle": "Our campus is designed to provide a comfortable, accessible learning environment for students with various abilities",
+      "features": {
+        "accessibility": {
+          "title": "Barrier-Free Design",
+          "description": "Ramps, elevators, and wide doorways throughout the campus for seamless mobility and access to all facilities."
+        },
+        "technology": {
+          "title": "Assistive Technology",
+          "description": "Specialized software, hardware, and adaptive equipment to support different learning and communication needs."
+        },
+        "support": {
+          "title": "Support Services",
+          "description": "Dedicated counselors, interpreters, and support staff available to assist students throughout their educational journey."
+        }
+      },
+      "gallery": {
+        "building": "Accessible campus building with ramps",
+        "technology": "Student using assistive technology",
+        "classroom": "Inclusive classroom with diverse students",
+        "support": "Support staff assisting student"
+      }
+    },
+    "leadership": {
+      "title": "Leadership & Management",
+      "subtitle": "Meet the dedicated team guiding our institution towards excellence",
+      "members": {
+        "director": {
+          "name": "Dr. Suresh Kumar",
+          "position": "Director",
+          "bio": "With over 25 years of experience in inclusive education, Dr. Kumar leads our institution with a vision of innovation and excellence."
+        },
+        "principal": {
+          "name": "Dr. Lakshmi Devi",
+          "position": "Principal",
+          "bio": "An expert in educational psychology and accessibility, Dr. Devi oversees the academic excellence and student development programs."
+        },
+        "dean": {
+          "name": "Prof. Rajesh Sharma",
+          "position": "Dean of Student Affairs",
+          "bio": "Professor Sharma ensures comprehensive support systems for our students while fostering a vibrant campus community."
+        }
+      }
+    }
+  },
+  "courses": {
+    "title": "Our Courses",
+    "subtitle": "Explore our diverse range of accessible technical diploma programs designed for differently-abled students",
+    "viewCourses": "View Courses",
+    "department": {
+      "computerScience": "Computer Science Department",
+      "mechanical": "Mechanical Engineering Department",
+      "electronics": "Electronics & Communication Department"
+    },
+    "details": "View Details",
+    "categories": {
+      "computerScience": {
+        "title": "Computer Science & IT",
+        "description": "Programs focusing on software development, programming, web technologies, and information systems with accessible learning tools."
+      },
+      "mechanical": {
+        "title": "Mechanical Engineering",
+        "description": "Courses covering mechanical design, manufacturing, CAD/CAM, and production processes with adaptations for differently-abled students."
+      },
+      "electronics": {
+        "title": "Electronics & Communication",
+        "description": "Programs in circuit design, communications, embedded systems, and signal processing with specialized accessibility features."
+      }
+    },
+    "featured": {
+      "title": "Featured Diploma Programs",
+      "webDevelopment": {
+        "title": "Web Development & Design",
+        "duration": "3 Years",
+        "description": "Comprehensive diploma focusing on accessible web design, front-end and back-end development with industry-standard tools.",
+        "imageAlt": "Student working on web development project"
+      },
+      "cadDesign": {
+        "title": "CAD/CAM Design",
+        "duration": "3 Years",
+        "description": "Specialized diploma in computer-aided design and manufacturing with adaptive equipment for differently-abled students.",
+        "imageAlt": "Student using accessible CAD software"
+      },
+      "embeddedSystems": {
+        "title": "Embedded Systems",
+        "duration": "3 Years",
+        "description": "Technical diploma focused on designing and programming embedded systems with IoT applications and accessibility features.",
+        "imageAlt": "Students working on embedded systems project"
+      },
+      "dataAnalytics": {
+        "title": "Data Analytics",
+        "duration": "3 Years",
+        "description": "Modern diploma program covering data analysis, visualization, and basic machine learning with accessible tools and methods.",
+        "imageAlt": "Student analyzing data on accessible workstation"
+      }
+    },
+    "admission": {
+      "title": "Admission Process",
+      "subtitle": "Follow these steps to begin your journey at JSS Polytechnic",
+      "steps": {
+        "apply": {
+          "title": "Submit Application",
+          "description": "Complete and submit the online or offline application form along with the required application fee."
+        },
+        "documents": {
+          "title": "Submit Documents",
+          "description": "Provide academic certificates, disability certificate, and other required documents for verification."
+        },
+        "assessment": {
+          "title": "Assessment & Interview",
+          "description": "Attend the assessment and interview process designed to understand your learning needs and abilities."
+        },
+        "enrollment": {
+          "title": "Enrollment & Orientation",
+          "description": "Upon selection, complete the enrollment process and attend the orientation program to begin your journey."
+        }
+      },
+      "applyNow": "Apply Now"
+    }
+  },
+  "faculty": {
+    "title": "Our Faculty",
+    "subtitle": "Meet our dedicated team of educators committed to accessible and inclusive technical education",
+    "leadership": {
+      "title": "Department Leadership",
+      "computerScience": {
+        "name": "Dr. Aditya Patel",
+        "position": "Head of Computer Science Department",
+        "bio": "With expertise in accessible software design and assistive technologies, Dr. Patel leads our computer science programs with innovation and excellence.",
+        "email": "aditya.patel@jsspolytechnic.edu.in",
+        "phone": "+91 821 2548240"
+      },
+      "mechanical": {
+        "name": "Prof. Rajeev Desai",
+        "position": "Head of Mechanical Engineering Department",
+        "bio": "Professor Desai brings 18 years of experience in adaptive mechanical design and has developed numerous innovations for differently-abled students.",
+        "email": "rajeev.desai@jsspolytechnic.edu.in",
+        "phone": "+91 821 2548241"
+      },
+      "electronics": {
+        "name": "Dr. Sunita Verma",
+        "position": "Head of Electronics & Communication Department",
+        "bio": "A specialist in accessible electronic interfaces, Dr. Verma has published extensively on making electronic systems more accessible for all users.",
+        "email": "sunita.verma@jsspolytechnic.edu.in",
+        "phone": "+91 821 2548242"
+      }
+    },
+    "departments": {
+      "computerScience": {
+        "title": "Computer Science Faculty",
+        "members": {
+          "1": {
+            "name": "Rajesh Kumar",
+            "position": "Senior Lecturer",
+            "qualification": "M.Tech in Computer Science",
+            "email": "rajesh.kumar@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          },
+          "2": {
+            "name": "Priya Singh",
+            "position": "Lecturer",
+            "qualification": "M.Sc in Information Technology",
+            "email": "priya.singh@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          },
+          "3": {
+            "name": "Mohan Rao",
+            "position": "Lecturer",
+            "qualification": "M.Tech in Software Engineering",
+            "email": "mohan.rao@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          },
+          "4": {
+            "name": "Deepa Sharma",
+            "position": "Lab Instructor",
+            "qualification": "B.Tech in Computer Science",
+            "email": "deepa.sharma@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          }
+        }
+      },
+      "mechanical": {
+        "title": "Mechanical Engineering Faculty",
+        "members": {
+          "1": {
+            "name": "Sanjay Reddy",
+            "position": "Senior Lecturer",
+            "qualification": "M.Tech in Mechanical Design",
+            "email": "sanjay.reddy@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          },
+          "2": {
+            "name": "Anita Kulkarni",
+            "position": "Lecturer",
+            "qualification": "M.Tech in Manufacturing",
+            "email": "anita.kulkarni@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          },
+          "3": {
+            "name": "Venkat Rao",
+            "position": "Workshop Instructor",
+            "qualification": "B.Tech in Mechanical Engineering",
+            "email": "venkat.rao@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          },
+          "4": {
+            "name": "Ravi Kumar",
+            "position": "Lab Instructor",
+            "qualification": "Diploma in Tool Design",
+            "email": "ravi.kumar@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          }
+        }
+      },
+      "electronics": {
+        "title": "Electronics & Communication Faculty",
+        "members": {
+          "1": {
+            "name": "Nandini Shah",
+            "position": "Senior Lecturer",
+            "qualification": "M.Tech in Electronics",
+            "email": "nandini.shah@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          },
+          "2": {
+            "name": "Vijay Prakash",
+            "position": "Lecturer",
+            "qualification": "M.Sc in Communication Systems",
+            "email": "vijay.prakash@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          },
+          "3": {
+            "name": "Rekha Nair",
+            "position": "Lecturer",
+            "qualification": "M.Tech in Signal Processing",
+            "email": "rekha.nair@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          },
+          "4": {
+            "name": "Prakash Iyer",
+            "position": "Lab Instructor",
+            "qualification": "B.Tech in Electronics",
+            "email": "prakash.iyer@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          }
+        }
+      },
+      "generalScience": {
+        "title": "General Science & Humanities Faculty",
+        "members": {
+          "1": {
+            "name": "Dr. Meena Ravi",
+            "position": "Professor",
+            "qualification": "PhD in Mathematics",
+            "email": "meena.ravi@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          },
+          "2": {
+            "name": "Suresh Menon",
+            "position": "Senior Lecturer",
+            "qualification": "M.Sc in Physics",
+            "email": "suresh.menon@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          },
+          "3": {
+            "name": "Lakshmi Narayan",
+            "position": "Lecturer",
+            "qualification": "M.A in English",
+            "email": "lakshmi.narayan@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          },
+          "4": {
+            "name": "Arun Bose",
+            "position": "Lecturer",
+            "qualification": "M.Sc in Chemistry",
+            "email": "arun.bose@jsspolytechnic.edu.in",
+            "profileUrl": "#"
+          }
+        }
+      }
+    },
+    "joinUs": {
+      "title": "Join Our Faculty Team",
+      "description": "We're always looking for passionate educators committed to inclusive education. Contact us to learn about current opportunities.",
+      "contactUs": "Contact HR Department"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Reach out to us with any questions or inquiries about our programs and facilities",
+    "info": {
+      "title": "Get in Touch",
+      "subtitle": "Have questions? Our team is here to help you. Reach out to us through any of these channels.",
+      "location": {
+        "title": "Our Location",
+        "address": "JSS Polytechnic for the Differently Abled, JSS Technical Education Campus, Mysuru, Karnataka - 570006"
+      },
+      "phone": {
+        "title": "Phone",
+        "number1": "+91 821 2548235",
+        "number2": "+91 821 2548236"
+      },
+      "email": {
+        "title": "Email",
+        "address1": "admissions@jsspolytechnic.edu.in",
+        "address2": "info@jsspolytechnic.edu.in"
+      },
+      "hours": {
+        "title": "Office Hours",
+        "weekdays": "Monday - Friday: 9:00 AM - 5:00 PM",
+        "saturday": "Saturday: 9:00 AM - 1:00 PM"
+      }
+    },
+    "form": {
+      "title": "Send us a Message",
+      "name": "Your Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "successTitle": "Message Sent",
+      "successMessage": "Thank you for your message. We will get back to you soon.",
+      "errorTitle": "Error",
+      "errorMessage": "Please fill in all required fields.",
+      "submitError": "There was an error sending your message. Please try again later."
+    },
+    "admissions": {
+      "title": "Admissions Inquiries",
+      "description": "For specific questions about our admission process, eligibility criteria, or application status, please contact our admissions team directly.",
+      "email": "admissions@jsspolytechnic.edu.in",
+      "phone": "+91 821 2548237"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Find answers to common questions about our institution and programs",
+      "questions": {
+        "1": {
+          "question": "What types of disabilities do you accommodate?",
+          "answer": "Our institution is designed to accommodate students with various disabilities including visual impairment, hearing impairment, mobility challenges, and learning disabilities. Our facilities and teaching methodologies are adapted to meet different needs."
+        },
+        "2": {
+          "question": "Do you provide hostel facilities?",
+          "answer": "Yes, we provide separate hostel facilities for male and female students with accessible rooms, common areas, and 24/7 support staff to assist students with their needs."
+        },
+        "3": {
+          "question": "What assistive technologies are available?",
+          "answer": "We offer a wide range of assistive technologies including screen readers, magnifiers, speech-to-text software, specialized keyboards, adaptive workstations, and sign language interpretation services."
+        },
+        "4": {
+          "question": "How do you help with job placements?",
+          "answer": "Our dedicated placement cell works with industry partners to create employment opportunities for our graduates. We provide career counseling, interview preparation, and job-specific skill development."
+        },
+        "5": {
+          "question": "Are scholarships available for students?",
+          "answer": "Yes, we offer various scholarships and financial aid options. These include government scholarships, institutional merit scholarships, and need-based financial assistance programs."
+        }
+      }
+    }
+  },
+  "footer": {
+    "title": "JSS Polytechnic",
+    "subtitle": "for the Differently Abled, Mysuru",
+    "description": "A premier institution providing inclusive technical education to differently-abled students since 1995.",
+    "copyright": "JSS Polytechnic for the Differently Abled. All rights reserved.",
+    "quickLinksHeading": "Quick Links",
+    "quickLinks": {
+      "about": "About Us",
+      "courses": "Courses",
+      "admissions": "Admissions",
+      "faculty": "Faculty",
+      "facilities": "Facilities",
+      "events": "Events",
+      "contact": "Contact"
+    },
+    "resourcesHeading": "Resources",
+    "resources": {
+      "studentPortal": "Student Portal",
+      "eLibrary": "E-Library",
+      "academicCalendar": "Academic Calendar",
+      "scholarships": "Scholarships",
+      "placementCell": "Placement Cell",
+      "assistiveTechnologies": "Assistive Technologies",
+      "alumniNetwork": "Alumni Network"
+    },
+    "subscribeHeading": "Subscribe",
+    "subscribeText": "Stay updated with our latest news and announcements",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "accreditationsHeading": "Accreditations",
+    "policies": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "accessibility": "Accessibility Statement",
+      "siteMap": "Site Map"
+    }
+  },
+  "chatbot": {
+    "toggle": "Chat with us",
+    "title": "Chat Support",
+    "close": "Close chat",
+    "inputPlaceholder": "Type your message...",
+    "send": "Send message",
+    "errorTitle": "Error",
+    "errorMessage": "Failed to get a response. Please try again later.",
+    "fallbackMessage": "I'm sorry, I'm having trouble connecting to the server. Please try again later or contact us directly at info@jsspolytechnic.edu.in."
+  },
+  "common": {
+    "duration": "{{years}} Years",
+    "readMore": "Read more",
+    "viewAll": "View all",
+    "searchPlaceholder": "Search...",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry"
+  }
+}

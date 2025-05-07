@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600;700&display=swap');
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+
+  /* Chart colors */
+  --chart-1: 207 90% 54%;
+  --chart-2: 142 71% 45%;
+  --chart-3: 262 83% 65%;
+  --chart-4: 35 92% 50%;
+  --chart-5: 0 84% 60%;
+  
+  /* Sidebar colors */
+  --sidebar-background: 0 0% 100%;
+  --sidebar-foreground: 20 14.3% 4.1%;
+  --sidebar-primary: 207 90% 54%;
+  --sidebar-primary-foreground: 211 100% 99%;
+  --sidebar-accent: 60 4.8% 95.9%;
+  --sidebar-accent-foreground: 24 9.8% 10%;
+  --sidebar-border: 20 5.9% 90%;
+  --sidebar-ring: 20 14.3% 4.1%;
+
+  /* Font families */
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Roboto Slab', serif;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+/* Accessibility color themes */
+.color-theme-blue {
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --accent: 213 94% 68%;
+  --accent-foreground: 210 40% 98%;
+  --chart-1: 207 90% 54%;
+}
+
+.color-theme-green {
+  --primary: 142 71% 45%;
+  --primary-foreground: 210 40% 98%;
+  --accent: 143 55% 62%;
+  --accent-foreground: 210 40% 98%;
+  --chart-1: 142 71% 45%;
+}
+
+.color-theme-purple {
+  --primary: 262 83% 65%;
+  --primary-foreground: 210 40% 98%;
+  --accent: 262 83% 58%;
+  --accent-foreground: 210 40% 98%;
+  --chart-1: 262 83% 65%;
+}
+
+.color-theme-orange {
+  --primary: 35 92% 50%;
+  --primary-foreground: 210 40% 98%;
+  --accent: 35 92% 43%;
+  --accent-foreground: 210 40% 98%;
+  --chart-1: 35 92% 50%;
+}
+
+/* Font size adjustments */
+[data-font-size="small"] {
+  font-size: 0.9rem;
+}
+
+[data-font-size="medium"] {
+  font-size: 1rem;
+}
+
+[data-font-size="large"] {
+  font-size: 1.15rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes logoPulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-logo-pulse {
+  animation: logoPulse 2s ease-in-out infinite alternate;
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Focus states for accessibility */
+button:focus, a:focus, input:focus, select:focus, textarea:focus {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
