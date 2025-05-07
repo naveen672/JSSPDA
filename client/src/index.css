@@ -17,6 +17,7 @@
   --input: 20 5.9% 90%;
   --primary: 207 90% 54%;
   --primary-foreground: 211 100% 99%;
+  --primary-hover: 207 90% 45%;
   --secondary: 60 4.8% 95.9%;
   --secondary-foreground: 24 9.8% 10%;
   --accent: 60 4.8% 95.9%;
@@ -74,6 +75,7 @@
 .color-theme-blue {
   --primary: 207 90% 54%;
   --primary-foreground: 211 100% 99%;
+  --primary-hover: 207 90% 45%;
   --accent: 213 94% 68%;
   --accent-foreground: 210 40% 98%;
   --chart-1: 207 90% 54%;
@@ -84,12 +86,12 @@
   --footer-bg: 205 100% 20%;
   --footer-text: 210 40% 98%;
   --card-accent: 210 60% 95%;
-  --button-hover: 207 90% 45%;
 }
 
 .color-theme-green {
   --primary: 142 71% 45%;
   --primary-foreground: 210 40% 98%;
+  --primary-hover: 142 71% 38%;
   --accent: 143 55% 62%;
   --accent-foreground: 210 40% 98%;
   --chart-1: 142 71% 45%;
@@ -100,12 +102,12 @@
   --footer-bg: 150 80% 20%;
   --footer-text: 150 42% 95%;
   --card-accent: 150 50% 94%;
-  --button-hover: 142 71% 38%;
 }
 
 .color-theme-purple {
   --primary: 262 83% 65%;
   --primary-foreground: 210 40% 98%;
+  --primary-hover: 262 83% 55%;
   --accent: 262 83% 58%;
   --accent-foreground: 210 40% 98%;
   --chart-1: 262 83% 65%;
@@ -116,12 +118,12 @@
   --footer-bg: 265 80% 25%;
   --footer-text: 265 50% 95%;
   --card-accent: 265 60% 95%;
-  --button-hover: 262 83% 55%;
 }
 
 .color-theme-orange {
   --primary: 35 92% 50%;
   --primary-foreground: 210 40% 98%;
+  --primary-hover: 35 92% 45%;
   --accent: 35 92% 43%;
   --accent-foreground: 210 40% 98%;
   --chart-1: 35 92% 50%;
@@ -132,7 +134,6 @@
   --footer-bg: 30 60% 30%;
   --footer-text: 40 80% 96%;
   --card-accent: 35 70% 95%;
-  --button-hover: 35 92% 45%;
 }
 
 /* Font size adjustments */

@@ -101,7 +101,7 @@ export default function Header() {
       </div>
       
       {/* Navigation bar */}
-      <div className="bg-[#1e3a8a] text-white shadow-md">
+      <div className="bg-primary text-primary-foreground shadow-md">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             {/* Main navigation */}
@@ -110,7 +110,7 @@ export default function Header() {
                 <Link 
                   key={link.href} 
                   href={link.href}
-                  className={`px-4 py-3 font-medium flex items-center gap-1.5 hover:bg-blue-700 transition-colors ${location === link.href ? 'bg-blue-700' : ''}`}
+                  className={`px-4 py-3 font-medium flex items-center gap-1.5 hover:bg-primary-hover transition-colors ${location === link.href ? 'bg-primary-hover' : ''}`}
                 >
                   {link.icon}
                   {link.label}
