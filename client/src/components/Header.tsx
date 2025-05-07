@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Home, Info, BookOpen, Users, Mail, ExternalLink } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 import { useFontSize } from "@/hooks/useFontSize";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useTranslation } from "react-i18next";
+import mainLogo from "@/assets/main-logo.png";
+import logo2 from "@/assets/logo2.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,11 +33,11 @@ export default function Header() {
   };
 
   const navLinks = [
-    { href: "/", label: t('navigation.home') },
-    { href: "/about", label: t('navigation.about') },
-    { href: "/courses", label: t('navigation.courses') },
-    { href: "/faculty", label: t('navigation.faculty') },
-    { href: "/contact", label: t('navigation.contact') }
+    { href: "/", label: t('navigation.home'), icon: <Home className="w-4 h-4" /> },
+    { href: "/about", label: t('navigation.about'), icon: <Info className="w-4 h-4" /> },
+    { href: "/courses", label: t('navigation.courses'), icon: <BookOpen className="w-4 h-4" /> },
+    { href: "/faculty", label: t('navigation.faculty'), icon: <Users className="w-4 h-4" /> },
+    { href: "/contact", label: t('navigation.contact'), icon: <Mail className="w-4 h-4" /> }
   ];
 
   // Type-safe language codes matching the type in useLanguage.ts
@@ -51,9 +53,11 @@ export default function Header() {
       <div className="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-3">
-            <div className="h-12 w-12 rounded-full flex items-center justify-center bg-primary text-primary-foreground text-xl font-bold">
-              JSS
-            </div>
+            <img
+              src={logo2}
+              alt="JSS Polytechnic for the Differently Abled Logo"
+              className="h-12 w-auto rounded-md"
+            />
             <div className="hidden md:block">
               <h1 className="text-lg font-bold font-serif">{t('header.title')}</h1>
               <p className="text-xs text-muted-foreground">{t('header.subtitle')}</p>
@@ -117,8 +121,9 @@ export default function Header() {
             <Link 
               key={link.href} 
               href={link.href}
-              className={`font-medium ${location === link.href ? 'text-primary' : 'hover:text-primary'}`}
+              className={`font-medium flex items-center gap-1.5 ${location === link.href ? 'text-primary' : 'hover:text-primary'}`}
             >
+              {link.icon}
               {link.label}
             </Link>
           ))}
@@ -156,6 +161,12 @@ export default function Header() {
             </div>
           </div>
           
+          <img
+            src={mainLogo}
+            alt="JSS Polytechnic Main Logo"
+            className="hidden md:block h-12 w-auto ml-2"
+          />
+          
           <button 
             className="md:hidden text-2xl" 
             id="mobile-menu-button" 
@@ -174,9 +185,10 @@ export default function Header() {
             <Link 
               key={link.href} 
               href={link.href} 
-              className={`py-2 font-medium border-b ${location === link.href ? 'text-primary' : ''}`}
+              className={`py-2 font-medium border-b flex items-center gap-2 ${location === link.href ? 'text-primary' : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
+              {link.icon}
               {link.label}
             </Link>
           ))}

@@ -137,15 +137,36 @@
 
 /* Font size adjustments */
 [data-font-size="small"] {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 [data-font-size="medium"] {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 [data-font-size="large"] {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
+}
+
+/* Adjust specific elements for better readability */
+[data-font-size="large"] h1 {
+  font-size: 2.2rem;
+}
+
+[data-font-size="large"] h2 {
+  font-size: 1.9rem;
+}
+
+[data-font-size="large"] h3 {
+  font-size: 1.7rem;
+}
+
+[data-font-size="large"] p, 
+[data-font-size="large"] li, 
+[data-font-size="large"] button,
+[data-font-size="large"] a {
+  font-size: 1.3rem;
+  line-height: 1.6;
 }
 
 @layer base {
