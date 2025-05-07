@@ -1,6 +1,6 @@
-import { users, type User, type InsertUser, courses, type Course, type InsertCourse, faculty, type Faculty, type InsertFaculty, events, type Event, type InsertEvent, contactSubmissions, type ContactSubmission, type InsertContactSubmission, chatMessages, type ChatMessage, type InsertChatMessage, faqs, type Faq, type InsertFaq } from "@shared/schema";
+import { users, type User, type InsertUser, courses, type Course, type InsertCourse, faculty, type Faculty, type InsertFaculty, events, type Event, type InsertEvent, contactSubmissions, type ContactSubmission, type InsertContactSubmission, chatMessages, type ChatMessage, type InsertChatMessage, faqs, type Faq, type InsertFaq, visitorStats, type VisitorStats, type InsertVisitorStats } from "@shared/schema";
 import { db } from "./db";
-import { eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 import { log } from "./vite";
 
 // Comprehensive storage interface for all tables
@@ -36,6 +36,10 @@ export interface IStorage {
   // FAQ methods
   getFaqs(): Promise<Faq[]>;
   createFaq(faq: InsertFaq): Promise<Faq>;
+  
+  // Visitor count methods
+  getVisitorCount(): Promise<number>;
+  incrementVisitorCount(): Promise<number>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -217,6 +221,55 @@ export class DatabaseStorage implements IStorage {
     } catch (error) {
       log(`Error creating FAQ: ${(error as Error).message}`, "storage");
       throw error;
+    }
+  }
+  
+  // Visitor count methods
+  async getVisitorCount(): Promise<number> {
+    try {
+      // Get the first record or create it if it doesn't exist
+      const [stats] = await db.select().from(visitorStats).limit(1);
+      if (stats) {
+        return stats.count;
+      } else {
+        // Initialize with count = 0
+        const [newStats] = await db.insert(visitorStats).values({ count: 0 }).returning();
+        return newStats.count;
+      }
+    } catch (error) {
+      log(`Error getting visitor count: ${(error as Error).message}`, "storage");
+      return 0;
+    }
+  }
+  
+  async incrementVisitorCount(): Promise<number> {
+    try {
+      // Get the first record or create it if it doesn't exist
+      const [stats] = await db.select().from(visitorStats).limit(1);
+      
+      if (stats) {
+        // Update existing record
+        const newCount = stats.count + 1;
+        const [updatedStats] = await db
+          .update(visitorStats)
+          .set({ 
+            count: newCount,
+            lastUpdated: new Date()
+          })
+          .where(eq(visitorStats.id, stats.id))
+          .returning();
+        return updatedStats.count;
+      } else {
+        // Initialize with count = 1 for the first visitor
+        const [newStats] = await db
+          .insert(visitorStats)
+          .values({ count: 1 })
+          .returning();
+        return newStats.count;
+      }
+    } catch (error) {
+      log(`Error incrementing visitor count: ${(error as Error).message}`, "storage");
+      return 0;
     }
   }
 }

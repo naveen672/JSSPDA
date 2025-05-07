@@ -122,6 +122,13 @@ export const faqs = pgTable("faqs", {
   updatedAt: timestamp("updated_at").defaultNow(),
 });
 
+// Visitor counter table
+export const visitorStats = pgTable("visitor_stats", {
+  id: serial("id").primaryKey(),
+  count: integer("count").notNull().default(0),
+  lastUpdated: timestamp("last_updated").defaultNow(),
+});
+
 // Create insert schemas for each table
 export const insertUserSchema = createInsertSchema(users).pick({
   username: true,
@@ -184,6 +191,10 @@ export const insertFaqSchema = createInsertSchema(faqs).pick({
   order: true,
 });
 
+export const insertVisitorStatsSchema = createInsertSchema(visitorStats).pick({
+  count: true,
+});
+
 // Export types
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
@@ -208,6 +219,9 @@ export type ChatMessage = typeof chatMessages.$inferSelect;
 
 export type InsertFaq = z.infer<typeof insertFaqSchema>;
 export type Faq = typeof faqs.$inferSelect;
+
+export type InsertVisitorStats = z.infer<typeof insertVisitorStatsSchema>;
+export type VisitorStats = typeof visitorStats.$inferSelect;
 
 // Define all relations after all tables are declared to avoid circular dependencies
 export const usersRelations = relations(users, ({ many }) => ({
