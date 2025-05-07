@@ -51,21 +51,29 @@ export default function Header() {
   return (
     <header className="sticky top-0 bg-[hsl(var(--header-bg))] shadow-md z-50" onClick={handleClickOutside}>
       <div className="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
+        {/* Left side - Logo combination */}
         <div className="flex items-center">
-          <Link href="/" className="flex items-center gap-3">
-            <img
-              src={logo2}
-              alt="JSS Polytechnic for the Differently Abled Logo"
-              className="h-16 w-auto rounded-md shadow-sm"
-            />
-            <div className="hidden md:block">
+          <Link href="/" className="flex flex-col md:flex-row items-center gap-3">
+            <div className="flex items-center gap-3">
+              <img
+                src={logo2}
+                alt="JSS Polytechnic for the Differently Abled Logo"
+                className="h-16 w-auto rounded-md shadow-sm"
+              />
+              <img
+                src={mainLogo}
+                alt="JSS Polytechnic Main Logo"
+                className="h-16 w-auto rounded-md shadow-sm"
+              />
+            </div>
+            <div className="hidden md:block ml-2">
               <h1 className="text-lg font-bold font-serif">{t('header.title')}</h1>
               <p className="text-xs text-muted-foreground">{t('header.subtitle')}</p>
             </div>
           </Link>
         </div>
         
-        {/* Accessibility Panel */}
+        {/* Middle - Accessibility Panel */}
         <div className="flex items-center gap-2 md:gap-4 order-last md:order-none">
           <div className="hidden md:flex items-center border rounded-full overflow-hidden p-1">
             <button 
@@ -115,66 +123,63 @@ export default function Header() {
           </div>
         </div>
         
-        {/* Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <Link 
-              key={link.href} 
-              href={link.href}
-              className={`font-medium flex items-center gap-1.5 ${location === link.href ? 'text-primary' : 'hover:text-primary'}`}
-            >
-              {link.icon}
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        
-        {/* Language Selector */}
-        <div className="flex items-center gap-4">
-          <div className="relative" id="language-selector">
-            <button 
-              className="flex items-center gap-1 border rounded-md px-3 py-1.5 text-sm hover:bg-gray-50" 
-              id="language-button"
-              onClick={toggleLanguageMenu}
-            >
-              <span>{languages.find(lang => lang.code === language)?.label || 'English'}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="m6 9 6 6 6-6"/>
-              </svg>
-            </button>
-            <div 
-              className={`absolute right-0 mt-1 bg-white shadow-lg rounded-md py-2 px-1 w-32 z-50 ${languageMenuOpen ? 'block' : 'hidden'}`} 
-              id="language-menu"
-            >
-              {languages.map((lang) => (
-                <button 
-                  key={lang.code}
-                  className="block w-full text-left px-3 py-1.5 text-sm rounded hover:bg-gray-100"
-                  onClick={() => {
-                    setLanguage(lang.code);
-                    setLanguageMenuOpen(false);
-                  }}
-                >
-                  {lang.label}
-                </button>
-              ))}
+        {/* Right side - Navigation and Language */}
+        <div className="flex items-center">
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center gap-6 mr-4">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.href} 
+                href={link.href}
+                className={`font-medium flex items-center gap-1.5 ${location === link.href ? 'text-primary' : 'hover:text-primary'}`}
+              >
+                {link.icon}
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+          
+          {/* Language Selector */}
+          <div className="flex items-center">
+            <div className="relative" id="language-selector">
+              <button 
+                className="flex items-center gap-1 border rounded-md px-3 py-1.5 text-sm hover:bg-gray-50" 
+                id="language-button"
+                onClick={toggleLanguageMenu}
+              >
+                <span>{languages.find(lang => lang.code === language)?.label || 'English'}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m6 9 6 6 6-6"/>
+                </svg>
+              </button>
+              <div 
+                className={`absolute right-0 mt-1 bg-white shadow-lg rounded-md py-2 px-1 w-32 z-50 ${languageMenuOpen ? 'block' : 'hidden'}`} 
+                id="language-menu"
+              >
+                {languages.map((lang) => (
+                  <button 
+                    key={lang.code}
+                    className="block w-full text-left px-3 py-1.5 text-sm rounded hover:bg-gray-100"
+                    onClick={() => {
+                      setLanguage(lang.code);
+                      setLanguageMenuOpen(false);
+                    }}
+                  >
+                    {lang.label}
+                  </button>
+                ))}
+              </div>
             </div>
+            
+            <button 
+              className="md:hidden ml-4 text-2xl" 
+              id="mobile-menu-button" 
+              aria-label={t('accessibility.openMenu')}
+              onClick={toggleMobileMenu}
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
-          
-          <img
-            src={mainLogo}
-            alt="JSS Polytechnic Main Logo"
-            className="hidden md:block h-16 w-auto ml-2 rounded-md shadow-sm"
-          />
-          
-          <button 
-            className="md:hidden text-2xl" 
-            id="mobile-menu-button" 
-            aria-label={t('accessibility.openMenu')}
-            onClick={toggleMobileMenu}
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
       </div>
       
