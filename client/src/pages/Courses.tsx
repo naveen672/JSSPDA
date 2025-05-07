@@ -24,59 +24,171 @@ export default function Courses() {
         </div>
       </section>
       
-      {/* Course Categories */}
+      {/* JSS PDA Courses */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Computer Science */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-primary/10 flex items-center justify-center">
-                <Monitor className="h-20 w-20 text-primary" />
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold mb-4">Diploma Courses</h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              The following courses are offered as approved by the Govt. of Karnataka and AICTE, New Delhi.
+            </p>
+            
+            {/* Course Table */}
+            <div className="overflow-x-auto bg-white rounded-xl shadow-md">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-primary/5">
+                  <tr>
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Course</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Intake</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Duration</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Details</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200 bg-white">
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900">Architecture Assistantship (AR)</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">60</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">3 Years</td>
+                    <td className="px-6 py-4 text-sm text-center">
+                      <Link href="/courses/architecture" className="text-primary hover:underline">View Details</Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900">Commercial Practice (CP)</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">60</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">3 Years</td>
+                    <td className="px-6 py-4 text-sm text-center">
+                      <Link href="/courses/commercial-practice" className="text-primary hover:underline">View Details</Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900">Computer Science and Engineering (CS)</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">60</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">3 Years</td>
+                    <td className="px-6 py-4 text-sm text-center">
+                      <Link href="/courses/computer-science" className="text-primary hover:underline">View Details</Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                      <strong>Jewellery Design and Technology (JD)</strong>
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">30</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">3 Years</td>
+                    <td className="px-6 py-4 text-sm text-center">
+                      <Link href="/courses/jewellery-design" className="text-primary hover:underline">View Details</Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900">Electronics and Communication Engineering (EC)</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">60</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">3 Years</td>
+                    <td className="px-6 py-4 text-sm text-center">
+                      <Link href="/courses/electronics" className="text-primary hover:underline">View Details</Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900">Computer Applications (CA)</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">30</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">3 Years</td>
+                    <td className="px-6 py-4 text-sm text-center">
+                      <Link href="/courses/computer-applications" className="text-primary hover:underline">View Details</Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900">Apparel Design and Fabrication Technology (FT)</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">30</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">3 Years</td>
+                    <td className="px-6 py-4 text-sm text-center">
+                      <Link href="/courses/apparel-design" className="text-primary hover:underline">View Details</Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 text-sm font-medium text-gray-900">
+                      <strong>Electrical Engineering and Electric Vehicle Technology (EV)</strong>
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">60</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center">3 Years</td>
+                    <td className="px-6 py-4 text-sm text-center">
+                      <Link href="/courses/electric-vehicle" className="text-primary hover:underline">View Details</Link>
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="px-6 py-4 text-sm font-bold text-center text-gray-900">TOTAL</td>
+                    <td className="px-6 py-4 text-sm font-bold text-center text-gray-900">390</td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center"></td>
+                    <td className="px-6 py-4 text-sm text-gray-500 text-center"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+          {/* Course Categories */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+            {/* Computer Science Related */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="h-32 bg-primary/10 flex items-center justify-center">
+                <Monitor className="h-14 w-14 text-primary" />
               </div>
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-4">{t('courses.categories.computerScience.title')}</h2>
-                <p className="text-muted-foreground mb-6">{t('courses.categories.computerScience.description')}</p>
-                <Link href="/courses/computer-science" className="text-primary font-medium flex items-center gap-1 hover:underline">
-                  {t('courses.viewCourses')} 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14"/>
-                    <path d="m12 5 7 7-7 7"/>
+              <div className="p-5">
+                <h3 className="text-lg font-bold mb-2">IT Courses</h3>
+                <p className="text-sm text-muted-foreground mb-4">Computer Science, Applications & IT related diploma programs</p>
+                <Link href="/courses/computer-science" className="text-primary text-sm font-medium flex items-center gap-1 hover:underline">
+                  View Details 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m9 18 6-6-6-6"/>
                   </svg>
                 </Link>
               </div>
             </div>
             
-            {/* Mechanical Engineering */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-primary/10 flex items-center justify-center">
-                <Cog className="h-20 w-20 text-primary" />
+            {/* Electronics Related */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="h-32 bg-primary/10 flex items-center justify-center">
+                <Cpu className="h-14 w-14 text-primary" />
               </div>
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-4">{t('courses.categories.mechanical.title')}</h2>
-                <p className="text-muted-foreground mb-6">{t('courses.categories.mechanical.description')}</p>
-                <Link href="/courses/mechanical" className="text-primary font-medium flex items-center gap-1 hover:underline">
-                  {t('courses.viewCourses')} 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14"/>
-                    <path d="m12 5 7 7-7 7"/>
+              <div className="p-5">
+                <h3 className="text-lg font-bold mb-2">Electronics & Electrical</h3>
+                <p className="text-sm text-muted-foreground mb-4">EC, EV Technology and related engineering diplomas</p>
+                <Link href="/courses/electronics" className="text-primary text-sm font-medium flex items-center gap-1 hover:underline">
+                  View Details 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m9 18 6-6-6-6"/>
                   </svg>
                 </Link>
               </div>
             </div>
             
-            {/* Electronics & Communication */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-              <div className="h-48 bg-primary/10 flex items-center justify-center">
-                <Cpu className="h-20 w-20 text-primary" />
+            {/* Commercial & Design */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="h-32 bg-primary/10 flex items-center justify-center">
+                <PenTool className="h-14 w-14 text-primary" />
               </div>
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-4">{t('courses.categories.electronics.title')}</h2>
-                <p className="text-muted-foreground mb-6">{t('courses.categories.electronics.description')}</p>
-                <Link href="/courses/electronics" className="text-primary font-medium flex items-center gap-1 hover:underline">
-                  {t('courses.viewCourses')} 
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14"/>
-                    <path d="m12 5 7 7-7 7"/>
+              <div className="p-5">
+                <h3 className="text-lg font-bold mb-2">Design & Commercial</h3>
+                <p className="text-sm text-muted-foreground mb-4">Architecture, Jewellery Design, Apparel Design courses</p>
+                <Link href="/courses/design" className="text-primary text-sm font-medium flex items-center gap-1 hover:underline">
+                  View Details 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m9 18 6-6-6-6"/>
+                  </svg>
+                </Link>
+              </div>
+            </div>
+            
+            {/* Autonomous Status */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="h-32 bg-primary/10 flex items-center justify-center">
+                <FileSymlink className="h-14 w-14 text-primary" />
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-bold mb-2">Autonomous Status</h3>
+                <p className="text-sm text-muted-foreground mb-4">JSSPDA has been granted autonomous status since 1999-2000</p>
+                <Link href="/about" className="text-primary text-sm font-medium flex items-center gap-1 hover:underline">
+                  Learn More 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m9 18 6-6-6-6"/>
                   </svg>
                 </Link>
               </div>

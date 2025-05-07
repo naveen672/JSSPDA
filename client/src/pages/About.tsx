@@ -20,37 +20,92 @@ export default function About() {
         </div>
       </section>
       
-      {/* Our Mission & Vision */}
+      {/* Our Vision */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-serif font-bold mb-6">{t('about.mission.title')}</h2>
-              <p className="text-lg mb-6 text-muted-foreground">{t('about.mission.description1')}</p>
-              <p className="text-lg text-muted-foreground">{t('about.mission.description2')}</p>
+              <h2 className="text-3xl font-serif font-bold mb-6 text-[#A52A2A]">VISION of the Institution</h2>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <p className="text-lg mb-4 font-semibold text-black">
+                  Empowering Differently Abled persons with the state-of-art professional skills, enhancing morality and mental ability for better living.
+                </p>
+              </div>
             </div>
             <div>
               <img 
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt={t('about.mission.imageAlt')} 
+                src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                alt="Vision - Empowering Differently Abled persons" 
                 className="rounded-lg shadow-md w-full h-auto"
               />
             </div>
           </div>
+        </div>
+      </section>
+      
+      {/* Our Mission */}
+      <section className="py-12 bg-neutral-light">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-serif font-bold mb-8 text-center text-[#A52A2A]">MISSION of the Institution</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-20">
-            <div className="order-1 md:order-0">
-              <img 
-                src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt={t('about.vision.imageAlt')} 
-                className="rounded-lg shadow-md w-full h-auto"
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-md flex items-start">
+              <div className="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0 mr-4">
+                M1
+              </div>
+              <div>
+                <p className="text-lg font-semibold text-black">
+                  Imparting knowledge to the differently abled students with accessible learning environment
+                </p>
+              </div>
             </div>
-            <div>
-              <h2 className="text-3xl font-serif font-bold mb-6">{t('about.vision.title')}</h2>
-              <p className="text-lg mb-6 text-muted-foreground">{t('about.vision.description1')}</p>
-              <p className="text-lg text-muted-foreground">{t('about.vision.description2')}</p>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md flex items-start">
+              <div className="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0 mr-4">
+                M2
+              </div>
+              <div>
+                <p className="text-lg font-semibold text-black">
+                  Facilitating appropriate co-curricular, extracurricular and extension activities
+                </p>
+              </div>
             </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md flex items-start">
+              <div className="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0 mr-4">
+                M3
+              </div>
+              <div>
+                <p className="text-lg font-semibold text-black">
+                  Providing value-added life skills and knowledge in addition to the regular academic input to make them employment-ready
+                </p>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-md flex items-start">
+              <div className="bg-primary text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold flex-shrink-0 mr-4">
+                M4
+              </div>
+              <div>
+                <p className="text-lg font-semibold text-black">
+                  Instilling the spirit of socialization, equity, ethics and social responsibility
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-12 bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-bold mb-4 text-[#A52A2A]">About JSS Polytechnic for the Differently Abled</h3>
+            <p className="text-lg mb-4 text-[#A52A2A] font-semibold">
+              JSS Polytechnic for the Differently Abled - JSSPDA is the first Polytechnic of its kind in the country and only polytechnic in the state of Karnataka started in the year 1991-92 to offer Professional Education with the approval of AICTE, New Delhi for Differently Abled at Diploma Level.
+            </p>
+            <p className="text-lg mb-4 text-[#A52A2A] font-semibold">
+              It was started under the World Bank Assistance Scheme of the Government of Karnataka by JSS Mahavidyapeetha. The new Buildings of the Polytechnic were inaugurated by the then Honorable Prime Minister of India on 3rd January 1999 in the gracious presence of His Holiness Jagadguru Sri Shivarathri Deshikendra Mahaswamigalavaru, the President of JSS Mahavidyapeetha, Mysuru.
+            </p>
+            <p className="text-lg font-semibold mt-6">
+              <span className="text-black">Autonomous Institution:</span> 
+              <span className="text-[#A52A2A]"> JSSPDA has been granted autonomous status since 1999-2000. As such the curriculum, scheme of examination, evaluation and award of Diploma are all governed by the rules of autonomy approved by the Department of Collegiate and Technical Education, Government of Karnataka.</span>
+            </p>
           </div>
         </div>
       </section>

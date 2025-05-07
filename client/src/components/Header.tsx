@@ -49,130 +49,45 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 bg-[hsl(var(--header-bg))] shadow-md z-50" onClick={handleClickOutside}>
-      <div className="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between">
-        {/* Left side - Logo combination */}
-        <div className="flex items-center">
-          <Link href="/" className="flex flex-col md:flex-row items-center gap-3">
-            <div className="flex items-center gap-3">
+    <header className="sticky top-0 z-50" onClick={handleClickOutside}>
+      {/* Top header with logos and title */}
+      <div className="bg-[hsl(var(--header-bg))] shadow-sm py-3 px-4">
+        <div className="container mx-auto">
+          {/* Main header content */}
+          <div className="flex items-center justify-between">
+            {/* Left logo */}
+            <div className="flex-shrink-0">
               <img
                 src={logo2}
                 alt="JSS Polytechnic for the Differently Abled Logo"
-                className="h-16 w-auto rounded-md shadow-sm"
+                className="h-20 w-auto"
               />
+            </div>
+            
+            {/* Center title */}
+            <div className="flex flex-col items-center text-center">
+              <h3 className="text-sm md:text-base text-primary font-semibold">JSS Mahavidyapeetha</h3>
+              <h2 className="text-xs md:text-sm hidden md:block text-gray-700 mb-1">ಜೆ ಎಸ್ ಎಸ್ ವಿಶೇಷ ಚೇತನರ ಪಾಲಿಟೆಕ್ನಿಕ್, ಮೈಸೂರು</h2>
+              <h1 className="text-lg md:text-2xl font-bold text-[#1e3a8a]">
+                JSS Polytechnic for the Differently Abled, Mysuru
+              </h1>
+              <p className="text-xs md:text-sm text-gray-600 hidden md:block">
+                (An Autonomous institution aided by the Government of Karnataka and Approved by AICTE)
+              </p>
+            </div>
+            
+            {/* Right logo */}
+            <div className="flex-shrink-0">
               <img
                 src={mainLogo}
                 alt="JSS Polytechnic Main Logo"
-                className="h-16 w-auto rounded-md shadow-sm"
+                className="h-20 w-auto"
               />
             </div>
-            <div className="hidden md:block ml-2">
-              <h1 className="text-lg font-bold font-serif">{t('header.title')}</h1>
-              <p className="text-xs text-muted-foreground">{t('header.subtitle')}</p>
-            </div>
-          </Link>
-        </div>
-        
-        {/* Middle - Accessibility Panel */}
-        <div className="flex items-center gap-2 md:gap-4 order-last md:order-none">
-          <div className="hidden md:flex items-center border rounded-full overflow-hidden p-1">
-            <button 
-              className="p-1 font-bold text-xs rounded-full hover:bg-gray-100 focus:bg-gray-100" 
-              aria-label={t('accessibility.decreaseFontSize')}
-              onClick={() => setFontSize('small')}
-            >
-              A-
-            </button>
-            <button 
-              className="p-1 font-bold text-sm rounded-full hover:bg-gray-100 focus:bg-gray-100" 
-              aria-label={t('accessibility.normalFontSize')}
-              onClick={() => setFontSize('medium')}
-            >
-              A
-            </button>
-            <button 
-              className="p-1 font-bold text-base rounded-full hover:bg-gray-100 focus:bg-gray-100" 
-              aria-label={t('accessibility.increaseFontSize')}
-              onClick={() => setFontSize('large')}
-            >
-              A+
-            </button>
-          </div>
-          
-          <div className="hidden md:flex items-center gap-1">
-            <button 
-              className={`w-6 h-6 rounded-full bg-blue-500 border-2 ${theme === 'color-theme-blue' ? 'border-primary' : 'border-white'} focus:ring-2`} 
-              aria-label={t('accessibility.blueTheme')}
-              onClick={() => setTheme('color-theme-blue')}
-            ></button>
-            <button 
-              className={`w-6 h-6 rounded-full bg-green-500 border-2 ${theme === 'color-theme-green' ? 'border-primary' : 'border-white'} focus:ring-2`} 
-              aria-label={t('accessibility.greenTheme')}
-              onClick={() => setTheme('color-theme-green')}
-            ></button>
-            <button 
-              className={`w-6 h-6 rounded-full bg-purple-500 border-2 ${theme === 'color-theme-purple' ? 'border-primary' : 'border-white'} focus:ring-2`} 
-              aria-label={t('accessibility.purpleTheme')}
-              onClick={() => setTheme('color-theme-purple')}
-            ></button>
-            <button 
-              className={`w-6 h-6 rounded-full bg-amber-500 border-2 ${theme === 'color-theme-orange' ? 'border-primary' : 'border-white'} focus:ring-2`} 
-              aria-label={t('accessibility.orangeTheme')}
-              onClick={() => setTheme('color-theme-orange')}
-            ></button>
-          </div>
-        </div>
-        
-        {/* Right side - Navigation and Language */}
-        <div className="flex items-center">
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-6 mr-4">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.href} 
-                href={link.href}
-                className={`font-medium flex items-center gap-1.5 ${location === link.href ? 'text-primary' : 'hover:text-primary'}`}
-              >
-                {link.icon}
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-          
-          {/* Language Selector */}
-          <div className="flex items-center">
-            <div className="relative" id="language-selector">
-              <button 
-                className="flex items-center gap-1 border rounded-md px-3 py-1.5 text-sm hover:bg-gray-50" 
-                id="language-button"
-                onClick={toggleLanguageMenu}
-              >
-                <span>{languages.find(lang => lang.code === language)?.label || 'English'}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="m6 9 6 6 6-6"/>
-                </svg>
-              </button>
-              <div 
-                className={`absolute right-0 mt-1 bg-white shadow-lg rounded-md py-2 px-1 w-32 z-50 ${languageMenuOpen ? 'block' : 'hidden'}`} 
-                id="language-menu"
-              >
-                {languages.map((lang) => (
-                  <button 
-                    key={lang.code}
-                    className="block w-full text-left px-3 py-1.5 text-sm rounded hover:bg-gray-100"
-                    onClick={() => {
-                      setLanguage(lang.code);
-                      setLanguageMenuOpen(false);
-                    }}
-                  >
-                    {lang.label}
-                  </button>
-                ))}
-              </div>
-            </div>
             
+            {/* Mobile menu button */}
             <button 
-              className="md:hidden ml-4 text-2xl" 
+              className="md:hidden ml-4 text-2xl absolute top-4 right-4" 
               id="mobile-menu-button" 
               aria-label={t('accessibility.openMenu')}
               onClick={toggleMobileMenu}
@@ -183,21 +98,115 @@ export default function Header() {
         </div>
       </div>
       
+      {/* Navigation bar */}
+      <div className="bg-[#1e3a8a] text-white shadow-md">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center">
+            {/* Main navigation */}
+            <nav className="hidden md:flex items-center">
+              {navLinks.map((link) => (
+                <Link 
+                  key={link.href} 
+                  href={link.href}
+                  className={`px-4 py-3 font-medium flex items-center gap-1.5 hover:bg-blue-700 transition-colors ${location === link.href ? 'bg-blue-700' : ''}`}
+                >
+                  {link.icon}
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+            
+            {/* Right side - Accessibility and Language */}
+            <div className="hidden md:flex items-center">
+              {/* Accessibility controls */}
+              <div className="flex items-center mr-4">
+                <div className="flex items-center border border-blue-400 rounded-full overflow-hidden p-1 bg-white/10">
+                  <button 
+                    className="p-1 text-xs rounded-full hover:bg-white/20 focus:bg-white/20" 
+                    aria-label={t('accessibility.decreaseFontSize')}
+                    onClick={() => setFontSize('small')}
+                  >
+                    A-
+                  </button>
+                  <button 
+                    className="p-1 text-sm rounded-full hover:bg-white/20 focus:bg-white/20" 
+                    aria-label={t('accessibility.normalFontSize')}
+                    onClick={() => setFontSize('medium')}
+                  >
+                    A
+                  </button>
+                  <button 
+                    className="p-1 text-base rounded-full hover:bg-white/20 focus:bg-white/20" 
+                    aria-label={t('accessibility.increaseFontSize')}
+                    onClick={() => setFontSize('large')}
+                  >
+                    A+
+                  </button>
+                </div>
+              </div>
+              
+              {/* Color themes */}
+              <div className="flex items-center gap-1 mr-4">
+                <button 
+                  className={`w-6 h-6 rounded-full bg-blue-500 border-2 ${theme === 'color-theme-blue' ? 'border-white' : 'border-transparent'} focus:ring-2`} 
+                  aria-label={t('accessibility.blueTheme')}
+                  onClick={() => setTheme('color-theme-blue')}
+                ></button>
+                <button 
+                  className={`w-6 h-6 rounded-full bg-green-500 border-2 ${theme === 'color-theme-green' ? 'border-white' : 'border-transparent'} focus:ring-2`} 
+                  aria-label={t('accessibility.greenTheme')}
+                  onClick={() => setTheme('color-theme-green')}
+                ></button>
+                <button 
+                  className={`w-6 h-6 rounded-full bg-purple-500 border-2 ${theme === 'color-theme-purple' ? 'border-white' : 'border-transparent'} focus:ring-2`} 
+                  aria-label={t('accessibility.purpleTheme')}
+                  onClick={() => setTheme('color-theme-purple')}
+                ></button>
+                <button 
+                  className={`w-6 h-6 rounded-full bg-amber-500 border-2 ${theme === 'color-theme-orange' ? 'border-white' : 'border-transparent'} focus:ring-2`} 
+                  aria-label={t('accessibility.orangeTheme')}
+                  onClick={() => setTheme('color-theme-orange')}
+                ></button>
+              </div>
+              
+              {/* Language Selector */}
+              <div className="relative" id="language-selector">
+                <button 
+                  className="flex items-center gap-1 bg-white/10 border border-blue-400 rounded-md px-3 py-1.5 text-sm hover:bg-white/20" 
+                  id="language-button"
+                  onClick={toggleLanguageMenu}
+                >
+                  <span>{languages.find(lang => lang.code === language)?.label || 'English'}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m6 9 6 6 6-6"/>
+                  </svg>
+                </button>
+                <div 
+                  className={`absolute right-0 mt-1 bg-white text-gray-800 shadow-lg rounded-md py-2 px-1 w-32 z-50 ${languageMenuOpen ? 'block' : 'hidden'}`} 
+                  id="language-menu"
+                >
+                  {languages.map((lang) => (
+                    <button 
+                      key={lang.code}
+                      className="block w-full text-left px-3 py-1.5 text-sm rounded hover:bg-gray-100"
+                      onClick={() => {
+                        setLanguage(lang.code);
+                        setLanguageMenuOpen(false);
+                      }}
+                    >
+                      {lang.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       {/* Mobile menu */}
       <div className={`md:hidden bg-[hsl(var(--header-bg))] shadow-lg absolute w-full left-0 z-50 ${mobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
         <nav className="container mx-auto px-4 py-3 flex flex-col">
-          <div className="flex justify-between items-center mb-4 pb-2 border-b">
-            <img
-              src={logo2}
-              alt="JSS Polytechnic for the Differently Abled Logo"
-              className="h-12 w-auto"
-            />
-            <img
-              src={mainLogo}
-              alt="JSS Polytechnic Main Logo"
-              className="h-12 w-auto"
-            />
-          </div>
           {navLinks.map((link) => (
             <Link 
               key={link.href} 
