@@ -1,12 +1,86 @@
 import { Link } from "wouter";
 import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import { apiRequest } from "@/lib/queryClient";
 import { 
   Facebook, 
   Twitter, 
   Instagram, 
   Linkedin, 
-  Send 
+  Send,
+  Users
 } from "lucide-react";
+
+// Visitor counter component
+function VisitorCounter() {
+  const [visitorCount, setVisitorCount] = useState<number | null>(null);
+  const [loading, setLoading] = useState(true);
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    // Increment visitor count on initial page load
+    const incrementVisitorCount = async () => {
+      try {
+        setLoading(true);
+        // Use absolute URL
+        const response = await fetch('/api/visitor-count/increment', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          setVisitorCount(data.count);
+        }
+      } catch (error) {
+        console.error('Failed to increment visitor count:', error);
+        // Fallback to getting the count without incrementing
+        getVisitorCount();
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    const getVisitorCount = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('/api/visitor-count', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          setVisitorCount(data.count);
+        }
+      } catch (error) {
+        console.error('Failed to get visitor count:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    // Only increment once when the component mounts
+    incrementVisitorCount();
+  }, []);
+
+  return (
+    <div className="flex items-center gap-2 text-white/60 text-sm">
+      <Users size={16} />
+      {loading ? (
+        <span className="animate-pulse">Loading...</span>
+      ) : (
+        <span>
+          {`${t('Visitors')}: ${visitorCount?.toLocaleString() || '0'}`}
+        </span>
+      )}
+    </div>
+  );
+}
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -130,7 +204,10 @@ export default function Footer() {
         
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-white/60 text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} {t('footer.copyright')}</p>
+            <div className="flex flex-col md:flex-row items-center gap-4">
+              <p className="text-white/60 text-sm mb-2 md:mb-0">&copy; {new Date().getFullYear()} {t('footer.copyright')}</p>
+              <VisitorCounter />
+            </div>
             <div className="flex flex-wrap gap-4 text-sm">
               {footerPolicies.map((policy, index) => (
                 <a key={index} href={policy.href} className="text-white/60 hover:text-white transition-colors">

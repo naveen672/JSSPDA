@@ -134,30 +134,76 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Chatbot API endpoint - now with database integration
+  // Chatbot API endpoint - now with enhanced intelligence
   app.post('/api/chatbot', validateRequest(insertChatMessageSchema.omit({ userId: true, responseMessage: true })), async (req: Request, res: Response) => {
     const { message } = req.body;
     
-    // Simple response mapping for common questions
-    const responses: Record<string, string> = {
-      'admission': 'Admissions for the academic year are currently open. You can apply online or visit our office for assistance.',
-      'course': 'We offer various diploma programs in Computer Science, Mechanical Engineering, and Electronics & Communication Engineering. All our courses are designed with accessibility at their core.',
-      'facility': 'Our campus features barrier-free design, assistive technologies, and comprehensive support services for all students.',
-      'contact': 'You can reach us at admissions@jsspolytechnic.edu.in or call +91 821 2548235.',
-      'accommodation': 'We provide on-campus accessible hostel facilities for students.',
-      'scholarship': 'We offer various scholarships and financial aid options for eligible students.',
-      'faculty': 'Our faculty members are experts in their fields and specially trained to support students with diverse learning needs.',
-      'placement': 'Our placement cell actively assists students in finding suitable job opportunities.'
-    };
+    // More comprehensive response mapping with multiple keywords for better matching
+    interface ResponsePattern {
+      keywords: string[];
+      response: string;
+    }
+    
+    const responsePatterns: ResponsePattern[] = [
+      {
+        keywords: ['admission', 'apply', 'enroll', 'join', 'registration', 'when can i join'],
+        response: 'Admissions for the academic year are currently open. You can apply online through our website or visit our admission office. The application process is fully accessible and we offer assistance throughout. Documents required include academic transcripts, ID proof, and disability certificate if applicable.'
+      },
+      {
+        keywords: ['course', 'program', 'curriculum', 'diploma', 'degree', 'what courses', 'subjects'],
+        response: 'We offer various diploma programs designed with accessibility at their core, including: 1) Computer Science & Engineering, 2) Electronics & Communication Engineering, 3) Mechanical Engineering, 4) Architecture & Interior Design. All programs include special assistive technology training.'
+      },
+      {
+        keywords: ['facility', 'campus', 'infrastructure', 'amenities', 'equipment', 'technology'],
+        response: 'Our campus is fully accessible with barrier-free design, including ramps, elevators, and signage in multiple formats. We provide assistive technologies like screen readers, specialized computer labs, Braille printers, hearing aid compatible systems, and accessible transportation services.'
+      },
+      {
+        keywords: ['contact', 'reach', 'email', 'phone', 'call', 'address', 'location', 'how to reach'],
+        response: 'You can reach us at admissions@jsspolytechnic.edu.in or call +91 821 2548235. Our campus is located at JSS Polytechnic for the Differently Abled, JSS Technical Education Campus, Mysuru - 570006, Karnataka, India. Our administrative office is open Monday to Friday, 9:00 AM to 5:00 PM.'
+      },
+      {
+        keywords: ['hostel', 'accommodation', 'stay', 'housing', 'dormitory', 'living'],
+        response: 'We provide fully accessible on-campus hostel facilities designed for students with different needs. Features include accessible rooms, emergency response systems, trained support staff, and specialized dining options. Applications for accommodation can be submitted along with your course application.'
+      },
+      {
+        keywords: ['scholarship', 'financial', 'aid', 'fee', 'concession', 'discount', 'funding', 'how much'],
+        response: 'We offer various scholarships and financial aid options for eligible students. These include government scholarships for differently-abled students, merit-based scholarships, need-based financial aid, and special grants for assistive technology. Our financial aid office can help identify the best options for your situation.'
+      },
+      {
+        keywords: ['faculty', 'teacher', 'professor', 'staff', 'instructor', 'who teaches'],
+        response: 'Our faculty members are experts in their fields with specialized training in inclusive education. Many have advanced degrees and research experience in accessible technology and inclusive design. They participate in regular professional development to stay current with the latest teaching methods for diverse learning needs.'
+      },
+      {
+        keywords: ['job', 'placement', 'career', 'employment', 'industry', 'hiring', 'opportunity', 'after completion'],
+        response: 'Our dedicated placement cell actively works with over 50 industry partners committed to inclusive hiring. We provide career counseling, resume building workshops, interview preparation, and job fairs specifically designed for differently-abled students. Our placement rate is consistently over 85%, with graduates working in various sectors including IT, manufacturing, and design.'
+      },
+      {
+        keywords: ['sports', 'activity', 'extra', 'cultural', 'event', 'recreation'],
+        response: 'We offer adaptive sports programs, cultural activities, and clubs designed to be inclusive for all abilities. Our annual cultural festival features performances showcasing diverse talents. We also organize special workshops on art, music, and other extracurricular interests.'
+      },
+      {
+        keywords: ['transport', 'bus', 'commute', 'travel'],
+        response: 'We provide specialized accessible transportation services including adapted buses with wheelchair access. Regular shuttle services connect the campus to major points in the city. For students with special transportation needs, we offer customized solutions.'
+      },
+      {
+        keywords: ['accessibility', 'disable', 'special need', 'support', 'assist', 'help', 'aid'],
+        response: 'Our institution is designed from the ground up for universal accessibility. We provide individualized accommodation plans, assistive technology, sign language interpreters, note-taking assistance, specialized exam formats, and continuous support from our Student Accessibility Services office.'
+      }
+    ];
     
     // Default response if no keywords match
-    let responseMessage = 'Thank you for your question. Our team is here to help. You can find more information on our website or contact our administration office for specific queries.';
+    let responseMessage = 'Thank you for your question. Our team is here to help. For more specific information, please try asking about our courses, admission process, facilities, faculty, or support services. You can also contact our administration office for personalized assistance.';
     
-    // Check if the message contains any keywords
-    for (const [keyword, reply] of Object.entries(responses)) {
-      if (message.toLowerCase().includes(keyword)) {
-        responseMessage = reply;
-        break;
+    // Check if the message contains any keywords using more sophisticated matching
+    const userMessageLower = message.toLowerCase();
+    
+    // Try to find the best matching pattern
+    for (const pattern of responsePatterns) {
+      for (const keyword of pattern.keywords) {
+        if (userMessageLower.includes(keyword)) {
+          responseMessage = pattern.response;
+          break;
+        }
       }
     }
 
@@ -203,6 +249,33 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ 
         success: false, 
         message: 'Failed to submit your message. Please try again later.' 
+      });
+    }
+  });
+  
+  // Visitor count API endpoints
+  app.get('/api/visitor-count', async (_req: Request, res: Response) => {
+    try {
+      const count = await storage.getVisitorCount();
+      res.json({ count });
+    } catch (error) {
+      log(`Error getting visitor count: ${(error as Error).message}`, "routes");
+      res.status(500).json({ 
+        success: false, 
+        message: 'Failed to retrieve visitor count' 
+      });
+    }
+  });
+
+  app.post('/api/visitor-count/increment', async (_req: Request, res: Response) => {
+    try {
+      const count = await storage.incrementVisitorCount();
+      res.json({ count });
+    } catch (error) {
+      log(`Error incrementing visitor count: ${(error as Error).message}`, "routes");
+      res.status(500).json({ 
+        success: false, 
+        message: 'Failed to increment visitor count' 
       });
     }
   });
