@@ -42,8 +42,7 @@ export default function Header() {
     { code: 'en', label: 'English' },
     { code: 'hi', label: 'हिंदी' },
     { code: 'kn', label: 'ಕನ್ನಡ' },
-    { code: 'ta', label: 'தமிழ்' },
-    { code: 'ml', label: 'മലയാളം' }
+    { code: 'ta', label: 'தமிழ்' }
   ];
 
   return (
