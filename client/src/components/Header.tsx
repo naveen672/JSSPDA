@@ -54,35 +54,37 @@ export default function Header() {
       <div className="bg-[hsl(var(--header-bg))] shadow-sm py-3 px-4">
         <div className="container mx-auto">
           {/* Main header content */}
-          <div className="flex items-center justify-between">
-            {/* Left logo */}
-            <div className="flex-shrink-0">
-              <img
-                src={logo2}
-                alt="JSS Polytechnic for the Differently Abled Logo"
-                className="h-20 w-auto"
-              />
-            </div>
-            
-            {/* Center title */}
-            <div className="flex flex-col items-center text-center">
-              <h3 className="text-sm md:text-base text-primary font-semibold">JSS Mahavidyapeetha</h3>
-              <h2 className="text-xs md:text-sm hidden md:block text-gray-700 mb-1">ಜೆ ಎಸ್ ಎಸ್ ವಿಶೇಷ ಚೇತನರ ಪಾಲಿಟೆಕ್ನಿಕ್, ಮೈಸೂರು</h2>
-              <h1 className="text-lg md:text-2xl font-bold text-[#1e3a8a]">
-                JSS Polytechnic for the Differently Abled, Mysuru
-              </h1>
-              <p className="text-xs md:text-sm text-gray-600 hidden md:block">
-                (An Autonomous institution aided by the Government of Karnataka and Approved by AICTE)
-              </p>
-            </div>
-            
-            {/* Right logo */}
-            <div className="flex-shrink-0">
-              <img
-                src={mainLogo}
-                alt="JSS Polytechnic Main Logo"
-                className="h-20 w-auto"
-              />
+          <div className="flex items-center justify-center">
+            <div className="flex items-center">
+              {/* Left logo */}
+              <div className="flex-shrink-0 mr-3">
+                <img
+                  src={logo2}
+                  alt="JSS Polytechnic for the Differently Abled Logo"
+                  className="h-20 w-auto"
+                />
+              </div>
+              
+              {/* Center title */}
+              <div className="flex flex-col items-center text-center">
+                <h3 className="text-sm md:text-base text-primary font-semibold">JSS Mahavidyapeetha</h3>
+                <h2 className="text-xs md:text-sm hidden md:block text-gray-700 mb-1">ಜೆ ಎಸ್ ಎಸ್ ವಿಶೇಷ ಚೇತನರ ಪಾಲಿಟೆಕ್ನಿಕ್, ಮೈಸೂರು</h2>
+                <h1 className="text-lg md:text-2xl font-bold text-[#1e3a8a]">
+                  JSS Polytechnic for the Differently Abled, Mysuru
+                </h1>
+                <p className="text-xs md:text-sm text-gray-600 hidden md:block">
+                  (An Autonomous institution aided by the Government of Karnataka and Approved by AICTE)
+                </p>
+              </div>
+              
+              {/* Right logo */}
+              <div className="flex-shrink-0 ml-3">
+                <img
+                  src={mainLogo}
+                  alt="JSS Polytechnic Main Logo"
+                  className="h-20 w-auto"
+                />
+              </div>
             </div>
             
             {/* Mobile menu button */}
