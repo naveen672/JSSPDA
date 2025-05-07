@@ -19,15 +19,7 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative bg-neutral-light">
-        {/* Main Hero Image - Institution Front */}
-        <div className="flex flex-col items-center">
-          <img 
-            src={instituteFrontImage} 
-            alt="JSS Polytechnic for the Differently Abled Front Entrance" 
-            className="w-full h-auto object-cover max-h-[400px]"
-          />
-        </div>
-        
+        {/* Title and subtitle */}
         <div className="bg-gradient-to-b from-[#1e3a8a]/10 to-[#1e3a8a]/5 py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
@@ -37,7 +29,7 @@ export default function Home() {
               <p className="text-lg md:text-xl text-gray-700 mb-8">
                 {t('home.hero.subtitle')}
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <Link href="/courses" className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-medium">
                   {t('home.hero.exploreCourses')}
                 </Link>
@@ -47,6 +39,15 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+        
+        {/* Main Hero Image - Institution Front */}
+        <div className="flex flex-col items-center">
+          <img 
+            src={instituteFrontImage} 
+            alt="JSS Polytechnic for the Differently Abled Front Entrance" 
+            className="w-full h-auto object-cover max-h-[400px]"
+          />
         </div>
       </section>
 
