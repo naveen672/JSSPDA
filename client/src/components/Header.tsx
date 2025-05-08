@@ -1,6 +1,23 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Home, Info, BookOpen, Users, Mail, ExternalLink } from "lucide-react";
+import { 
+  Menu, 
+  X, 
+  Home, 
+  GraduationCap, 
+  BookOpen, 
+  Building2, 
+  Users, 
+  Mail, 
+  ExternalLink, 
+  School,
+  LifeBuoy,
+  Briefcase,
+  Medal,
+  MoreHorizontal,
+  ChevronDown,
+  Info
+} from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
 import { useFontSize } from "@/hooks/useFontSize";
 import { useLanguage } from "@/hooks/useLanguage";
@@ -32,12 +49,147 @@ export default function Header() {
     }
   };
 
+  // Track which dropdown is currently open
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  
+  // Close dropdowns when clicking outside
+  const navRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setOpenDropdown(null);
+      }
+    }
+    
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  // Toggle dropdown menu
+  const toggleDropdown = (name: string) => {
+    setOpenDropdown(openDropdown === name ? null : name);
+  };
+  
+  // Main navigation structure
   const navLinks = [
-    { href: "/", label: t('navigation.home'), icon: <Home className="w-4 h-4" /> },
-    { href: "/about", label: t('navigation.about'), icon: <Info className="w-4 h-4" /> },
-    { href: "/courses", label: t('navigation.courses'), icon: <BookOpen className="w-4 h-4" /> },
-    { href: "/faculty", label: t('navigation.faculty'), icon: <Users className="w-4 h-4" /> },
-    { href: "/contact", label: t('navigation.contact'), icon: <Mail className="w-4 h-4" /> }
+    { 
+      href: "#", 
+      label: "Home", 
+      icon: <Home className="w-4 h-4" />,
+      hasDropdown: true,
+      id: "home-dropdown",
+      dropdown: [
+        { href: "/", label: "Home Page" },
+        { href: "/about-jssmvp", label: "About JSSMVP" },
+        { href: "/about-jsspda", label: "About JSSPDA" },
+        { href: "/vision-mission", label: "Vision, Mission and Core Values" },
+        { href: "/messages", label: "Messages" },
+        { href: "/governance", label: "Governance" },
+        { href: "/administration", label: "Administration" },
+        { href: "/green-initiatives", label: "JSSPDA Green Initiatives" },
+        { href: "/employee-benefits", label: "Employee Benefits" },
+        { href: "/reports-downloads", label: "Reports and Downloads" },
+        { href: "/contact", label: "Contact us" },
+      ]
+    },
+    { 
+      href: "/admission", 
+      label: "Admission", 
+      icon: <GraduationCap className="w-4 h-4" />,
+      hasDropdown: false,
+      id: "admission-dropdown"
+    },
+    { 
+      href: "#", 
+      label: "Academics", 
+      icon: <BookOpen className="w-4 h-4" />,
+      hasDropdown: true,
+      id: "academics-dropdown",
+      dropdown: [
+        { href: "/departments/ar", label: "Dept. of AR" },
+        { href: "/departments/cp", label: "Dept. of CP" },
+        { href: "/departments/cse", label: "Dept. of CSE" },
+        { href: "/departments/jd", label: "Dept. of JD" },
+        { href: "/departments/ec", label: "Dept. of EC" },
+        { href: "/departments/ca", label: "Dept. of CA" },
+        { href: "/departments/evt", label: "Dept. of EVT" },
+        { href: "/calendar", label: "Calendar of Events" },
+        { href: "/professional-bodies", label: "Professional Bodies" },
+        { href: "/collaborations", label: "JSSPDA Collaborations and MOU's" }
+      ]
+    },
+    { 
+      href: "#", 
+      label: "Facilities", 
+      icon: <Building2 className="w-4 h-4" />,
+      hasDropdown: true,
+      id: "facilities-dropdown",
+      dropdown: [
+        { href: "/campus", label: "PDA Campus" },
+        { href: "/library", label: "Library and Information" },
+        { href: "/sports", label: "Sports" },
+        { href: "/cafeteria", label: "Cafeteria" },
+        { href: "/hostel", label: "Hostel" }
+      ]
+    },
+    { 
+      href: "#", 
+      label: "Student Support", 
+      icon: <LifeBuoy className="w-4 h-4" />,
+      hasDropdown: true,
+      id: "student-support-dropdown",
+      dropdown: [
+        { href: "/exam", label: "Exam" },
+        { href: "/scholarships", label: "Scholarships" },
+        { href: "/sponsorships", label: "Sponsorships" },
+        { href: "/counselling", label: "Counselling" },
+        { href: "/mentoring", label: "Mentoring Scheme" },
+        { href: "/sign-language", label: "Sign Language Support" },
+        { href: "/nss", label: "NSS" },
+        { href: "/red-cross", label: "Red Cross" },
+        { href: "/cultural", label: "Cultural Crew" },
+        { href: "/iipc", label: "IIPC" },
+        { href: "/health", label: "Health Centre" },
+        { href: "/bank", label: "Bank" },
+        { href: "/datthi-awards", label: "Datthi Awards" },
+        { href: "/insurance", label: "Accidental Insurance Scheme" }
+      ]
+    },
+    { 
+      href: "#", 
+      label: "Training & Placement", 
+      icon: <Briefcase className="w-4 h-4" />,
+      hasDropdown: true,
+      id: "training-dropdown",
+      dropdown: [
+        { href: "/placement", label: "Placement" },
+        { href: "/training", label: "Training" },
+        { href: "/internship", label: "Internship" }
+      ]
+    },
+    { 
+      href: "/iqac", 
+      label: "IQAC", 
+      icon: <Medal className="w-4 h-4" />,
+      hasDropdown: false
+    },
+    { 
+      href: "#", 
+      label: "More", 
+      icon: <MoreHorizontal className="w-4 h-4" />,
+      hasDropdown: true,
+      id: "more-dropdown",
+      dropdown: [
+        { href: "/alumni", label: "Alumni" },
+        { href: "/grievance", label: "Online Grievance Support" },
+        { href: "/gallery", label: "Photo Gallery" },
+        { href: "/media", label: "Media" },
+        { href: "/achievements", label: "Achievements" }
+      ]
+    }
   ];
 
   // Type-safe language codes matching the type in useLanguage.ts
@@ -105,16 +257,49 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             {/* Main navigation */}
-            <nav className="hidden md:flex items-center">
-              {navLinks.map((link) => (
-                <Link 
-                  key={link.href} 
-                  href={link.href}
-                  className={`px-4 py-3 font-medium flex items-center gap-1.5 hover:bg-primary-hover transition-colors ${location === link.href ? 'bg-primary-hover' : ''}`}
+            <nav className="hidden md:flex items-center" ref={navRef}>
+              {navLinks.map((link, index) => (
+                <div 
+                  key={`nav-item-${index}`} 
+                  className="relative group"
                 >
-                  {link.icon}
-                  {link.label}
-                </Link>
+                  {link.hasDropdown ? (
+                    <>
+                      <button
+                        onClick={() => toggleDropdown(link.id || '')}
+                        className={`px-4 py-3 font-medium flex items-center gap-1.5 hover:bg-primary-hover transition-colors ${openDropdown === link.id ? 'bg-primary-hover' : ''}`}
+                      >
+                        {link.icon}
+                        <span>{link.label}</span>
+                        <ChevronDown className="w-4 h-4 ml-1" />
+                      </button>
+                      {link.hasDropdown && (
+                        <div 
+                          className={`absolute top-full left-0 bg-white shadow-lg rounded-md mt-0.5 py-2 min-w-[200px] z-50 ${openDropdown === link.id ? 'block' : 'hidden'}`}
+                        >
+                          {link.dropdown?.map((item, subIndex) => (
+                            <Link 
+                              key={`dropdown-item-${subIndex}`} 
+                              href={item.href}
+                              className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-primary"
+                              onClick={() => setOpenDropdown(null)}
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <Link 
+                      href={link.href}
+                      className={`px-4 py-3 font-medium flex items-center gap-1.5 hover:bg-primary-hover transition-colors ${location === link.href ? 'bg-primary-hover' : ''}`}
+                    >
+                      {link.icon}
+                      {link.label}
+                    </Link>
+                  )}
+                </div>
               ))}
             </nav>
             
@@ -209,16 +394,48 @@ export default function Header() {
       {/* Mobile menu */}
       <div className={`md:hidden bg-[hsl(var(--header-bg))] shadow-lg absolute w-full left-0 z-50 ${mobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
         <nav className="container mx-auto px-4 py-3 flex flex-col">
-          {navLinks.map((link) => (
-            <Link 
-              key={link.href} 
-              href={link.href} 
-              className={`py-2 font-medium border-b flex items-center gap-2 ${location === link.href ? 'text-primary' : ''}`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {link.icon}
-              {link.label}
-            </Link>
+          {navLinks.map((link, idx) => (
+            <div key={`mobile-nav-${idx}`} className="border-b">
+              {link.hasDropdown ? (
+                <div>
+                  <button
+                    className={`w-full py-2 font-medium flex items-center justify-between gap-2 ${openDropdown === link.id ? 'text-primary' : ''}`}
+                    onClick={() => toggleDropdown(link.id || '')}
+                  >
+                    <div className="flex items-center gap-2">
+                      {link.icon}
+                      <span>{link.label}</span>
+                    </div>
+                    <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === link.id ? 'rotate-180' : ''}`} />
+                  </button>
+                  
+                  <div className={`pl-8 ${openDropdown === link.id ? 'block' : 'hidden'}`}>
+                    {link.dropdown?.map((item, subIdx) => (
+                      <Link
+                        key={`mobile-dropdown-${subIdx}`}
+                        href={item.href}
+                        className="block py-2 text-sm hover:text-primary"
+                        onClick={() => {
+                          setOpenDropdown(null);
+                          setMobileMenuOpen(false);
+                        }}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link 
+                  href={link.href}
+                  className={`py-2 font-medium flex items-center gap-2 ${location === link.href ? 'text-primary' : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.icon}
+                  {link.label}
+                </Link>
+              )}
+            </div>
           ))}
           
           <div className="py-4 border-b">
