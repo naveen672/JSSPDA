@@ -17,7 +17,7 @@ export default function AccessibilityPanel() {
   };
 
   return (
-    <div className="fixed top-36 left-4 z-50 hidden md:block" id="accessibility-panel">
+    <div className="fixed top-64 left-4 z-50 hidden md:block" id="accessibility-panel">
       <button 
         id="accessibility-toggle" 
         className="w-14 h-14 rounded-full bg-primary shadow-lg flex items-center justify-center hover:bg-primary/90 text-primary-foreground transition-all transform hover:scale-105" 
