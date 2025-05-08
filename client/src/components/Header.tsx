@@ -36,6 +36,17 @@ export default function Header() {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+    // Close any open dropdowns when toggling mobile menu
+    setOpenDropdown(null);
+  };
+  
+  // This function is specifically for mobile dropdowns
+  const toggleMobileDropdown = (id: string) => {
+    if (id === openDropdown) {
+      setOpenDropdown(null);
+    } else {
+      setOpenDropdown(id);
+    }
   };
 
   const toggleLanguageMenu = () => {
@@ -423,12 +434,7 @@ export default function Header() {
                     className={`w-full py-2 font-medium flex items-center justify-between gap-2 ${openDropdown === link.id ? 'text-primary' : ''}`}
                     onClick={(e) => {
                       e.stopPropagation();
-                      // Explicitly check if dropdown is already open and close it
-                      if (openDropdown === link.id) {
-                        setOpenDropdown(null);
-                      } else {
-                        setOpenDropdown(link.id || '');
-                      }
+                      toggleMobileDropdown(link.id || '');
                     }}
                   >
                     <div className="flex items-center gap-2">
