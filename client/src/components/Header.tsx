@@ -38,10 +38,23 @@ export default function Header() {
     setMobileMenuOpen(!mobileMenuOpen);
     // Close any open dropdowns when toggling mobile menu
     setOpenDropdown(null);
+    // Also clear any mobile dropdowns
+    setMobileDropdowns({});
+  };
+  
+  // This special function just for mobile dropdowns
+  const handleMobileDropdownToggle = (id: string) => {
+    setMobileDropdowns(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
   };
   
   // This function is specifically for mobile dropdowns
-  const toggleMobileDropdown = (id: string) => {
+  const toggleMobileDropdown = (id: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Toggling dropdown:', id, 'Current open:', openDropdown);
     if (id === openDropdown) {
       setOpenDropdown(null);
     } else {
@@ -62,6 +75,8 @@ export default function Header() {
 
   // Track which dropdown is currently open
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  // For mobile dropdowns, we'll track them separately with individual boolean states
+  const [mobileDropdowns, setMobileDropdowns] = useState<Record<string, boolean>>({});
   
   // Close dropdowns when clicking outside
   const navRef = useRef<HTMLDivElement>(null);
@@ -431,20 +446,21 @@ export default function Header() {
               {link.hasDropdown ? (
                 <div>
                   <button
-                    className={`w-full py-2 font-medium flex items-center justify-between gap-2 ${openDropdown === link.id ? 'text-primary' : ''}`}
+                    className={`w-full py-2 font-medium flex items-center justify-between gap-2 ${mobileDropdowns[link.id || ''] ? 'text-primary' : ''}`}
                     onClick={(e) => {
+                      e.preventDefault();
                       e.stopPropagation();
-                      toggleMobileDropdown(link.id || '');
+                      handleMobileDropdownToggle(link.id || '');
                     }}
                   >
                     <div className="flex items-center gap-2">
                       {link.icon}
                       <span>{link.label}</span>
                     </div>
-                    <ChevronDown className={`w-4 h-4 transition-transform ${openDropdown === link.id ? 'rotate-180' : ''}`} />
+                    <ChevronDown className={`w-4 h-4 transition-transform ${mobileDropdowns[link.id || ''] ? 'rotate-180' : ''}`} />
                   </button>
                   
-                  <div className={`pl-8 ${openDropdown === link.id ? 'block' : 'hidden'}`}>
+                  <div className={`pl-8 ${mobileDropdowns[link.id || ''] ? 'block' : 'hidden'}`}>
                     {link.dropdown?.map((item, subIdx) => (
                       <Link
                         key={`mobile-dropdown-${subIdx}`}
