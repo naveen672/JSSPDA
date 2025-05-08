@@ -242,7 +242,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50" onClick={handleClickOutside}>
       {/* Top header with logos and title */}
-      <div className="bg-[hsl(var(--header-bg))] shadow-sm py-3 px-4">
+      <div className="bg-[hsl(var(--header-bg))] shadow-sm py-5 px-4">
         <div className="container mx-auto">
           {/* Main header content */}
           <div className="flex items-center justify-center">
@@ -280,7 +280,7 @@ export default function Header() {
             
             {/* Mobile menu button */}
             <button 
-              className="md:hidden ml-4 text-2xl absolute top-4 right-4" 
+              className="md:hidden ml-4 text-2xl absolute top-6 right-4" 
               id="mobile-menu-button" 
               aria-label={t('accessibility.openMenu')}
               onClick={toggleMobileMenu}
@@ -439,7 +439,7 @@ export default function Header() {
       </div>
       
       {/* Mobile menu */}
-      <div className={`md:hidden bg-[hsl(var(--header-bg))] shadow-lg fixed top-[97px] w-full left-0 z-50 h-[calc(100vh-97px)] overflow-y-auto ${mobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
+      <div className={`md:hidden bg-[hsl(var(--header-bg))] shadow-lg fixed top-[106px] w-full left-0 z-50 h-[calc(100vh-106px)] overflow-y-auto ${mobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
         <nav className="container mx-auto px-4 py-3 flex flex-col">
           {navLinks.map((link, idx) => (
             <div key={`mobile-nav-${idx}`} className="border-b">
