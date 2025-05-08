@@ -73,6 +73,19 @@ export default function Header() {
     setOpenDropdown(openDropdown === name ? null : name);
   };
   
+  // Prevent body scrolling when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+  
   // Main navigation structure
   const navLinks = [
     { 
@@ -392,7 +405,7 @@ export default function Header() {
       </div>
       
       {/* Mobile menu */}
-      <div className={`md:hidden bg-[hsl(var(--header-bg))] shadow-lg absolute w-full left-0 z-50 ${mobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
+      <div className={`md:hidden bg-[hsl(var(--header-bg))] shadow-lg fixed top-[97px] w-full left-0 z-50 h-[calc(100vh-97px)] overflow-y-auto ${mobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
         <nav className="container mx-auto px-4 py-3 flex flex-col">
           {navLinks.map((link, idx) => (
             <div key={`mobile-nav-${idx}`} className="border-b">
@@ -400,7 +413,10 @@ export default function Header() {
                 <div>
                   <button
                     className={`w-full py-2 font-medium flex items-center justify-between gap-2 ${openDropdown === link.id ? 'text-primary' : ''}`}
-                    onClick={() => toggleDropdown(link.id || '')}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleDropdown(link.id || '');
+                    }}
                   >
                     <div className="flex items-center gap-2">
                       {link.icon}
