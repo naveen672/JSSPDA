@@ -279,7 +279,15 @@ export default function Header() {
                   {link.hasDropdown ? (
                     <>
                       <button
-                        onClick={() => toggleDropdown(link.id || '')}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          // Explicitly check if dropdown is already open and close it
+                          if (openDropdown === link.id) {
+                            setOpenDropdown(null);
+                          } else {
+                            setOpenDropdown(link.id || '');
+                          }
+                        }}
                         className={`px-4 py-3 font-medium flex items-center gap-1.5 hover:bg-primary-hover transition-colors ${openDropdown === link.id ? 'bg-primary-hover' : ''}`}
                       >
                         {link.icon}
@@ -415,7 +423,12 @@ export default function Header() {
                     className={`w-full py-2 font-medium flex items-center justify-between gap-2 ${openDropdown === link.id ? 'text-primary' : ''}`}
                     onClick={(e) => {
                       e.stopPropagation();
-                      toggleDropdown(link.id || '');
+                      // Explicitly check if dropdown is already open and close it
+                      if (openDropdown === link.id) {
+                        setOpenDropdown(null);
+                      } else {
+                        setOpenDropdown(link.id || '');
+                      }
                     }}
                   >
                     <div className="flex items-center gap-2">
