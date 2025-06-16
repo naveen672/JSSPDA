@@ -11,9 +11,9 @@ export default function AboutJSSMVP() {
       <section className="bg-neutral-light py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('aboutJSSMVP.title', 'About JSS Mahavidyapeetha')}</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('aboutJSSMVP.hero.title')}</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {t('aboutJSSMVP.subtitle', 'Empowering lives through education since 1954')}
+              {t('aboutJSSMVP.hero.subtitle')}
             </p>
           </div>
         </div>

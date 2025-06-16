@@ -11,9 +11,9 @@ export default function Messages() {
       <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('messages.title', 'Messages')}</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('messages.hero.title')}</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {t('messages.subtitle', 'Messages from our leadership and administration')}
+              {t('messages.hero.subtitle')}
             </p>
           </div>
         </div>

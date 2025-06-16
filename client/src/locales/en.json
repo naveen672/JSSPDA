@@ -292,6 +292,416 @@
       "applyNow": "Apply Now"
     }
   },
+  "aboutJSSMVP": {
+    "hero": {
+      "title": "JSS Mahavidyapeetha",
+      "subtitle": "A legacy of excellence in education spanning over five decades"
+    },
+    "history": {
+      "title": "History of JSS Mahavidyapeetha",
+      "description1": "JSS Mahavidyapeetha was founded by His Holiness Jagadguru Sri Shivarathri Deshikendra Mahaswamiji in 1954 at Mysuru.",
+      "description2": "The institution was established with the noble vision of providing quality education to all sections of society, irrespective of caste, creed, religion, or economic status."
+    },
+    "philosophy": {
+      "title": "Our Philosophy",
+      "description": "JSS Mahavidyapeetha believes in the Vedic concept of 'Sarve Janah Sukhino Bhavantu' (May all beings be happy) and strives to create an educational environment that nurtures human values alongside academic excellence."
+    },
+    "managingCommittee": {
+      "title": "Managing Committee",
+      "members": [
+        {
+          "name": "Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji",
+          "position": "President"
+        },
+        {
+          "name": "Dr. C G Betsurmath",
+          "position": "Executive Secretary"
+        },
+        {
+          "name": "Prof. M H Dhananjaya",
+          "position": "Advisor, Technical Education Division"
+        },
+        {
+          "name": "Dr. C Ranganathaiah",
+          "position": "Director (Academic & Administration)"
+        },
+        {
+          "name": "Dr. B G Sangameshwara",
+          "position": "Vice Chancellor, JSS Science & Technology University"
+        }
+      ]
+    }
+  },
+  "aboutJSSPDA": {
+    "hero": {
+      "title": "JSS Polytechnic for the Differently Abled",
+      "subtitle": "Pioneering inclusive technical education since 1992"
+    },
+    "history": {
+      "title": "Our Beginning",
+      "description1": "JSS Polytechnic for the Differently Abled was established in 1991-92 as a pioneering institution for technical education for differently-abled students.",
+      "description2": "It was set up with assistance from the World Bank under the Technical Education Project as part of India's commitment to inclusive education."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "To be a center of excellence in technical education that empowers differently-abled students with knowledge, skills, and confidence to excel in their chosen fields."
+    },
+    "mission": {
+      "title": "Mission",
+      "description": "To provide accessible, quality technical education through innovative teaching methodologies, state-of-the-art facilities, and comprehensive support systems."
+    },
+    "courses": {
+      "title": "Courses Offered",
+      "list": [
+        {
+          "name": "Architecture",
+          "duration": "3 Years",
+          "intake": "30"
+        },
+        {
+          "name": "Commercial Practice",
+          "duration": "3 Years", 
+          "intake": "60"
+        },
+        {
+          "name": "Computer Science & Engineering",
+          "duration": "3 Years",
+          "intake": "60"
+        },
+        {
+          "name": "Electronics & Communication Engineering",
+          "duration": "3 Years",
+          "intake": "30"
+        },
+        {
+          "name": "Jewellery Design & Technology",
+          "duration": "3 Years",
+          "intake": "30"
+        },
+        {
+          "name": "Computer Applications for the Visually Impaired",
+          "duration": "1 Year",
+          "intake": "30"
+        }
+      ]
+    }
+  },
+  "messages": {
+    "hero": {
+      "title": "Messages",
+      "subtitle": "Words of wisdom and guidance from our leadership"
+    },
+    "principal": {
+      "name": "Sri. Elangovan B",
+      "position": "Principal",
+      "contact": {
+        "mobile": "9686677236",
+        "email": "elango1.india@gmail.com",
+        "office": "0821-2548315"
+      },
+      "message": {
+        "title": "Principal's Message",
+        "content1": "Welcome to JSS Polytechnic for the Differently Abled (JSSPDA), a unique institution that has been at the forefront of inclusive technical education since 1991-92.",
+        "content2": "Our institution was established with the vision of providing quality technical education to differently-abled students, ensuring that physical limitations never become barriers to achieving academic and professional excellence.",
+        "content3": "We take pride in our comprehensive approach that combines academic rigor with practical training, preparing our students for successful careers in various technical fields. Our faculty members are specially trained to understand and address the unique learning needs of our students.",
+        "content4": "I encourage all prospective students to explore the opportunities we offer and join our family of achievers who continue to make remarkable contributions to society."
+      }
+    }
+  },
+  "governance": {
+    "hero": {
+      "title": "Governance",
+      "subtitle": "Institutional governance structure and administrative framework"
+    },
+    "governingCouncil": {
+      "title": "Governing Council",
+      "description": "The Governing Council provides strategic direction and oversight for the institution's operations and development.",
+      "members": [
+        {
+          "name": "His Holiness Jagadguru Sri Shivarathri Deshikendra Mahaswamigalavaru",
+          "position": "Chairman",
+          "organization": "President, JSS Mahavidyapeetha, Mysuru"
+        },
+        {
+          "name": "Dr. C G Betsurmath",
+          "position": "Member Management Nominee",
+          "organization": "Executive Secretary, JSS Mahavidyapeetha, Mysuru"
+        }
+      ]
+    },
+    "committees": {
+      "title": "Administrative Committees",
+      "iqac": {
+        "title": "Internal Quality Assurance Cell (IQAC)",
+        "description": "Ensures quality enhancement and sustenance in academic and administrative processes."
+      },
+      "womensSecurity": {
+        "title": "Women's Security Committee",
+        "description": "Addresses issues related to women's safety and security on campus."
+      },
+      "antiRagging": {
+        "title": "Anti-Ragging Committee",
+        "description": "Prevents and addresses any instances of ragging to ensure a safe learning environment."
+      }
+    }
+  },
+  "administration": {
+    "hero": {
+      "title": "Administration",
+      "subtitle": "Meet our dedicated administrative team and key functionaries"
+    },
+    "principal": {
+      "name": "Sri. Elangovan B",
+      "position": "Principal",
+      "contact": {
+        "mobile": "9686677236",
+        "email": "elango1.india@gmail.com",
+        "office": "0821-2548315"
+      }
+    },
+    "ministerialStaff": {
+      "title": "Ministerial Staff",
+      "grantInAid": {
+        "title": "Grant-in-Aid Employees",
+        "count": "13 employees"
+      },
+      "management": {
+        "title": "Management Employees", 
+        "count": "4 employees"
+      }
+    },
+    "keyFunctionaries": {
+      "title": "Key Functionaries",
+      "description": "Department heads and coordinators responsible for various institutional functions",
+      "count": "28 functionaries"
+    }
+  },
+  "greenInitiatives": {
+    "hero": {
+      "title": "JSSPDA Green Initiatives",
+      "subtitle": "Sustainable and eco-friendly campus designed for environmental responsibility and digital innovation"
+    },
+    "ecoFriendly": {
+      "title": "ECO-FRIENDLY CAMPUS",
+      "greenEnvironment": {
+        "title": "Green Environment",
+        "features": [
+          "Campus is covered with trees, flower plants and ornamental plants and lawn which are well maintained",
+          "Our campus is specially designed for persons with special needs through international standard accessibility",
+          "Regular maintenance of garden, lawn and other trees by the identified agency",
+          "The waste collected from trees, biodegradable waste are properly collected and placed in the pits. The manure used as fertilizer for gardening"
+        ]
+      },
+      "solarEnergy": {
+        "title": "Solar Energy",
+        "features": [
+          "Solar power generation is set up as an alternate energy source. Around 15,000 units of electricity is expected to generate through solar power",
+          "Reduction of CO2 is achieved through solar power",
+          "Uninterrupted electrical power supply is provided through centralized generator"
+        ]
+      },
+      "waterManagement": {
+        "title": "Water Management",
+        "features": [
+          "Use of rain water for watering trees and plants",
+          "Safe & purified drinking water facility is extended to all the departments and hostel",
+          "Sufficient water sources through borewells and storage tanks is available for uninterrupted water supply",
+          "Proper sewage disposal through UGD is in place"
+        ]
+      },
+      "wasteManagement": {
+        "title": "Waste Management",
+        "features": [
+          "Solid waste disposal system is in place",
+          "Sign boards regarding cleanliness of campus is placed for user awareness"
+        ]
+      }
+    },
+    "digitalCampus": {
+      "title": "DIGITAL CAMPUS",
+      "technology": {
+        "title": "Technology Infrastructure",
+        "features": [
+          "The Campus is enabled with WiFi facility for students and staff",
+          "ERP Software is in place for examination, admission, library and other academic activities"
+        ]
+      },
+      "security": {
+        "title": "Security & Accessibility",
+        "features": [
+          "The Campus has connected with CCTV surveillance for effective monitoring",
+          "Class rooms are equipped with audio visual systems for effective teaching for the differently abled students"
+        ]
+      }
+    },
+    "gallery": {
+      "title": "Campus Gallery",
+      "subtitle": "Visual showcase of our eco-friendly and accessible campus infrastructure"
+    },
+    "impact": {
+      "title": "Environmental Impact",
+      "metrics": {
+        "solarGeneration": "15,000 Units",
+        "solarDescription": "Annual solar power generation",
+        "waterConservation": "Water Conservation",
+        "waterDescription": "Rainwater harvesting system",
+        "zeroWaste": "Zero Waste",
+        "wasteDescription": "Biodegradable waste to compost"
+      }
+    }
+  },
+  "employeeBenefits": {
+    "hero": {
+      "title": "JSSPDA Employee Benefits",
+      "subtitle": "Comprehensive benefits package ensuring security and welfare for all our valued employees"
+    },
+    "gratuity": {
+      "title": "Gratuity",
+      "description": "It is a prescribed benefit plan and is one of the many retirement privileges by the employer to the employee upon leaving the organization.",
+      "eligibility": "Eligibility & Calculation:",
+      "features": [
+        "A person who has served in this organization for at least 5 years is eligible",
+        "The employee is eligible for 15 days of salary for every one calendar year of service",
+        "Computation based on average salary, dearness allowance, and years of service"
+      ]
+    },
+    "epf": {
+      "title": "Employee Provident Fund (EPF) & Employee Pension Scheme",
+      "description": "Employee Provident Fund (EPF) & Employee Pension Schemes are provided to all eligible employees as per Central Government norms.",
+      "contribution": "Contribution Details:",
+      "features": [
+        "Employee: 12% of monthly basic salary + dearness allowance (max ceiling Rs. 15,000/-)",
+        "Employer: 12% (8.33% towards EFPS + 3.67% EPF)"
+      ]
+    },
+    "mediclaim": {
+      "title": "Group Mediclaim Facility",
+      "description": "Group mediclaim facility is provided to all the employees of JSSPDA (optional) with cashless hospital admission facility.",
+      "feature": "Cashless Hospital Admission Available"
+    },
+    "esi": {
+      "title": "Employee State Insurance Corporation (ESI)",
+      "description": "ESI Medical Benefits - A comprehensive social security program for workers in the event of medical contingencies, such as sickness, maternity, death, or disablement due to employment injury and occupational disease.",
+      "coverage": "Coverage:",
+      "feature": "ESI facility is extended to all employees with ceiling limit of total salary Rs. 21,000/- per month"
+    },
+    "maternity": {
+      "title": "Maternity Benefit",
+      "description": "Women Employees can avail maternity leave with full salary and comprehensive support during this important time.",
+      "entitlement": "Leave Entitlement:",
+      "features": [
+        "135 days of maternity leave with full salary",
+        "Maximum two occasions during service period",
+        "ESI Scheme employees: Up to 180 days extended leave"
+      ]
+    },
+    "accident": {
+      "title": "Group Personal Accident Policy",
+      "description": "All JSSPDA Employees are covered under Group Personal Accident Insurance providing comprehensive protection.",
+      "coverage": "Coverage Details:",
+      "features": [
+        "Sum Assured: Rs. 2,50,000/-",
+        "Accidental hospitalization expenses: Up to Rs. 50,000/-",
+        "Weekly compensation for temporary total disabilities: Rs. 5,000/- for 52 weeks"
+      ]
+    },
+    "edli": {
+      "title": "Early Death Life Insurance (EDLI) Scheme",
+      "description": "EDLI facility related to the death of the employee during his service period, providing financial security to families.",
+      "coverage": "Coverage:",
+      "feature": "Extended to all MANAGEMENT employees of JSSPDA up to a limit of Rs. 7,00,000/-"
+    },
+    "summary": {
+      "title": "Comprehensive Employee Welfare",
+      "description": "JSSPDA is committed to providing comprehensive benefits that ensure the security, health, and welfare of all our employees and their families.",
+      "categories": {
+        "financial": {
+          "title": "Financial Security",
+          "description": "Gratuity, EPF, and life insurance coverage"
+        },
+        "health": {
+          "title": "Health Coverage",
+          "description": "Mediclaim and ESI medical benefits"
+        },
+        "family": {
+          "title": "Family Support",
+          "description": "Maternity benefits and accident coverage"
+        }
+      }
+    }
+  },
+  "reportsDownload": {
+    "hero": {
+      "title": "Reports and Download",
+      "subtitle": "Access official documents, reports, and forms from JSS Polytechnic for the Differently Abled"
+    },
+    "categories": {
+      "title": "Document Categories"
+    },
+    "documents": {
+      "applicationForm": {
+        "title": "JSSPDA Home Application Form 2021-22",
+        "description": "Official application form for home admission process for the academic year 2021-22",
+        "category": "Application Forms",
+        "type": "Application"
+      },
+      "auditReport2020": {
+        "title": "Audit Report 2019-20",
+        "description": "Comprehensive audit report for the financial year 2019-20",
+        "category": "Audit Reports",
+        "type": "Financial Audit"
+      },
+      "auditReport2019": {
+        "title": "Audit Report 2018-19",
+        "description": "Comprehensive audit report for the financial year 2018-19",
+        "category": "Audit Reports",
+        "type": "Financial Audit"
+      },
+      "auditReport2018": {
+        "title": "Audit Report 2017-18",
+        "description": "Comprehensive audit report for the financial year 2017-18",
+        "category": "Audit Reports",
+        "type": "Financial Audit"
+      },
+      "mandatoryDisclosure": {
+        "title": "JSSPDA Mandatory Disclosure",
+        "description": "Mandatory disclosure document containing comprehensive institutional information as per AICTE requirements",
+        "category": "Compliance Documents",
+        "type": "AICTE Disclosure"
+      },
+      "rti": {
+        "title": "RTI Information - JSSPDA",
+        "description": "Right to Information document with detailed institutional information and organizational structure",
+        "category": "Information Documents",
+        "type": "RTI Document"
+      }
+    },
+    "actions": {
+      "viewOnline": "View Online",
+      "download": "Download"
+    },
+    "info": {
+      "title": "Document Information",
+      "official": {
+        "title": "Official Documents",
+        "description": "All documents are official and authenticated by JSSPDA administration"
+      },
+      "compliance": {
+        "title": "Compliance Ready",
+        "description": "Documents comply with AICTE and government regulations"
+      },
+      "access": {
+        "title": "Easy Access",
+        "description": "View online or download for offline reference"
+      }
+    },
+    "contact": {
+      "title": "Need Additional Documents?",
+      "description": "If you require additional documents or have questions about any of the available reports, please contact our administration office.",
+      "phone": "Phone:",
+      "email": "Email:"
+    }
+  },
   "faculty": {
     "title": "Our Faculty",
     "subtitle": "Meet our dedicated team of educators committed to accessible and inclusive technical education",
