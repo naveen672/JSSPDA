@@ -657,5 +657,28 @@
         "para4": "It was a unique concept conceived and became reality by providing educational and employment opportunities for the persons with disabilities."
       }
     }
+  },
+  "governance": {
+    "title": "Governance",
+    "subtitle": "Administrative structure and committees ensuring effective governance of JSS Polytechnic for the Differently Abled",
+    "council": {
+      "title": "Governing Council",
+      "description": "The Polytechnic has the Governing Council which has a set of members constituted by the Management as per the norms of AICTE for giving guidance regarding administration of the Institution.",
+      "composition": "Composition of Governing Council",
+      "compositionText": "The Governing Council shall have at least 11 members including the Chairman and the Member-Secretary. The Management / Registered Society shall nominate members including the Chairman and the Member-Secretary as indicated below:",
+      "members": "Governing Council Members",
+      "functions": "Functions and Responsibilities of the Governing Council",
+      "meetings": "GC Meeting Proceedings"
+    },
+    "committees": {
+      "title": "Administrative Committees",
+      "description": "Various committees formed to assist the Polytechnic administration for effective governance and student welfare"
+    },
+    "academic": {
+      "title": "Academic Governance"
+    },
+    "services": {
+      "title": "Support Services & Administrative Sections"
+    }
   }
 }

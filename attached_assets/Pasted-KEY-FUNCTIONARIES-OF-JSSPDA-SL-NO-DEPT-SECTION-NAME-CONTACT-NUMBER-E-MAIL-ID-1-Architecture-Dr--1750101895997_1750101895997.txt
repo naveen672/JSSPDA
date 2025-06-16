@@ -1,0 +1,33 @@
+KEY FUNCTIONARIES OF JSSPDA
+
+SL NO.	DEPT/SECTION	NAME	CONTACT NUMBER	E-MAIL ID
+1	Architecture	Dr. S Uma	9448957991	jsspdaar@gmail.com
+2	Commercial Practice	Mr. K Mahadevaswamy	9886558878	jsspdacp@gmail.com
+3	Computer Science & Engineering	Mrs. C Nirupama	9986011217	jsspdacs@gmail.com
+4	Jewellery Design & Technology	Mr. N M Shivakumaraswamy	9448826306	jsspda.jdt@gmail.com
+5	Electronics & Communication Engineering	Mrs. C Kavya	9739319715	jsspdaec@gmail.com
+6	Computer Applications for the Visually Impaired	Mrs. V Geetha	9483608707	jsspdacavi@gmail.com
+7	Controller of Examinations	Mr. G P Sathisha	9066868931	jsspdaexam@gmail.com
+8	Librarian	Mrs. B Sunitha	9844079269	jsspdalib@gmail.com
+9	Training & Placement Officer	Mr. B J Kushal 	8050709919
+	jsspdaplacement@gmail.com
+10	Hostel Warden	Mr. N M Shivakumara swamy	9448826306	nmswarden@gmail.com
+11	Internal Quality Assurance Cell (IQAC)	Mr. N M Shivakumaraswamy	9448826306	nmswarden@gmail.com
+12	AISHE & E-Governance Cell Coordinator	Mr. K S Mahesh	9886067061	ksmmahesh@gmail.com
+13	NBA Coordinator	Dr. S G Srikantaswamy	9900898748	jsspdanba@gmail.com
+14	Alumni Association Coordinator	Mrs. Sunanda	9844496133	sunandacs@gmail.com
+15	NSS Coordinator	Mr. B Srinivasa	8722670778	jsspdanss@gmail.com
+16	ISTE Student Chapter Coordinator	Mrs. D V Nandini	9901591463	jsspdaiste@gmail.com
+17	IIP Cell Coordinator	Mr. M B Raghu	9448434270	jsspdaiipc@gmail.com
+18	Scholarship Coordinator & Student Counselor	Mrs. M Suchetha	9555356789	suchethapda@gmail.com
+19	Sign Language Interpreter	Mrs. Kanchan S Sharma	9611807979	jsspdasl@gmail.com
+20	Youth Red Cross Coordinator	Mrs. Murugamma	9538962593	murugammaj15@gmail.com
+21	Medical Officer 	Dr. A M Mahesh	9481150303	--
+22	Sports coordinator	Mr. H N Mahadevaswamy	9980049708	crazyms.swamy@gmail.com
+23	Cultural Coordinator	Smt. M Prathima	8277474055	prathimadivyap@gmail.com
+24	Anti Ragging Committee 	Dr. S G Srikantaswamy	9900898748	sgsrikantaswamy@gmail.com
+25	SC / ST Committee	Mr. B Srinivasa	8722670778	srinivasmbs22@gmail.com
+26	OMBUDSMEN Grievance Redressal Committee	Smt. C Nirupama	9986011217	c.nirupama2007@gmail.com
+27	Internal Complaint Committee	Smt. C Nirupama	9986011217	c.nirupama2007@gmail.com
+28	Women’s Security, Welfare & Grievance 	Dr. S Uma	9448957991	umasarch53@gmail.com
+

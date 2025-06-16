@@ -125,6 +125,12 @@ The application is configured for deployment on Replit with:
 ✓ Created Messages submenu under Home navigation with Principal's message page
 ✓ Added Principal Sri. Elangovan B's profile with contact information and institutional message
 ✓ Implemented proper color theming and multilingual support for Messages page
+✓ Created Governance submenu under Home navigation with comprehensive administrative structure
+✓ Added complete Governing Council details with 13 members and their roles
+✓ Implemented six major administrative committees (IQAC, Women's Security, Anti-Ragging, etc.)
+✓ Added Academic Governance section with Academic and Examination committees
+✓ Included Support Services section with four administrative departments
+✓ Applied consistent four-color theming and full multilingual support for Governance page
 
 ## Changelog
 

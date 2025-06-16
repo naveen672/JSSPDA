@@ -126,6 +126,7 @@ export default function Header() {
         { href: "/about-jsspda", label: "About JSSPDA" },
         { href: "/about", label: "Vision, Mission and Core Values" },
         { href: "/messages", label: "Messages" },
+        { href: "/governance", label: "Governance" },
         { href: "/contact", label: "Contact us" },
       ]
     },
