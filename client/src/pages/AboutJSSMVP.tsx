@@ -23,12 +23,12 @@ export default function AboutJSSMVP() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           {/* President and Building Images Side by Side */}
-          <div className="flex flex-col md:flex-row mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <div className="text-center">
               <img 
                 src={presidentImage} 
                 alt="Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji" 
-                className="w-48 h-64 object-cover rounded-lg shadow-lg mx-auto"
+                className="w-full max-w-md mx-auto rounded-lg shadow-lg"
               />
               <h3 className="text-lg font-bold mt-4 text-[#A52A2A]">
                 Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji
@@ -39,7 +39,7 @@ export default function AboutJSSMVP() {
               <img 
                 src={buildingImage} 
                 alt="JSS Mahavidyapeetha Building" 
-                className="w-full h-80 object-cover rounded-lg shadow-lg"
+                className="w-full rounded-lg shadow-lg"
               />
               <h3 className="text-lg font-bold mt-4 text-[#A52A2A]">
                 JSS Mahavidyapeetha Campus
