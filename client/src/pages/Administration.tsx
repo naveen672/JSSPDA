@@ -10,8 +10,8 @@ export default function Administration() {
       <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('administration.title', 'Administration')}</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#1a1a1a]">{t('administration.title', 'Administration')}</h1>
+            <p className="text-xl text-[#1a1a1a] max-w-3xl mx-auto">
               {t('administration.subtitle', 'Administrative staff and key functionaries managing JSS Polytechnic for the Differently Abled')}
             </p>
           </div>
@@ -24,7 +24,7 @@ export default function Administration() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <User className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h2 className="text-3xl font-serif font-bold mb-6 text-primary">{t('administration.principal.title', 'Principal Profile')}</h2>
+              <h2 className="text-3xl font-serif font-bold mb-6 text-[#1a1a1a]">{t('administration.principal.title', 'Principal Profile')}</h2>
             </div>
 
             <div className="bg-[hsl(var(--background))] border border-[hsl(var(--border))] rounded-xl shadow-lg p-8 mb-12">

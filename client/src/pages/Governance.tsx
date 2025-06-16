@@ -10,8 +10,8 @@ export default function Governance() {
       <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('governance.title', 'Governance')}</h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#1a1a1a]">{t('governance.title', 'Governance')}</h1>
+            <p className="text-xl text-[#1a1a1a] max-w-3xl mx-auto">
               {t('governance.subtitle', 'Administrative structure and committees ensuring effective governance of JSS Polytechnic for the Differently Abled')}
             </p>
           </div>
@@ -24,8 +24,8 @@ export default function Governance() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h2 className="text-3xl font-serif font-bold mb-6 text-primary">{t('governance.council.title', 'Governing Council')}</h2>
-              <p className="text-lg text-gray-700 max-w-4xl mx-auto mb-8">
+              <h2 className="text-3xl font-serif font-bold mb-6 text-[#1a1a1a]">{t('governance.council.title', 'Governing Council')}</h2>
+              <p className="text-lg text-[#1a1a1a] max-w-4xl mx-auto mb-8">
                 {t('governance.council.description', 'The Polytechnic has the Governing Council which has a set of members constituted by the Management as per the norms of AICTE for giving guidance regarding administration of the Institution.')}
               </p>
             </div>

@@ -267,12 +267,12 @@ export default function Header() {
               
               {/* Center title */}
               <div className="flex flex-col items-center text-center">
-                <h3 className="text-sm md:text-base text-[hsl(var(--primary))] font-semibold">JSS Mahavidyapeetha</h3>
-                <h2 className="text-xs md:text-sm hidden md:block text-[hsl(var(--foreground))] opacity-80 mb-1">ಜೆ ಎಸ್ ಎಸ್ ವಿಶೇಷ ಚೇತನರ ಪಾಲಿಟೆಕ್ನಿಕ್, ಮೈಸೂರು</h2>
-                <h1 className="text-base md:text-lg lg:text-2xl font-bold text-[hsl(var(--foreground))]">
+                <h3 className="text-sm md:text-base text-[#0066cc] font-semibold">JSS Mahavidyapeetha</h3>
+                <h2 className="text-xs md:text-sm hidden md:block text-[#1a1a1a] mb-1">ಜೆ ಎಸ್ ಎಸ್ ವಿಶೇಷ ಚೇತನರ ಪಾಲಿಟೆಕ್ನಿಕ್, ಮೈಸೂರು</h2>
+                <h1 className="text-base md:text-lg lg:text-2xl font-bold text-[#1a1a1a]">
                   JSS Polytechnic for the Differently Abled, Mysuru
                 </h1>
-                <p className="text-xs md:text-sm text-[hsl(var(--muted-foreground))] hidden md:block opacity-90">
+                <p className="text-xs md:text-sm text-[#1a1a1a] hidden md:block">
                   (An Autonomous institution aided by the Government of Karnataka and Approved by AICTE)
                 </p>
               </div>
@@ -455,7 +455,7 @@ export default function Header() {
               {link.hasDropdown ? (
                 <div>
                   <button
-                    className={`w-full py-3 font-medium flex items-center justify-between gap-2 text-[hsl(var(--foreground))] hover:text-[hsl(var(--primary))] ${mobileDropdowns[link.id || ''] ? 'text-[hsl(var(--primary))]' : ''}`}
+                    className={`w-full py-3 font-medium flex items-center justify-between gap-2 text-[#1a1a1a] hover:text-[#0066cc] ${mobileDropdowns[link.id || ''] ? 'text-[#0066cc]' : ''}`}
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
@@ -474,7 +474,7 @@ export default function Header() {
                       <Link
                         key={`mobile-dropdown-${subIdx}`}
                         href={item.href}
-                        className="block py-2 text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors"
+                        className="block py-2 text-sm text-[#1a1a1a] hover:text-[#0066cc] transition-colors"
                         onClick={() => {
                           setOpenDropdown(null);
                           setMobileMenuOpen(false);
