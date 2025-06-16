@@ -228,27 +228,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Contact form submission endpoint - now with database integration
   app.post('/api/contact', validateRequest(insertContactSubmissionSchema.omit({ userId: true })), async (req: Request, res: Response) => {
-    const { name, email, subject, message } = req.body;
+    const { candidateName, fatherName, email, address, mobile, purpose, message } = req.body;
     
     try {
       // Save contact submission to database
       await storage.createContactSubmission({
-        name,
+        candidateName,
+        fatherName,
         email,
-        subject,
+        address,
+        mobile,
+        purpose,
         message,
         userId: null // For anonymous submissions
       });
       
       res.status(200).json({ 
         success: true, 
-        message: 'Thank you for your message. We will get back to you soon.' 
+        message: 'Thank you for your inquiry. We will get back to you soon.' 
       });
     } catch (error) {
       log(`Error saving contact submission: ${(error as Error).message}`, "routes");
       res.status(500).json({ 
         success: false, 
-        message: 'Failed to submit your message. Please try again later.' 
+        message: 'Failed to submit your inquiry. Please try again later.' 
       });
     }
   });
