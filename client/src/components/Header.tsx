@@ -425,13 +425,13 @@ export default function Header() {
                   </svg>
                 </button>
                 <div 
-                  className={`absolute right-0 mt-1 bg-white text-gray-800 shadow-lg rounded-md py-2 px-1 w-32 z-50 ${languageMenuOpen ? 'block' : 'hidden'}`} 
+                  className={`absolute right-0 mt-1 bg-[hsl(var(--background))] border border-[hsl(var(--border))] text-[hsl(var(--foreground))] shadow-lg rounded-md py-2 px-1 w-32 z-50 ${languageMenuOpen ? 'block' : 'hidden'}`} 
                   id="language-menu"
                 >
                   {languages.map((lang) => (
                     <button 
                       key={lang.code}
-                      className="block w-full text-left px-3 py-1.5 text-sm rounded hover:bg-gray-100"
+                      className="block w-full text-left px-3 py-1.5 text-sm rounded hover:bg-[hsl(var(--accent))] hover:text-[hsl(var(--accent-foreground))]"
                       onClick={() => {
                         setLanguage(lang.code);
                         setLanguageMenuOpen(false);
@@ -448,14 +448,14 @@ export default function Header() {
       </div>
       
       {/* Mobile menu */}
-      <div className={`md:hidden bg-[hsl(var(--header-bg))] shadow-lg fixed top-[106px] w-full left-0 z-50 h-[calc(100vh-106px)] overflow-y-auto ${mobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
+      <div className={`md:hidden bg-[hsl(var(--background))] border-t border-[hsl(var(--border))] shadow-lg fixed top-[106px] w-full left-0 z-50 h-[calc(100vh-106px)] overflow-y-auto ${mobileMenuOpen ? 'block' : 'hidden'}`} id="mobile-menu">
         <nav className="container mx-auto px-4 py-3 flex flex-col">
           {navLinks.map((link, idx) => (
-            <div key={`mobile-nav-${idx}`} className="border-b">
+            <div key={`mobile-nav-${idx}`} className="border-b border-[hsl(var(--border))]">
               {link.hasDropdown ? (
                 <div>
                   <button
-                    className={`w-full py-2 font-medium flex items-center justify-between gap-2 ${mobileDropdowns[link.id || ''] ? 'text-primary' : ''}`}
+                    className={`w-full py-3 font-medium flex items-center justify-between gap-2 text-[hsl(var(--foreground))] hover:text-[hsl(var(--primary))] ${mobileDropdowns[link.id || ''] ? 'text-[hsl(var(--primary))]' : ''}`}
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
@@ -474,7 +474,7 @@ export default function Header() {
                       <Link
                         key={`mobile-dropdown-${subIdx}`}
                         href={item.href}
-                        className="block py-2 text-sm hover:text-primary"
+                        className="block py-2 text-sm text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors"
                         onClick={() => {
                           setOpenDropdown(null);
                           setMobileMenuOpen(false);
