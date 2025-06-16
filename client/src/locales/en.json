@@ -10,6 +10,8 @@
   "navigation": {
     "home": "Home",
     "about": "About",
+    "aboutJSSMVP": "About JSSMVP",
+    "aboutJSSPDA": "About JSSPDA",
     "courses": "Courses",
     "faculty": "Faculty",
     "contact": "Contact"

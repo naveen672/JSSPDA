@@ -74,33 +74,43 @@
 /* Accessibility color themes */
 .color-theme-blue {
   --primary: 207 90% 54%;
-  --primary-foreground: 211 100% 99%;
+  --primary-foreground: 0 0% 100%;
   --primary-hover: 207 90% 45%;
   --accent: 213 94% 68%;
-  --accent-foreground: 210 40% 98%;
+  --accent-foreground: 0 0% 100%;
   --chart-1: 207 90% 54%;
   --secondary: 210 40% 96%;
-  --secondary-foreground: 222 47% 11%;
+  --secondary-foreground: 222 84% 4.9%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+  --foreground: 222 84% 4.9%;
+  --background: 0 0% 100%;
+  --border: 214 32% 91%;
   /* Specific color elements for this theme */
   --header-bg: 210 40% 96%;
   --footer-bg: 205 100% 20%;
-  --footer-text: 210 40% 98%;
+  --footer-text: 0 0% 100%;
   --card-accent: 210 60% 95%;
 }
 
 .color-theme-green {
   --primary: 142 71% 45%;
-  --primary-foreground: 210 40% 98%;
+  --primary-foreground: 0 0% 100%;
   --primary-hover: 142 71% 38%;
   --accent: 143 55% 62%;
-  --accent-foreground: 210 40% 98%;
+  --accent-foreground: 0 0% 100%;
   --chart-1: 142 71% 45%;
   --secondary: 150 42% 95%;
-  --secondary-foreground: 150 60% 20%;
+  --secondary-foreground: 150 90% 15%;
+  --muted: 150 42% 95%;
+  --muted-foreground: 150 30% 40%;
+  --foreground: 150 90% 15%;
+  --background: 0 0% 100%;
+  --border: 150 30% 85%;
   /* Specific color elements for this theme */
   --header-bg: 150 42% 95%;
   --footer-bg: 150 80% 20%;
-  --footer-text: 150 42% 95%;
+  --footer-text: 0 0% 100%;
   --card-accent: 150 50% 94%;
 }
 
@@ -147,6 +157,175 @@
 
 [data-font-size="large"] {
   font-size: 1.3rem;
+}
+
+/* Enhanced responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+  
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .text-base {
+    font-size: 1rem;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .px-6 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  
+  .space-y-6 > * + * {
+    margin-top: 1.5rem;
+  }
+  
+  .space-y-8 > * + * {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .text-4xl {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  
+  .text-3xl {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+/* Improved color contrast and visibility */
+.text-muted-foreground {
+  color: hsl(var(--muted-foreground));
+  opacity: 0.9;
+}
+
+.text-secondary-foreground {
+  color: hsl(var(--secondary-foreground));
+  font-weight: 500;
+}
+
+.bg-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.bg-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+.bg-accent {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+/* Enhanced card styling for better contrast */
+.card {
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+}
+
+.card-header {
+  background-color: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+.card-content {
+  color: hsl(var(--foreground));
+}
+
+/* Button improvements for better visibility */
+.btn-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: 1px solid hsl(var(--primary));
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: hsl(var(--primary-hover));
+  border-color: hsl(var(--primary-hover));
+}
+
+.btn-secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border: 1px solid hsl(var(--border));
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
 }
 
 /* Adjust specific elements for better readability */
