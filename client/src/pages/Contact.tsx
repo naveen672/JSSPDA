@@ -84,7 +84,7 @@ export default function Contact() {
       <section className="bg-neutral-light py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">{t('contact.title')}</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('contact.title')}</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{t('contact.subtitle')}</p>
           </div>
         </div>

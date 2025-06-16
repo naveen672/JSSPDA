@@ -17,7 +17,7 @@ export default function Faculty() {
       <section className="bg-neutral-light py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">{t('faculty.title')}</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('faculty.title')}</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{t('faculty.subtitle')}</p>
           </div>
         </div>
@@ -26,7 +26,7 @@ export default function Faculty() {
       {/* Faculty Leadership */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-serif font-bold mb-12 text-center">{t('faculty.leadership.title')}</h2>
+          <h2 className="text-3xl font-serif font-bold mb-12 text-center text-primary">{t('faculty.leadership.title')}</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {/* HOD Computer Science */}

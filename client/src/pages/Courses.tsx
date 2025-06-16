@@ -18,7 +18,7 @@ export default function Courses() {
       <section className="bg-neutral-light py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">{t('courses.title')}</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('courses.title')}</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{t('courses.subtitle')}</p>
           </div>
         </div>
@@ -28,20 +28,20 @@ export default function Courses() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">Diploma Courses</h2>
+            <h2 className="text-2xl font-bold mb-4 text-primary">{t('courses.diploma.title', 'Diploma Courses')}</h2>
             <p className="text-lg text-muted-foreground mb-6">
-              The following courses are offered as approved by the Govt. of Karnataka and AICTE, New Delhi.
+              {t('courses.diploma.description', 'The following courses are offered as approved by the Govt. of Karnataka and AICTE, New Delhi.')}
             </p>
             
             {/* Course Table */}
             <div className="overflow-x-auto bg-white rounded-xl shadow-md">
               <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-primary/5">
+                <thead className="bg-primary text-primary-foreground">
                   <tr>
-                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Course</th>
-                    <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Intake</th>
-                    <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Duration</th>
-                    <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">Details</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold">{t('courses.table.headers.course', 'Course')}</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold">{t('courses.table.headers.intake', 'Intake')}</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold">{t('courses.table.headers.duration', 'Duration')}</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold">{t('courses.table.headers.details', 'Details')}</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">

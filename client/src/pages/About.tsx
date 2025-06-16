@@ -14,7 +14,7 @@ export default function About() {
       <section className="bg-neutral-light py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#A52A2A]">Vision, Mission & Core Values</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('about.title', 'Vision, Mission & Core Values')}</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Empowering lives through quality education and innovative support systems
             </p>
