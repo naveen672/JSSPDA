@@ -28,7 +28,7 @@ export default function AboutJSSMVP() {
               <img 
                 src={presidentImage} 
                 alt="Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji" 
-                className="w-full h-80 object-cover rounded-lg shadow-lg"
+                className="w-48 h-64 object-cover rounded-lg shadow-lg mx-auto"
               />
               <h3 className="text-lg font-bold mt-4 text-[#A52A2A]">
                 Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji
