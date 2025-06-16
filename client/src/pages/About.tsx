@@ -4,6 +4,8 @@ import {
   Monitor, 
   HeartHandshake 
 } from "lucide-react";
+import presidentImage from "@assets/image_1750098685509.png";
+import buildingImage from "@assets/image_1750098690353.png";
 
 export default function About() {
   const { t } = useTranslation();
@@ -110,6 +112,115 @@ export default function About() {
         </div>
       </section>
       
+      {/* JSS Mahavidyapeetha Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-[#A52A2A]">About JSS Mahavidyapeetha</h2>
+          </div>
+          
+          {/* President and Building Images Side by Side */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="text-center">
+              <img 
+                src={presidentImage} 
+                alt="Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji" 
+                className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+              />
+              <h3 className="text-lg font-bold mt-4 text-[#A52A2A]">
+                Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji
+              </h3>
+              <p className="text-muted-foreground">President, JSS Mahavidyapeetha</p>
+            </div>
+            <div className="text-center">
+              <img 
+                src={buildingImage} 
+                alt="JSS Mahavidyapeetha Building" 
+                className="w-full rounded-lg shadow-lg"
+              />
+              <h3 className="text-lg font-bold mt-4 text-[#A52A2A]">
+                JSS Mahavidyapeetha Campus
+              </h3>
+              <p className="text-muted-foreground">Main Building, Mysuru</p>
+            </div>
+          </div>
+          
+          {/* Content About JSS Mahavidyapeetha */}
+          <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="prose max-w-none">
+              <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                The origin of JSS Mahavidyapeetha (JSSMVP), a formidable educational movement, can be traced to the establishment of a small hostel in 1928 to cater to the accommodation needs of students pursuing higher studies in Mysore. His Holiness Jagadguru Dr. Sri Shivarathri Rajendra Mahaswamiji established the Jagadguru Sri Shivarathreeshwara Mahavidyapeetha (JSSMVP) in 1954 and it was registered under the Societies' Registration Act 1960.
+              </p>
+              
+              <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                Focusing on a purpose as expansive and yet as specific as improving quality of life through Human Development, the JSS Mahavidyapeetha has grown from strength to strength. A long and healthy life, Education for all and a decent standard of living, the indicators of Human development, have been the underlying philosophy of Jagadguru Sri Veerasimhasana Mahasamsthana Math, Suttur Srikshethra, for centuries. This is also the philosophy for which the Mahavidyapeetha today stands for.
+              </p>
+              
+              <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                Under the untiring efforts of Jagadguru Dr. Sri Shivarathri Rajendra Mahaswamiji, the Mahavidyapeetha has witnessed enormous growth in the field of education and today has over 300 institutions under its fold, from kindergartens to postgraduate centres and postdoctoral research catering to the educational needs of more than 1,00,000 students.
+              </p>
+              
+              <p className="text-lg mb-8 text-gray-700 leading-relaxed">
+                The Mahavidyapeetha continues to play an important role in expanding the scope of its activities to several branches of knowledge, welfare and culture. Its educational efforts span crèches for toddlers of working rural women, schools to impart primary and secondary education in both Kannada and English medium, Colleges, Polytechnics, Technical, Medicine, etc. Apart from formal education, the initiatives stretch to integrated rural development through training and empowering of rural folk, reaching out healthcare to people through modern and traditional Indian systems of medicine, patronizing literary activities, visual arts, performing arts, restoration of temples and historical monuments.
+              </p>
+              
+              {/* Managing Committee */}
+              <div className="mt-8">
+                <h3 className="text-2xl font-bold mb-6 text-[#A52A2A]">Managing Committee Members</h3>
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-gray-300">
+                    <thead>
+                      <tr className="bg-[#A52A2A] text-white">
+                        <th className="border border-gray-300 px-4 py-2 text-left">Sl. No.</th>
+                        <th className="border border-gray-300 px-4 py-2 text-left">Name</th>
+                        <th className="border border-gray-300 px-4 py-2 text-left">Position</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border border-gray-300 px-4 py-2">1.</td>
+                        <td className="border border-gray-300 px-4 py-2">Jagadguru His Holiness Sri Shivarathri Deshikendra Mahaswamiji President, JSS Mahavidyapeetha, Mysuru</td>
+                        <td className="border border-gray-300 px-4 py-2">Chairman</td>
+                      </tr>
+                      <tr className="bg-gray-50">
+                        <td className="border border-gray-300 px-4 py-2">2.</td>
+                        <td className="border border-gray-300 px-4 py-2">Justice Dr.Shivaraj V. Patil Retd. Justice of Supreme Court</td>
+                        <td className="border border-gray-300 px-4 py-2">Member</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 px-4 py-2">3.</td>
+                        <td className="border border-gray-300 px-4 py-2">Sri Chiranjeevi Singh, IAS (Retd) Retd. Principal Secretary</td>
+                        <td className="border border-gray-300 px-4 py-2">Member</td>
+                      </tr>
+                      <tr className="bg-gray-50">
+                        <td className="border border-gray-300 px-4 py-2">4.</td>
+                        <td className="border border-gray-300 px-4 py-2">Dr.Channabasappa</td>
+                        <td className="border border-gray-300 px-4 py-2">Member</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 px-4 py-2">5.</td>
+                        <td className="border border-gray-300 px-4 py-2">Sri. M.B. Dhyaberi, IAS (Retd)</td>
+                        <td className="border border-gray-300 px-4 py-2">Member</td>
+                      </tr>
+                      <tr className="bg-gray-50">
+                        <td className="border border-gray-300 px-4 py-2">6.</td>
+                        <td className="border border-gray-300 px-4 py-2">Sri V. Vinayaka Shankar, B.E</td>
+                        <td className="border border-gray-300 px-4 py-2">Member</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-gray-300 px-4 py-2">7.</td>
+                        <td className="border border-gray-300 px-4 py-2">Sri S. ShivakumaraSwamy Retd., Associate Professor</td>
+                        <td className="border border-gray-300 px-4 py-2">Honorary secretary</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* History & Timeline */}
       <section className="py-16 bg-neutral-light">
         <div className="container mx-auto px-4">
