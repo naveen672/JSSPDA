@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
+import { useAppContext } from "@/contexts/AppContext";
 import presidentImage from "@assets/image_1750098685509.png";
 import buildingImage from "@assets/image_1750098690353.png";
 
 export default function AboutJSSMVP() {
   const { t } = useTranslation();
+  const { theme, fontSize } = useAppContext();
   
   return (
     <>
@@ -11,9 +13,9 @@ export default function AboutJSSMVP() {
       <section className="bg-neutral-light py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#A52A2A]">About JSS Mahavidyapeetha</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('aboutJSSMVP.title', 'About JSS Mahavidyapeetha')}</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Empowering lives through education since 1954
+              {t('aboutJSSMVP.subtitle', 'Empowering lives through education since 1954')}
             </p>
           </div>
         </div>
@@ -54,10 +56,10 @@ export default function AboutJSSMVP() {
                   alt="Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji" 
                   className="w-full max-w-sm mx-auto rounded-lg shadow-lg"
                 />
-                <h3 className="text-lg font-bold mt-4 text-[#A52A2A]">
-                  Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji
+                <h3 className="text-lg font-bold mt-4 text-primary">
+                  {t('aboutJSSMVP.president.name', 'Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji')}
                 </h3>
-                <p className="text-muted-foreground">President, JSS Mahavidyapeetha</p>
+                <p className="text-muted-foreground">{t('aboutJSSMVP.president.title', 'President, JSS Mahavidyapeetha')}</p>
               </div>
             </div>
           </div>
@@ -69,24 +71,24 @@ export default function AboutJSSMVP() {
               alt="JSS Mahavidyapeetha Building" 
               className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
             />
-            <h3 className="text-lg font-bold mt-4 text-[#A52A2A]">
-              JSS Mahavidyapeetha Campus
+            <h3 className="text-lg font-bold mt-4 text-primary">
+              {t('aboutJSSMVP.campus.name', 'JSS Mahavidyapeetha Campus')}
             </h3>
-            <p className="text-muted-foreground">Main Building, Mysuru</p>
+            <p className="text-muted-foreground">{t('aboutJSSMVP.campus.location', 'Main Building, Mysuru')}</p>
           </div>
           
           {/* Managing Committee Section */}
           <div className="bg-white p-8 rounded-lg shadow-md">
             {/* Managing Committee */}
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-[#A52A2A]">Managing Committee Members</h3>
+              <h3 className="text-2xl font-bold mb-6 text-primary">{t('aboutJSSMVP.committee.title', 'Managing Committee Members')}</h3>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-gray-300">
                   <thead>
-                    <tr className="bg-[#A52A2A] text-white">
-                      <th className="border border-gray-300 px-4 py-3 text-left">Position</th>
-                      <th className="border border-gray-300 px-4 py-3 text-left">Name</th>
-                      <th className="border border-gray-300 px-4 py-3 text-left">Designation</th>
+                    <tr className="bg-primary text-primary-foreground">
+                      <th className="border border-gray-300 px-4 py-3 text-left">{t('aboutJSSMVP.committee.headers.position', 'Position')}</th>
+                      <th className="border border-gray-300 px-4 py-3 text-left">{t('aboutJSSMVP.committee.headers.name', 'Name')}</th>
+                      <th className="border border-gray-300 px-4 py-3 text-left">{t('aboutJSSMVP.committee.headers.designation', 'Designation')}</th>
                     </tr>
                   </thead>
                   <tbody>

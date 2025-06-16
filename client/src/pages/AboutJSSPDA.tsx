@@ -1,9 +1,11 @@
 import { useTranslation } from "react-i18next";
+import { useAppContext } from "@/contexts/AppContext";
 import jsspdaEntrance from "@assets/image_1750098781136.png";
 import organizationChart from "@assets/image_1750098860303.png";
 
 export default function AboutJSSPDA() {
   const { t } = useTranslation();
+  const { theme, fontSize } = useAppContext();
   
   return (
     <>
@@ -11,9 +13,9 @@ export default function AboutJSSPDA() {
       <section className="bg-neutral-light py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#A52A2A]">About JSS Polytechnic for the Differently Abled</h1>
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('aboutJSSPDA.title', 'About JSS Polytechnic for the Differently Abled')}</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              First of its kind in India - Empowering differently abled students since 1991
+              {t('aboutJSSPDA.subtitle', 'First of its kind in India - Empowering differently abled students since 1991')}
             </p>
           </div>
         </div>
@@ -41,7 +43,7 @@ export default function AboutJSSPDA() {
               </p>
               
               <div className="bg-blue-50 p-6 rounded-lg">
-                <h4 className="text-xl font-bold mb-3 text-[#A52A2A]">Autonomous Institution</h4>
+                <h4 className="text-xl font-bold mb-3 text-primary">{t('aboutJSSPDA.autonomous.title', 'Autonomous Institution')}</h4>
                 <p>
                   JSSPDA has been granted <strong>autonomous status since 1999-2000</strong>. As such the curriculum, scheme of examination, evaluation and award of Diploma are all governed by the rules of autonomy approved by the Department of Collegiate and Technical Education, Government of Karnataka.
                 </p>
