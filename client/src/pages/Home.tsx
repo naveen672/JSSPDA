@@ -288,52 +288,39 @@ export default function Home() {
             
             <div>
               <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className="text-2xl font-bold mb-6">{t('home.contact.form.title')}</h3>
-                <form>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-muted-foreground mb-2">{t('home.contact.form.name')}</label>
-                      <input 
-                        type="text" 
-                        id="name" 
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-muted-foreground mb-2">{t('home.contact.form.email')}</label>
-                      <input 
-                        type="email" 
-                        id="email" 
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
-                      />
-                    </div>
+                <h3 className="text-2xl font-bold mb-6">Contact Form</h3>
+                <p className="text-muted-foreground mb-6">
+                  Fill out our comprehensive contact form to get in touch with us. We'll respond to your inquiry promptly.
+                </p>
+                <div className="space-y-4">
+                  <div className="text-sm text-muted-foreground">
+                    <strong>Required Information:</strong>
+                    <ul className="list-disc list-inside mt-2 space-y-1">
+                      <li>Name of the Candidate</li>
+                      <li>Email Address</li>
+                      <li>Mobile Number</li>
+                      <li>Purpose of Enquiry (Admission/Other)</li>
+                    </ul>
                   </div>
-                  
-                  <div className="mb-6">
-                    <label htmlFor="subject" className="block text-sm font-medium text-muted-foreground mb-2">{t('home.contact.form.subject')}</label>
-                    <input 
-                      type="text" 
-                      id="subject" 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
-                    />
+                  <div className="text-sm text-muted-foreground">
+                    <strong>Optional Information:</strong>
+                    <ul className="list-disc list-inside mt-2 space-y-1">
+                      <li>Father's Name</li>
+                      <li>Address</li>
+                      <li>Additional Message</li>
+                    </ul>
                   </div>
-                  
-                  <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-muted-foreground mb-2">{t('home.contact.form.message')}</label>
-                    <textarea 
-                      id="message" 
-                      rows={5} 
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    ></textarea>
-                  </div>
-                  
-                  <button 
-                    type="submit" 
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-medium"
-                  >
-                    {t('home.contact.form.send')}
-                  </button>
-                </form>
+                </div>
+                <Link 
+                  href="/contact" 
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md font-medium flex items-center justify-center gap-2 mt-6"
+                >
+                  Fill Contact Form
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14"/>
+                    <path d="m12 5 7 7-7 7"/>
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>
