@@ -14,6 +14,7 @@ import Governance from "./pages/Governance";
 import Administration from "./pages/Administration";
 import GreenInitiatives from "./pages/GreenInitiatives";
 import EmployeeBenefits from "./pages/EmployeeBenefits";
+import ReportsDownload from "./pages/ReportsDownload";
 import Courses from "./pages/Courses";
 import Faculty from "./pages/Faculty";
 import Contact from "./pages/Contact";
@@ -34,6 +35,7 @@ function Router() {
         <Route path="/administration" component={Administration} />
         <Route path="/green-initiatives" component={GreenInitiatives} />
         <Route path="/employee-benefits" component={EmployeeBenefits} />
+        <Route path="/reports-download" component={ReportsDownload} />
         <Route path="/courses" component={Courses} />
         <Route path="/faculty" component={Faculty} />
         <Route path="/contact" component={Contact} />

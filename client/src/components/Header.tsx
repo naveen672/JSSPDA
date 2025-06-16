@@ -130,6 +130,7 @@ export default function Header() {
         { href: "/administration", label: "Administration" },
         { href: "/green-initiatives", label: "JSSPDA Green Initiatives" },
         { href: "/employee-benefits", label: "Employee Benefits" },
+        { href: "/reports-download", label: "Reports and Download" },
         { href: "/contact", label: "Contact us" },
       ]
     },
