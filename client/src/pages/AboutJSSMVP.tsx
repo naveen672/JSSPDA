@@ -23,7 +23,7 @@ export default function AboutJSSMVP() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           {/* President and Building Images Side by Side */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0 mb-12">
+          <div className="flex flex-col md:flex-row mb-12">
             <div className="text-center">
               <img 
                 src={presidentImage} 
