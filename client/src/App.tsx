@@ -7,6 +7,8 @@ import { queryClient } from "./lib/queryClient";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import AboutJSSMVP from "./pages/AboutJSSMVP";
+import AboutJSSPDA from "./pages/AboutJSSPDA";
 import Courses from "./pages/Courses";
 import Faculty from "./pages/Faculty";
 import Contact from "./pages/Contact";
@@ -19,6 +21,8 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
+        <Route path="/about-jssmvp" component={AboutJSSMVP} />
+        <Route path="/about-jsspda" component={AboutJSSPDA} />
         <Route path="/courses" component={Courses} />
         <Route path="/faculty" component={Faculty} />
         <Route path="/contact" component={Contact} />

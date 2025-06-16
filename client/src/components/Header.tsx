@@ -122,10 +122,9 @@ export default function Header() {
       id: "home-dropdown",
       dropdown: [
         { href: "/", label: "Home Page" },
-        { href: "/about#jssmvp", label: "About JSSMVP" },
-        { href: "/about#jsspda", label: "About JSSPDA" },
-        { href: "/about#vision-mission", label: "Vision, Mission and Core Values" },
-        { href: "/about", label: "About Us" },
+        { href: "/about-jssmvp", label: "About JSSMVP" },
+        { href: "/about-jsspda", label: "About JSSPDA" },
+        { href: "/about", label: "Vision, Mission and Core Values" },
         { href: "/contact", label: "Contact us" },
       ]
     },
