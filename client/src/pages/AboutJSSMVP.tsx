@@ -22,54 +22,63 @@ export default function AboutJSSMVP() {
       {/* JSS Mahavidyapeetha Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          {/* President and Building Images Side by Side */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="text-center">
-              <img 
-                src={presidentImage} 
-                alt="Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji" 
-                className="w-full max-w-md mx-auto rounded-lg shadow-lg"
-              />
-              <h3 className="text-lg font-bold mt-4 text-[#A52A2A]">
-                Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji
-              </h3>
-              <p className="text-muted-foreground">President, JSS Mahavidyapeetha</p>
-            </div>
-            <div className="text-center">
-              <img 
-                src={buildingImage} 
-                alt="JSS Mahavidyapeetha Building" 
-                className="w-full rounded-lg shadow-lg"
-              />
-              <h3 className="text-lg font-bold mt-4 text-[#A52A2A]">
-                JSS Mahavidyapeetha Campus
-              </h3>
-              <p className="text-muted-foreground">Main Building, Mysuru</p>
+          
+          {/* Content About JSS Mahavidyapeetha with President Image on Right */}
+          <div className="bg-white p-8 rounded-lg shadow-md mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+              {/* Text Content - Takes 2/3 of the space */}
+              <div className="lg:col-span-2">
+                <div className="prose max-w-none">
+                  <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                    The origin of JSS Mahavidyapeetha (JSSMVP), a formidable educational movement, can be traced to the establishment of a small hostel in 1928 to cater to the accommodation needs of students pursuing higher studies in Mysore. His Holiness Jagadguru Dr. Sri Shivarathri Rajendra Mahaswamiji established the Jagadguru Sri Shivarathreeshwara Mahavidyapeetha (JSSMVP) in 1954 and it was registered under the Societies' Registration Act 1960.
+                  </p>
+                  
+                  <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                    Focusing on a purpose as expansive and yet as specific as improving quality of life through Human Development, the JSS Mahavidyapeetha has grown from strength to strength. A long and healthy life, Education for all and a decent standard of living, the indicators of Human development, have been the underlying philosophy of Jagadguru Sri Veerasimhasana Mahasamsthana Math, Suttur Srikshethra, for centuries. This is also the philosophy for which the Mahavidyapeetha today stands for.
+                  </p>
+                  
+                  <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                    Today, the JSS Mahavidyapeetha is one of the most prestigious educational institutions in the country with over 300 educational institutions, 48 hostels and 34 health units. The institutions affiliated to JSS Mahavidyapeetha provide education at all levels from KG to PG, in almost all streams of knowledge, including medical, engineering, arts, commerce, physical sciences, bio-sciences, hotel management and catering technology.
+                  </p>
+                  
+                  <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                    The JSS Mahavidyapeetha has been constantly working to keep itself up to date with the latest developments in the field of education and research. It has always been in the forefront of educational innovation and excellence. The vision of the JSS Mahavidyapeetha is to be a leading educational organization that provides quality education and promotes human development.
+                  </p>
+                </div>
+              </div>
+              
+              {/* President Image - Takes 1/3 of the space on the right */}
+              <div className="text-center lg:sticky lg:top-8">
+                <img 
+                  src={presidentImage} 
+                  alt="Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji" 
+                  className="w-full max-w-sm mx-auto rounded-lg shadow-lg"
+                />
+                <h3 className="text-lg font-bold mt-4 text-[#A52A2A]">
+                  Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji
+                </h3>
+                <p className="text-muted-foreground">President, JSS Mahavidyapeetha</p>
+              </div>
             </div>
           </div>
           
-          {/* Content About JSS Mahavidyapeetha */}
+          {/* Building Image - Centered */}
+          <div className="text-center mb-12">
+            <img 
+              src={buildingImage} 
+              alt="JSS Mahavidyapeetha Building" 
+              className="w-full max-w-4xl mx-auto rounded-lg shadow-lg"
+            />
+            <h3 className="text-lg font-bold mt-4 text-[#A52A2A]">
+              JSS Mahavidyapeetha Campus
+            </h3>
+            <p className="text-muted-foreground">Main Building, Mysuru</p>
+          </div>
+          
+          {/* Managing Committee Section */}
           <div className="bg-white p-8 rounded-lg shadow-md">
-            <div className="prose max-w-none">
-              <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                The origin of JSS Mahavidyapeetha (JSSMVP), a formidable educational movement, can be traced to the establishment of a small hostel in 1928 to cater to the accommodation needs of students pursuing higher studies in Mysore. His Holiness Jagadguru Dr. Sri Shivarathri Rajendra Mahaswamiji established the Jagadguru Sri Shivarathreeshwara Mahavidyapeetha (JSSMVP) in 1954 and it was registered under the Societies' Registration Act 1960.
-              </p>
-              
-              <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                Focusing on a purpose as expansive and yet as specific as improving quality of life through Human Development, the JSS Mahavidyapeetha has grown from strength to strength. A long and healthy life, Education for all and a decent standard of living, the indicators of Human development, have been the underlying philosophy of Jagadguru Sri Veerasimhasana Mahasamsthana Math, Suttur Srikshethra, for centuries. This is also the philosophy for which the Mahavidyapeetha today stands for.
-              </p>
-              
-              <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                Today, the JSS Mahavidyapeetha is one of the most prestigious educational institutions in the country with over 300 educational institutions, 48 hostels and 34 health units. The institutions affiliated to JSS Mahavidyapeetha provide education at all levels from KG to PG, in almost all streams of knowledge, including medical, engineering, arts, commerce, physical sciences, bio-sciences, hotel management and catering technology.
-              </p>
-              
-              <p className="text-lg mb-6 text-gray-700 leading-relaxed">
-                The JSS Mahavidyapeetha has been constantly working to keep itself up to date with the latest developments in the field of education and research. It has always been in the forefront of educational innovation and excellence. The vision of the JSS Mahavidyapeetha is to be a leading educational organization that provides quality education and promotes human development.
-              </p>
-            </div>
-            
             {/* Managing Committee */}
-            <div className="mt-12">
+            <div>
               <h3 className="text-2xl font-bold mb-6 text-[#A52A2A]">Managing Committee Members</h3>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-gray-300">
