@@ -10,8 +10,8 @@ export default function Governance() {
       <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-[#1a1a1a]">{t('governance.title', 'Governance')}</h1>
-            <p className="text-xl text-[#1a1a1a] max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-primary">{t('governance.title', 'Governance')}</h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               {t('governance.subtitle', 'Administrative structure and committees ensuring effective governance of JSS Polytechnic for the Differently Abled')}
             </p>
           </div>
@@ -24,134 +24,134 @@ export default function Governance() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h2 className="text-3xl font-serif font-bold mb-6 text-[#1a1a1a]">{t('governance.council.title', 'Governing Council')}</h2>
-              <p className="text-lg text-[#1a1a1a] max-w-4xl mx-auto mb-8">
+              <h2 className="text-3xl font-serif font-bold mb-6 text-primary">{t('governance.council.title', 'Governing Council')}</h2>
+              <p className="text-lg text-gray-700 max-w-4xl mx-auto mb-8">
                 {t('governance.council.description', 'The Polytechnic has the Governing Council which has a set of members constituted by the Management as per the norms of AICTE for giving guidance regarding administration of the Institution.')}
               </p>
             </div>
 
             {/* Council Composition */}
-            <div className="bg-[hsl(var(--background))] border border-[hsl(var(--border))] rounded-xl shadow-lg p-8 mb-8">
-              <h3 className="text-2xl font-bold mb-6 text-[hsl(var(--primary))]">{t('governance.council.composition', 'Composition of Governing Council')}</h3>
-              <p className="text-[hsl(var(--foreground))] mb-6">
+            <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+              <h3 className="text-2xl font-bold mb-6 text-secondary">{t('governance.council.composition', 'Composition of Governing Council')}</h3>
+              <p className="text-gray-700 mb-6">
                 {t('governance.council.compositionText', 'The Governing Council shall have at least 11 members including the Chairman and the Member-Secretary. The Management / Registered Society shall nominate members including the Chairman and the Member-Secretary as indicated below:')}
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-3">
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-[hsl(var(--primary))] rounded-full mr-3"></div>
-                    <span className="text-[hsl(var(--foreground))]">The Chairman</span>
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <span>The Chairman</span>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-[hsl(var(--primary))] rounded-full mr-3"></div>
-                    <span className="text-[hsl(var(--foreground))]">Two to Five members (Industrialist / Technologist / Educationalist)</span>
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <span>Two to Five members (Industrialist / Technologist / Educationalist)</span>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-[hsl(var(--primary))] rounded-full mr-3"></div>
-                    <span className="text-[hsl(var(--foreground))]">One nominee from the Affiliating Board</span>
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <span>One nominee from the Affiliating Board</span>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-[hsl(var(--primary))] rounded-full mr-3"></div>
-                    <span className="text-[hsl(var(--foreground))]">One nominee from All India Council for Technical Education (Ex-Officio)</span>
+                    <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
+                    <span>One nominee from All India Council for Technical Education (Ex-Officio)</span>
                   </div>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-[hsl(var(--primary))] rounded-full mr-3"></div>
-                    <span className="text-[hsl(var(--foreground))]">One nominee from the State Government (Ex-Officio)</span>
+                    <div className="w-2 h-2 bg-secondary rounded-full mr-3"></div>
+                    <span>One nominee from the State Government (Ex-Officio)</span>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-[hsl(var(--primary))] rounded-full mr-3"></div>
-                    <span className="text-[hsl(var(--foreground))]">One Senior Faculty member of the Institute</span>
+                    <div className="w-2 h-2 bg-secondary rounded-full mr-3"></div>
+                    <span>One Senior Faculty member of the Institute</span>
                   </div>
                   <div className="flex items-center">
-                    <div className="w-2 h-2 bg-[hsl(var(--primary))] rounded-full mr-3"></div>
-                    <span className="text-[hsl(var(--foreground))]">Principal of the concerned Technical institution is the Member Secretary</span>
+                    <div className="w-2 h-2 bg-secondary rounded-full mr-3"></div>
+                    <span>Principal of the concerned Technical institution is the Member Secretary</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Council Members Table */}
-            <div className="bg-[hsl(var(--background))] border border-[hsl(var(--border))] rounded-xl shadow-lg overflow-hidden mb-8">
-              <div className="bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] p-6">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-8">
+              <div className="bg-primary text-white p-6">
                 <h3 className="text-2xl font-bold">{t('governance.council.members', 'Governing Council Members')}</h3>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-[hsl(var(--muted))]">
+                  <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-6 py-4 text-left text-sm font-medium text-[hsl(var(--foreground))]">Sl. No</th>
-                      <th className="px-6 py-4 text-left text-sm font-medium text-[hsl(var(--foreground))]">Name & Designation</th>
-                      <th className="px-6 py-4 text-left text-sm font-medium text-[hsl(var(--foreground))]">Role</th>
+                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">Sl. No</th>
+                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">Name & Designation</th>
+                      <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">Role</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[hsl(var(--border))]">
+                  <tbody className="divide-y divide-gray-200">
                     <tr>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">1</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">His Holiness Jagadguru Sri Shivarathri Deshikendra Mahaswamigalavaru, President, JSS Mahavidyapeetha, Mysuru</td>
-                      <td className="px-6 py-4 text-sm font-medium text-[hsl(var(--primary))]">Chairman</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">1</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">His Holiness Jagadguru Sri Shivarathri Deshikendra Mahaswamigalavaru, President, JSS Mahavidyapeetha, Mysuru</td>
+                      <td className="px-6 py-4 text-sm font-medium text-primary">Chairman</td>
                     </tr>
-                    <tr className="bg-[hsl(var(--muted))]">
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">2</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Dr. C G Betsurmath, Executive Secretary, JSS Mahavidyapeetha, Mysuru</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Member</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">3</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Prof. M H Dhananjaya, Advisor, Technical Education Division, JSS Mahavidyapeetha, Mysuru</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Member</td>
-                    </tr>
-                    <tr className="bg-[hsl(var(--muted))]">
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">4</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Dr. H R Mahadevaswamy, Joint Director, Technical Education Division, JSS Mahavidyapeetha, Mysuru</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Member</td>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 text-sm text-gray-900">2</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Dr. C G Betsurmath, Executive Secretary, JSS Mahavidyapeetha, Mysuru</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Member</td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">5</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Sri B R Umakant, Joint Director (Projects), Technical Education Division, JSS Mahavidyapeetha, Mysuru</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Member</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">3</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Prof. M H Dhananjaya, Advisor, Technical Education Division, JSS Mahavidyapeetha, Mysuru</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Member</td>
                     </tr>
-                    <tr className="bg-[hsl(var(--muted))]">
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">6</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Smt. Shanthi Raghavan, Founder, Managing Trustee, M/s EnAable India Pvt. Ltd., #473/B, Adugodi Main Road, 8th Block Koramangala, Bengaluru – 560 095</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Member</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">7</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">The Director, Department of Technical Education, Govt. of Karnataka, TantrikaShikshanaBhavan, Palace Road, Bengaluru – 560 001</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Member</td>
-                    </tr>
-                    <tr className="bg-[hsl(var(--muted))]">
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">8</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">The Regional Officer, SWRO – AICTE, University Campus, Bengaluru – 560 001</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Member</td>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 text-sm text-gray-900">4</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Dr. H R Mahadevaswamy, Joint Director, Technical Education Division, JSS Mahavidyapeetha, Mysuru</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Member</td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">9</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">The State Commissioner for Persons with Disabilities, # 55, Rasildhar Street, Sheshadripuram, Bengaluru – 560 001</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Member</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">5</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Sri B R Umakant, Joint Director (Projects), Technical Education Division, JSS Mahavidyapeetha, Mysuru</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Member</td>
                     </tr>
-                    <tr className="bg-[hsl(var(--muted))]">
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">10</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Sri N Narendra, Managing Director, M/s Vinyas Innovative Technologies Pvt. Ltd., Hebbal Industrial Estate, Hebbal, Mysuru – 570 027</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Member</td>
-                    </tr>
-                    <tr>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">11</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Sri Murali Kumar, Programme Director, Centre for Inclusion, M/s EnAble India Pvt. Ltd.,# 473/B, Adugodi Main Road, 8th Block, Koramangala, Bengaluru – 560 095</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Member</td>
-                    </tr>
-                    <tr className="bg-[hsl(var(--muted))]">
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">12</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Sri N M Shivakumaraswamy, Sl. Gr. Lecturer in Science, JSS Polytechnic for the Differently Abled, Mysuru – 570 006</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Member</td>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 text-sm text-gray-900">6</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Smt. Shanthi Raghavan, Founder, Managing Trustee, M/s EnAable India Pvt. Ltd., #473/B, Adugodi Main Road, 8th Block Koramangala, Bengaluru – 560 095</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Member</td>
                     </tr>
                     <tr>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">13</td>
-                      <td className="px-6 py-4 text-sm text-[hsl(var(--foreground))]">Sri B Elangovan, Principal, JSS Polytechnic for the Differently Abled, Mysuru – 570 006</td>
-                      <td className="px-6 py-4 text-sm font-medium text-[hsl(var(--primary))]">Member Secretary</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">7</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">The Director, Department of Technical Education, Govt. of Karnataka, TantrikaShikshanaBhavan, Palace Road, Bengaluru – 560 001</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Member</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 text-sm text-gray-900">8</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">The Regional Officer, SWRO – AICTE, University Campus, Bengaluru – 560 001</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Member</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 text-sm text-gray-900">9</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">The State Commissioner for Persons with Disabilities, # 55, Rasildhar Street, Sheshadripuram, Bengaluru – 560 001</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Member</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 text-sm text-gray-900">10</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Sri N Narendra, Managing Director, M/s Vinyas Innovative Technologies Pvt. Ltd., Hebbal Industrial Estate, Hebbal, Mysuru – 570 027</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Member</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 text-sm text-gray-900">11</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Sri Murali Kumar, Programme Director, Centre for Inclusion, M/s EnAble India Pvt. Ltd.,# 473/B, Adugodi Main Road, 8th Block, Koramangala, Bengaluru – 560 095</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Member</td>
+                    </tr>
+                    <tr className="bg-gray-50">
+                      <td className="px-6 py-4 text-sm text-gray-900">12</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Sri N M Shivakumaraswamy, Sl. Gr. Lecturer in Science, JSS Polytechnic for the Differently Abled, Mysuru – 570 006</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Member</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 text-sm text-gray-900">13</td>
+                      <td className="px-6 py-4 text-sm text-gray-900">Sri B Elangovan, Principal, JSS Polytechnic for the Differently Abled, Mysuru – 570 006</td>
+                      <td className="px-6 py-4 text-sm font-medium text-secondary">Member Secretary</td>
                     </tr>
                   </tbody>
                 </table>
