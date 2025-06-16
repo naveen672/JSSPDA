@@ -122,6 +122,9 @@ The application is configured for deployment on Replit with:
 ✓ Fixed language switching functionality to work seamlessly across all sections
 ✓ Applied consistent color theming using primary/secondary classes throughout the site
 ✓ Added translation keys for all page content including About JSSMVP and About JSSPDA
+✓ Created Messages submenu under Home navigation with Principal's message page
+✓ Added Principal Sri. Elangovan B's profile with contact information and institutional message
+✓ Implemented proper color theming and multilingual support for Messages page
 
 ## Changelog
 
