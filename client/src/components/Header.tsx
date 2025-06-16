@@ -125,6 +125,7 @@ export default function Header() {
         { href: "/about-jssmvp", label: "About JSSMVP" },
         { href: "/about-jsspda", label: "About JSSPDA" },
         { href: "/about", label: "Vision, Mission and Core Values" },
+        { href: "/messages", label: "Messages" },
         { href: "/contact", label: "Contact us" },
       ]
     },

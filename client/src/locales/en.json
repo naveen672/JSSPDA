@@ -642,5 +642,20 @@
       "title": "Organization Chart of JSSPDA",
       "imageAlt": "JSSPDA Organization Chart showing institutional hierarchy"
     }
+  },
+  "messages": {
+    "title": "Messages",
+    "subtitle": "Messages from our leadership and administration",
+    "principal": {
+      "title": "MESSAGE FROM PRINCIPAL",
+      "designation": "Principal, JSS Polytechnic for the Differently Abled (JSSPDA)",
+      "profile": "PROFILE",
+      "message": {
+        "para1": "In India, a person born with any kind of disability was believed to be a sin in the society. For decades, opportunities in education, employment and other living status was denied for the differently abled even though efforts are being made to rehabilitate them by the Government and other socially responsible organizations both in terms of education and employment.",
+        "para2": "Recent years this trend has changed drastically and many organizations and institutions are inclined towards providing opportunities for the persons with special needs.",
+        "para3": "In this direction, JSS Polytechnic for the Differently Abled, Mysuru was established by JSS Mahavidyapeetha in the year 1991-92 under the World Bank Assistance Scheme of the Government of Karnataka.",
+        "para4": "It was a unique concept conceived and became reality by providing educational and employment opportunities for the persons with disabilities."
+      }
+    }
   }
 }
