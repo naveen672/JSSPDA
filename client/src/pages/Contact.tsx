@@ -15,9 +15,12 @@ export default function Contact() {
   const { toast } = useToast();
   
   const [formData, setFormData] = useState({
-    name: '',
+    candidateName: '',
+    fatherName: '',
     email: '',
-    subject: '',
+    address: '',
+    mobile: '',
+    purpose: '',
     message: ''
   });
   
@@ -140,13 +143,26 @@ export default function Contact() {
               {/* Map */}
               <div className="mt-10 h-64 bg-gray-200 rounded-lg overflow-hidden">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.2196377737144!2d76.61687!3d12.311389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDE4JzQxLjAiTiA3NsKwMzcnMDAuNyJF!5e0!3m2!1sen!2sin!4v1625123456789!5m2!1sen!2sin" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.2196377737144!2d76.61687!3d12.311389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf7091b7f1b7b3%3A0x7b7b7b7b7b7b7b7b!2sJSS%20Polytechnic%20for%20the%20Differently%20Abled!5e0!3m2!1sen!2sin!4v1625123456789!5m2!1sen!2sin" 
                   className="w-full h-full border-0" 
                   allowFullScreen={true} 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade" 
                   title="JSS Polytechnic Location Map"
                 ></iframe>
+              </div>
+              
+              {/* Map Link */}
+              <div className="mt-4">
+                <a 
+                  href="https://g.page/jsspda?share" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:underline"
+                >
+                  <MapPin className="h-4 w-4" />
+                  View on Google Maps
+                </a>
               </div>
             </div>
             
