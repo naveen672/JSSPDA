@@ -588,5 +588,59 @@
     "loading": "Loading...",
     "error": "An error occurred",
     "retry": "Retry"
+  },
+  "aboutJSSMVP": {
+    "title": "About JSS Mahavidyapeetha",
+    "subtitle": "Empowering lives through education since 1954",
+    "president": {
+      "name": "Jagadguru His Holiness Sri Sri Sri Shivarathri Deshikendra Mahaswamiji",
+      "title": "President, JSS Mahavidyapeetha"
+    },
+    "campus": {
+      "name": "JSS Mahavidyapeetha Campus",
+      "location": "Main Building, Mysuru"
+    },
+    "committee": {
+      "title": "Managing Committee Members",
+      "headers": {
+        "position": "Position",
+        "name": "Name",
+        "designation": "Designation"
+      }
+    }
+  },
+  "aboutJSSPDA": {
+    "title": "About JSS Polytechnic for the Differently Abled",
+    "subtitle": "Empowering differently-abled students through quality technical education",
+    "hero": {
+      "imageAlt": "JSS Polytechnic for the Differently Abled entrance"
+    },
+    "courses": {
+      "title": "Courses Offered",
+      "description": "The following courses are offered as approved by the Government of Karnataka and AICTE, New Delhi:",
+      "headers": {
+        "course": "Course",
+        "intake": "Intake"
+      },
+      "total": "TOTAL"
+    },
+    "recognition": {
+      "title": "Government Support & Recognition",
+      "description": "As per the National Policy of the Government, there is a provision to earmark 3% of the budget for the welfare of differently abled persons. Further there is also reservation in job placements."
+    },
+    "awards": {
+      "national": {
+        "title": "🏆 National Award (2012)",
+        "description": "\"Best Institution working for the cause of Persons with Disabilities\" by the Ministry of Social Justice and Empowerment, Government of India. The award was presented by His Excellency The President of India."
+      },
+      "state": {
+        "title": "🏆 State Award (2016)",
+        "description": "The Government of Karnataka honored us with a State Award under the category of \"Best Institution working for the cause of Persons with Disabilities\"."
+      }
+    },
+    "organization": {
+      "title": "Organization Chart of JSSPDA",
+      "imageAlt": "JSSPDA Organization Chart showing institutional hierarchy"
+    }
   }
 }

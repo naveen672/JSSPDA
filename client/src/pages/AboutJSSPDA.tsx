@@ -110,17 +110,17 @@ export default function AboutJSSPDA() {
                 </p>
                 
                 <div className="space-y-3">
-                  <div className="bg-white p-4 rounded border-l-4 border-yellow-500">
-                    <h5 className="font-bold text-gray-800">🏆 National Award (2012)</h5>
+                  <div className="bg-white p-4 rounded border-l-4 border-primary">
+                    <h5 className="font-bold text-gray-800">{t('aboutJSSPDA.awards.national.title', '🏆 National Award (2012)')}</h5>
                     <p className="text-sm text-gray-600">
-                      "Best Institution working for the cause of Persons with Disabilities" by the Ministry of Social Justice and Empowerment, Government of India. The award was presented by His Excellency The President of India.
+                      {t('aboutJSSPDA.awards.national.description', '"Best Institution working for the cause of Persons with Disabilities" by the Ministry of Social Justice and Empowerment, Government of India. The award was presented by His Excellency The President of India.')}
                     </p>
                   </div>
                   
-                  <div className="bg-white p-4 rounded border-l-4 border-blue-500">
-                    <h5 className="font-bold text-gray-800">🏆 State Award (2016)</h5>
+                  <div className="bg-white p-4 rounded border-l-4 border-secondary">
+                    <h5 className="font-bold text-gray-800">{t('aboutJSSPDA.awards.state.title', '🏆 State Award (2016)')}</h5>
                     <p className="text-sm text-gray-600">
-                      The Government of Karnataka honored us with a State Award under the category of "Best Institution working for the cause of Persons with Disabilities".
+                      {t('aboutJSSPDA.awards.state.description', 'The Government of Karnataka honored us with a State Award under the category of "Best Institution working for the cause of Persons with Disabilities".')}
                     </p>
                   </div>
                 </div>
@@ -128,7 +128,7 @@ export default function AboutJSSPDA() {
               
               {/* Organization Chart */}
               <div className="mt-8">
-                <h4 className="text-xl font-bold mb-4 text-[#A52A2A]">Organization Chart of JSSPDA</h4>
+                <h4 className="text-xl font-bold mb-4 text-primary">{t('aboutJSSPDA.organization.title', 'Organization Chart of JSSPDA')}</h4>
                 <div className="text-center">
                   <img 
                     src={organizationChart} 
