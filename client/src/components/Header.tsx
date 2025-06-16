@@ -127,6 +127,7 @@ export default function Header() {
         { href: "/about", label: "Vision, Mission and Core Values" },
         { href: "/messages", label: "Messages" },
         { href: "/governance", label: "Governance" },
+        { href: "/administration", label: "Administration" },
         { href: "/contact", label: "Contact us" },
       ]
     },

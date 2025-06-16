@@ -680,5 +680,22 @@
     "services": {
       "title": "Support Services & Administrative Sections"
     }
+  },
+  "administration": {
+    "title": "Administration",
+    "subtitle": "Administrative staff and key functionaries managing JSS Polytechnic for the Differently Abled",
+    "principal": {
+      "title": "Principal Profile",
+      "designation": "Principal, JSS Polytechnic for the Differently Abled (JSSPDA)"
+    },
+    "staff": {
+      "title": "Ministerial Staff of JSSPDA",
+      "grantInAid": "Grant-in-Aid Employees",
+      "management": "Management Employees"
+    },
+    "functionaries": {
+      "title": "Key Functionaries of JSSPDA",
+      "subtitle": "Department Heads & Coordinators"
+    }
   }
 }

@@ -11,6 +11,7 @@ import AboutJSSMVP from "./pages/AboutJSSMVP";
 import AboutJSSPDA from "./pages/AboutJSSPDA";
 import Messages from "./pages/Messages";
 import Governance from "./pages/Governance";
+import Administration from "./pages/Administration";
 import Courses from "./pages/Courses";
 import Faculty from "./pages/Faculty";
 import Contact from "./pages/Contact";
@@ -28,6 +29,7 @@ function Router() {
         <Route path="/about-jsspda" component={AboutJSSPDA} />
         <Route path="/messages" component={Messages} />
         <Route path="/governance" component={Governance} />
+        <Route path="/administration" component={Administration} />
         <Route path="/courses" component={Courses} />
         <Route path="/faculty" component={Faculty} />
         <Route path="/contact" component={Contact} />
