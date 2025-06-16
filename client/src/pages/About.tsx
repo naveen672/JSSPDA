@@ -27,7 +27,7 @@ export default function About() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-serif font-bold mb-6 text-[#A52A2A]">VISION of the Institution</h2>
+              <h2 className="text-3xl font-serif font-bold mb-6 text-primary">{t('about.vision.title', 'VISION of the Institution')}</h2>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <p className="text-lg mb-4 font-semibold text-black">
                   Empowering Differently Abled persons with the state-of-art professional skills, enhancing morality and mental ability for better living.
