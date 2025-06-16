@@ -25,7 +25,7 @@ export default function About() {
       </section>
       
       {/* Our Vision */}
-      <section className="py-16">
+      <section id="vision-mission" className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -99,7 +99,7 @@ export default function About() {
           </div>
           
           {/* About JSSPDA Section */}
-          <div className="mt-12 bg-white p-8 rounded-lg shadow-md">
+          <div id="jsspda" className="mt-12 bg-white p-8 rounded-lg shadow-md">
             <div className="text-center mb-8">
               <img 
                 src={jsspdaEntrance} 
@@ -222,7 +222,7 @@ export default function About() {
       </section>
       
       {/* JSS Mahavidyapeetha Section */}
-      <section className="py-16">
+      <section id="jssmvp" className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-[#A52A2A]">About JSS Mahavidyapeetha</h2>
