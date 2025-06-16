@@ -79,10 +79,13 @@ export const events = pgTable("events", {
 // Contact form submissions
 export const contactSubmissions = pgTable("contact_submissions", {
   id: serial("id").primaryKey(),
-  name: text("name").notNull(),
+  candidateName: text("candidate_name").notNull(),
+  fatherName: text("father_name"),
   email: text("email").notNull(),
-  subject: text("subject"),
-  message: text("message").notNull(),
+  address: text("address"),
+  mobile: text("mobile").notNull(),
+  purpose: text("purpose").notNull(),
+  message: text("message"),
   userId: integer("user_id").references(() => users.id),
   createdAt: timestamp("created_at").defaultNow(),
   responded: boolean("responded").default(false),
@@ -171,9 +174,12 @@ export const insertEventSchema = createInsertSchema(events).pick({
 });
 
 export const insertContactSubmissionSchema = createInsertSchema(contactSubmissions).pick({
-  name: true,
+  candidateName: true,
+  fatherName: true,
   email: true,
-  subject: true,
+  address: true,
+  mobile: true,
+  purpose: true,
   message: true,
   userId: true,
 });

@@ -26,18 +26,18 @@ export default function Contact() {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { id, value } = e.target;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [id]: value
+      [name]: value
     }));
   };
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.candidateName || !formData.email || !formData.mobile || !formData.purpose) {
       toast({
         title: t('contact.form.errorTitle'),
         description: t('contact.form.errorMessage'),
@@ -58,9 +58,12 @@ export default function Contact() {
       
       // Reset form
       setFormData({
-        name: '',
+        candidateName: '',
+        fatherName: '',
         email: '',
-        subject: '',
+        address: '',
+        mobile: '',
+        purpose: '',
         message: ''
       });
     } catch (error) {
@@ -172,46 +175,90 @@ export default function Contact() {
                 <form onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-muted-foreground mb-2">{t('contact.form.name')}</label>
+                      <label htmlFor="candidateName" className="block text-sm font-medium text-muted-foreground mb-2">Name of the Candidate *</label>
                       <input 
                         type="text" 
-                        id="name" 
-                        value={formData.name}
+                        name="candidateName" 
+                        value={formData.candidateName}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                        disabled={isSubmitting}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="fatherName" className="block text-sm font-medium text-muted-foreground mb-2">Father Name</label>
+                      <input 
+                        type="text" 
+                        name="fatherName" 
+                        value={formData.fatherName}
                         onChange={handleChange}
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
                         disabled={isSubmitting}
                       />
                     </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-muted-foreground mb-2">{t('contact.form.email')}</label>
+                      <label htmlFor="email" className="block text-sm font-medium text-muted-foreground mb-2">Email *</label>
                       <input 
                         type="email" 
-                        id="email" 
+                        name="email" 
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
                         disabled={isSubmitting}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="mobile" className="block text-sm font-medium text-muted-foreground mb-2">Mobile No. *</label>
+                      <input 
+                        type="tel" 
+                        name="mobile" 
+                        value={formData.mobile}
+                        onChange={handleChange}
+                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                        disabled={isSubmitting}
+                        required
                       />
                     </div>
                   </div>
                   
                   <div className="mb-6">
-                    <label htmlFor="subject" className="block text-sm font-medium text-muted-foreground mb-2">{t('contact.form.subject')}</label>
-                    <input 
-                      type="text" 
-                      id="subject" 
-                      value={formData.subject}
+                    <label htmlFor="address" className="block text-sm font-medium text-muted-foreground mb-2">Address</label>
+                    <textarea 
+                      name="address" 
+                      rows={3}
+                      value={formData.address}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                       disabled={isSubmitting}
-                    />
+                    ></textarea>
                   </div>
                   
                   <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-muted-foreground mb-2">{t('contact.form.message')}</label>
+                    <label htmlFor="purpose" className="block text-sm font-medium text-muted-foreground mb-2">Purpose of Enquiry *</label>
+                    <select 
+                      name="purpose" 
+                      value={formData.purpose}
+                      onChange={handleChange}
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                      disabled={isSubmitting}
+                      required
+                    >
+                      <option value="">Select Purpose</option>
+                      <option value="Admission">Admission</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <label htmlFor="message" className="block text-sm font-medium text-muted-foreground mb-2">Additional Message</label>
                     <textarea 
-                      id="message" 
-                      rows={5}
+                      name="message" 
+                      rows={4}
                       value={formData.message}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
