@@ -242,10 +242,19 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50" onClick={handleClickOutside}>
       {/* Top header with logos and title */}
-      <div className="bg-[hsl(var(--header-bg))] shadow-sm py-5 px-4">
+      <div className="bg-[hsl(var(--header-bg))] shadow-sm py-3 md:py-5 px-4">
         <div className="container mx-auto">
           {/* Main header content */}
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-between md:justify-center">
+            {/* Mobile menu button */}
+            <button
+              onClick={toggleMobileMenu}
+              className="md:hidden inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring hover:bg-accent hover:text-accent-foreground h-9 w-9"
+              aria-label={t("accessibility.openMenu")}
+            >
+              {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            </button>
+            
             <div className="flex items-center">
               {/* Left logo */}
               <div className="flex-shrink-0 mr-3">
@@ -258,12 +267,12 @@ export default function Header() {
               
               {/* Center title */}
               <div className="flex flex-col items-center text-center">
-                <h3 className="text-sm md:text-base text-primary font-semibold">JSS Mahavidyapeetha</h3>
-                <h2 className="text-xs md:text-sm hidden md:block text-gray-700 mb-1">ಜೆ ಎಸ್ ಎಸ್ ವಿಶೇಷ ಚೇತನರ ಪಾಲಿಟೆಕ್ನಿಕ್, ಮೈಸೂರು</h2>
-                <h1 className="text-lg md:text-2xl font-bold text-[#1e3a8a]">
+                <h3 className="text-sm md:text-base text-[hsl(var(--primary))] font-semibold">JSS Mahavidyapeetha</h3>
+                <h2 className="text-xs md:text-sm hidden md:block text-[hsl(var(--foreground))] opacity-80 mb-1">ಜೆ ಎಸ್ ಎಸ್ ವಿಶೇಷ ಚೇತನರ ಪಾಲಿಟೆಕ್ನಿಕ್, ಮೈಸೂರು</h2>
+                <h1 className="text-base md:text-lg lg:text-2xl font-bold text-[hsl(var(--foreground))]">
                   JSS Polytechnic for the Differently Abled, Mysuru
                 </h1>
-                <p className="text-xs md:text-sm text-gray-600 hidden md:block">
+                <p className="text-xs md:text-sm text-[hsl(var(--muted-foreground))] hidden md:block opacity-90">
                   (An Autonomous institution aided by the Government of Karnataka and Approved by AICTE)
                 </p>
               </div>
@@ -322,13 +331,13 @@ export default function Header() {
                       </button>
                       {link.hasDropdown && (
                         <div 
-                          className={`absolute top-full left-0 bg-white shadow-lg rounded-md mt-0.5 py-2 min-w-[200px] z-50 ${openDropdown === link.id ? 'block' : 'hidden'}`}
+                          className={`absolute top-full left-0 bg-[hsl(var(--background))] border border-[hsl(var(--border))] shadow-lg rounded-md mt-0.5 py-2 min-w-[200px] z-50 ${openDropdown === link.id ? 'block' : 'hidden'}`}
                         >
                           {link.dropdown?.map((item, subIndex) => (
                             <Link 
                               key={`dropdown-item-${subIndex}`} 
                               href={item.href}
-                              className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-primary"
+                              className="block px-4 py-2 text-[hsl(var(--foreground))] hover:bg-[hsl(var(--accent))] hover:text-[hsl(var(--accent-foreground))]"
                               onClick={() => setOpenDropdown(null)}
                             >
                               {item.label}

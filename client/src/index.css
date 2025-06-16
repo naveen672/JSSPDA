@@ -115,34 +115,44 @@
 }
 
 .color-theme-purple {
-  --primary: 262 83% 65%;
-  --primary-foreground: 210 40% 98%;
-  --primary-hover: 262 83% 55%;
-  --accent: 262 83% 58%;
-  --accent-foreground: 210 40% 98%;
-  --chart-1: 262 83% 65%;
+  --primary: 262 83% 58%;
+  --primary-foreground: 0 0% 100%;
+  --primary-hover: 262 83% 50%;
+  --accent: 262 83% 55%;
+  --accent-foreground: 0 0% 100%;
+  --chart-1: 262 83% 58%;
   --secondary: 265 50% 95%;
-  --secondary-foreground: 265 70% 30%;
+  --secondary-foreground: 265 90% 15%;
+  --muted: 265 50% 95%;
+  --muted-foreground: 265 30% 40%;
+  --foreground: 265 90% 15%;
+  --background: 0 0% 100%;
+  --border: 265 30% 85%;
   /* Specific color elements for this theme */
   --header-bg: 265 50% 95%;
   --footer-bg: 265 80% 25%;
-  --footer-text: 265 50% 95%;
+  --footer-text: 0 0% 100%;
   --card-accent: 265 60% 95%;
 }
 
 .color-theme-orange {
   --primary: 35 92% 50%;
-  --primary-foreground: 210 40% 98%;
+  --primary-foreground: 0 0% 100%;
   --primary-hover: 35 92% 45%;
   --accent: 35 92% 43%;
-  --accent-foreground: 210 40% 98%;
+  --accent-foreground: 0 0% 100%;
   --chart-1: 35 92% 50%;
   --secondary: 40 80% 96%;
-  --secondary-foreground: 30 75% 25%;
+  --secondary-foreground: 30 90% 15%;
+  --muted: 40 80% 96%;
+  --muted-foreground: 30 40% 35%;
+  --foreground: 30 90% 15%;
+  --background: 0 0% 100%;
+  --border: 40 30% 85%;
   /* Specific color elements for this theme */
   --header-bg: 40 80% 96%;
   --footer-bg: 30 60% 30%;
-  --footer-text: 40 80% 96%;
+  --footer-text: 0 0% 100%;
   --card-accent: 35 70% 95%;
 }
 
