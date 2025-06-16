@@ -1,11 +1,9 @@
 import { useTranslation } from "react-i18next";
-import { useAppContext } from "@/contexts/AppContext";
 import presidentImage from "@assets/image_1750098685509.png";
 import buildingImage from "@assets/image_1750098690353.png";
 
 export default function AboutJSSMVP() {
   const { t } = useTranslation();
-  const { theme, fontSize } = useAppContext();
   
   return (
     <>

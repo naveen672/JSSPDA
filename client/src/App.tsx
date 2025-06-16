@@ -13,6 +13,7 @@ import Courses from "./pages/Courses";
 import Faculty from "./pages/Faculty";
 import Contact from "./pages/Contact";
 import SplashScreen from "./components/SplashScreen";
+import { AppProvider } from "./contexts/AppContext";
 import { useEffect, useState } from "react";
 
 function Router() {
@@ -46,8 +47,10 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        {showSplash ? <SplashScreen /> : <Router />}
+        <AppProvider>
+          <Toaster />
+          {showSplash ? <SplashScreen /> : <Router />}
+        </AppProvider>
       </TooltipProvider>
     </QueryClientProvider>
   );

@@ -1,11 +1,9 @@
 import { useTranslation } from "react-i18next";
-import { useAppContext } from "@/contexts/AppContext";
 import jsspdaEntrance from "@assets/image_1750098781136.png";
 import organizationChart from "@assets/image_1750098860303.png";
 
 export default function AboutJSSPDA() {
   const { t } = useTranslation();
-  const { theme, fontSize } = useAppContext();
   
   return (
     <>
@@ -51,15 +49,15 @@ export default function AboutJSSPDA() {
               
               {/* Courses Offered Table */}
               <div className="mt-8">
-                <h4 className="text-xl font-bold mb-4 text-[#A52A2A]">Courses Offered</h4>
+                <h4 className="text-xl font-bold mb-4 text-primary">{t('aboutJSSPDA.courses.title', 'Courses Offered')}</h4>
                 <p className="mb-4 text-gray-600">The following courses are offered as approved by the Government of Karnataka and AICTE, New Delhi:</p>
                 
                 <div className="overflow-x-auto">
                   <table className="w-full border-collapse border border-gray-300 mb-4">
                     <thead>
-                      <tr className="bg-[#A52A2A] text-white">
-                        <th className="border border-gray-300 px-4 py-3 text-left">Course</th>
-                        <th className="border border-gray-300 px-4 py-3 text-center">Intake</th>
+                      <tr className="bg-primary text-primary-foreground">
+                        <th className="border border-gray-300 px-4 py-3 text-left">{t('aboutJSSPDA.courses.headers.course', 'Course')}</th>
+                        <th className="border border-gray-300 px-4 py-3 text-center">{t('aboutJSSPDA.courses.headers.intake', 'Intake')}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -95,8 +93,8 @@ export default function AboutJSSPDA() {
                         <td className="border border-gray-300 px-4 py-2">Electrical Engineering and Electric Vehicle Technology (EV)</td>
                         <td className="border border-gray-300 px-4 py-2 text-center">60</td>
                       </tr>
-                      <tr className="bg-[#A52A2A] text-white font-bold">
-                        <td className="border border-gray-300 px-4 py-2">TOTAL</td>
+                      <tr className="bg-primary text-primary-foreground font-bold">
+                        <td className="border border-gray-300 px-4 py-2">{t('aboutJSSPDA.courses.total', 'TOTAL')}</td>
                         <td className="border border-gray-300 px-4 py-2 text-center">390</td>
                       </tr>
                     </tbody>
@@ -106,7 +104,7 @@ export default function AboutJSSPDA() {
               
               {/* Government Support & Recognition */}
               <div className="bg-green-50 p-6 rounded-lg">
-                <h4 className="text-xl font-bold mb-3 text-[#A52A2A]">Government Support & Recognition</h4>
+                <h4 className="text-xl font-bold mb-3 text-primary">{t('aboutJSSPDA.recognition.title', 'Government Support & Recognition')}</h4>
                 <p className="mb-4">
                   As per the National Policy of the Government, there is a provision to earmark <strong>3% of the budget for the welfare of differently abled persons</strong>. Further there is also reservation in job placements. Our experience shows that industries/service establishments are keen to help the differently abled who are competent for suitable jobs.
                 </p>
