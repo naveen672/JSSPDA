@@ -313,6 +313,76 @@
   color: hsl(var(--foreground));
 }
 
+/* Global text color fixes for better visibility */
+.text-gray-900 {
+  color: hsl(var(--foreground)) !important;
+}
+
+.text-gray-800 {
+  color: hsl(var(--foreground)) !important;
+}
+
+.text-gray-700 {
+  color: hsl(var(--foreground)) !important;
+}
+
+.text-gray-600 {
+  color: hsl(var(--muted-foreground)) !important;
+}
+
+.text-blue-600 {
+  color: hsl(var(--primary)) !important;
+}
+
+.bg-gray-50 {
+  background-color: hsl(var(--muted)) !important;
+}
+
+.bg-white {
+  background-color: hsl(var(--background)) !important;
+  border: 1px solid hsl(var(--border));
+}
+
+.divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: hsl(var(--border));
+}
+
+/* Table styling fixes */
+table {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+table th {
+  color: hsl(var(--foreground)) !important;
+  font-weight: 600;
+}
+
+table td {
+  color: hsl(var(--foreground)) !important;
+}
+
+/* Ensure Architecture and department names are always visible */
+.department-name {
+  color: hsl(var(--foreground)) !important;
+  font-weight: 500;
+}
+
+/* List items and spans */
+span {
+  color: hsl(var(--foreground));
+}
+
+/* Links */
+a {
+  color: hsl(var(--primary));
+}
+
+a:hover {
+  color: hsl(var(--primary));
+  opacity: 0.8;
+}
+
 /* Button improvements for better visibility */
 .btn-primary {
   background-color: hsl(var(--primary));
